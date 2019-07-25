@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Install file.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function tide_demo_content_schema() {
+  $schema['tide_demo_content_tracking'] = [
+    'description' => 'Tracks created demo content.',
+    'fields' => [
+      'entity_type' => [
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'description' => 'Entity type.',
+      ],
+      'bundle' => [
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'description' => 'Entity bundle.',
+      ],
+      'entity_id' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'Entity ID.',
+      ],
+    ],
+    'primary key' => ['entity_type', 'bundle', 'entity_id'],
+    'indexes' => [
+      'entity_type' => ['entity_type'],
+      'bundle' => ['bundle'],
+      'entity_id' => ['entity_id'],
+    ],
+  ];
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function tide_demo_content_install() {
+  /** @var \Drupal\tide_demo_content\DemoContentLoader $loader */
+  $loader = \Drupal::service('tide_demo_content.loader');
+  $loader->loadAllDemoContent();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function tide_demo_content_uninstall() {
+  /** @var \Drupal\tide_demo_content\DemoContentRepository $repository */
+  $repository = \Drupal::service('tide_demo_content.repository');
+  $repository->removeTrackedEntities();
+  \Drupal::messenger()->addMessage('Removed all demo content.');
+}

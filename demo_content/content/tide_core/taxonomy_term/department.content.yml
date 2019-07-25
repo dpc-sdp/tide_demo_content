@@ -1,0 +1,10 @@
+- entity: taxonomy_term
+  vid: department
+  name: 'Demo Department'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000001
+- entity: taxonomy_term
+  vid: department
+  name: 'Another Demo Department'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000002

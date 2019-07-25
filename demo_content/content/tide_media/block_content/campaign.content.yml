@@ -1,0 +1,40 @@
+- entity: block_content
+  type: campaign
+  uuid: 11dede11-10c0-111e1-1100-000000000200
+  info: Demo Campaign block
+  status: 1
+  field_block_title: Demo Campaign
+  body:
+    - format: rich_text
+      value: |
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vobis voluptatum perceptarum recordatio vitam beatam facit</p>
+  field_block_cta:
+    - uri: https://www.vic.gov.au
+      title: Find out more
+  field_block_image:
+    - '#process':
+        callback: reference
+        args:
+          - media
+          - bundle: image
+            name: 'Demo: Melbourne skyline at dusk'
+- entity: block_content
+  type: campaign
+  uuid: 11dede11-10c0-111e1-1100-000000000201
+  info: Another Demo Campaign block
+  status: 1
+  field_block_title: Another Demo Campaign
+  body:
+    - format: rich_text
+      value: |
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vobis voluptatum perceptarum recordatio vitam beatam facit</p>
+  field_block_cta:
+    - uri: https://www.vic.gov.au
+      title: Find out more
+  field_block_image:
+    - '#process':
+        callback: reference
+        args:
+          - media
+          - bundle: image
+            name: 'Demo: Melbourne tram'

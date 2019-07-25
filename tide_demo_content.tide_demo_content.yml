@@ -1,0 +1,71 @@
+tide_core.demo:
+  dependencies:
+    modules:
+      - tide_core
+  content:
+    - tide_core
+tide_event.demo:
+  dependencies:
+    modules:
+      - tide_event
+    collections:
+      - tide_demo_content:tide_core.demo
+      - tide_demo_content:tide_site.demo
+      - tide_demo_content:tide_media.demo
+  content:
+    - 'tide_event/taxonomy_term'
+    - 'tide_event/event_01.content.yml'
+tide_landing_page.demo:
+  dependencies:
+    modules:
+      - tide_page
+    collections:
+      - tide_demo_content:tide_core.demo
+      - tide_demo_content:tide_site.demo
+      - tide_demo_content:tide_media.demo
+      - tide_demo_content:tide_page.demo
+      - tide_demo_content:tide_news.demo
+      - tide_demo_content:tide_event.demo
+  content:
+    - tide_landing_page
+tide_media.demo:
+  dependencies:
+    modules:
+      - tide_media
+    collections:
+      - tide_demo_content:tide_core.demo
+      - tide_demo_content:tide_site.demo
+  content:
+    - 'tide_media/taxonomy_term'
+    - 'tide_media/document.content.yml'
+    - 'tide_media/image.content.yml'
+    - 'tide_media/embedded_video.content.yml'
+    - 'tide_media/block_content'
+tide_news.demo:
+  dependencies:
+    modules:
+      - tide_page
+    collections:
+      - tide_demo_content:tide_core.demo
+      - tide_demo_content:tide_site.demo
+      - tide_demo_content:tide_media.demo
+  content:
+    - tide_news
+tide_page.demo:
+  dependencies:
+    modules:
+      - tide_page
+    collections:
+      - tide_demo_content:tide_core.demo
+      - tide_demo_content:tide_site.demo
+      - tide_demo_content:tide_media.demo
+  content:
+    - tide_page
+tide_site.demo:
+  dependencies:
+    modules:
+      - tide_site
+    collections:
+      - tide_demo_content:tide_core.demo
+  content:
+    - tide_site

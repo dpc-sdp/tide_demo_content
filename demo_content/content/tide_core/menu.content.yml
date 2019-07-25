@@ -1,0 +1,16 @@
+- entity: menu
+  id: 'main-tide-demo'
+  label: 'Main menu - demo.vic.gov.au'
+  description: 'Demo main menu'
+- entity: menu
+  id: 'footer-tide-demo'
+  label: 'Footer menu - demo.vic.gov.au'
+  description: 'Demo footer menu'
+- entity: menu
+  id: 'main-tide-demo-another'
+  label: 'Main menu - another.demo.vic.gov.au'
+  description: 'Another Demo main menu'
+- entity: menu
+  id: 'footer-tide-demo-another'
+  label: 'Footer menu - another.demo.vic.gov.au'
+  description: 'Another Demo footer menu'

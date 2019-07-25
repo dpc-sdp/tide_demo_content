@@ -1,0 +1,26 @@
+{
+  "name": "dpc-sdp/tide_demo_content",
+  "description": "Create demo content for Tide modules.",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "version": "0.0.1",
+  "require": {
+    "drupal/yaml_content": "^1.0"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "minimum-stability": "alpha",
+  "prefer-stable": true,
+  "extra": {
+    "patches": {
+      "drupal/yaml_content": {
+        "Better support for Config entities - https://www.drupal.org/project/yaml_content/issues/3068015#comment-13187170": "https://www.drupal.org/files/issues/2019-07-18/3068015-support_config_entities-3.patch"
+      }
+    }
+  }
+}
+

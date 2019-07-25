@@ -1,0 +1,7 @@
+tide_demo_content.import_form:
+  path: /admin/content/import_demo_content
+  defaults:
+    _form: 'Drupal\tide_demo_content\Form\ImportForm'
+    _title: 'Import Demo Content'
+  requirements:
+    _permission: 'manually import demo content'

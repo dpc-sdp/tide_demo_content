@@ -1,0 +1,5 @@
+- entity: taxonomy_term
+  vid: license_type
+  name: 'Demo License'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000030

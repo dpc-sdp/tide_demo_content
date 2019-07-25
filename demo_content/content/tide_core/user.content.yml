@@ -1,0 +1,115 @@
+# Administrators.
+- entity: user
+  status: 1
+  name: 'administrator1.test@example.com'
+  mail: 'administrator1.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'administrator'
+- entity: user
+  status: 1
+  name: 'administrator2.test@example.com'
+  mail: 'administrator2.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'administrator'
+# Site Admin.
+- entity: user
+  status: 1
+  name: 'site_admin1.test@example.com'
+  mail: 'site_admin1.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'site_admin'
+- entity: user
+  status: 1
+  name: 'site_admin2.test@example.com'
+  mail: 'site_admin2.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'site_admin'
+# Approvers.
+- entity: user
+  status: 1
+  name: 'approver1.test@example.com'
+  mail: 'approver1.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'approver'
+- entity: user
+  status: 1
+  name: 'approver2.test@example.com'
+  mail: 'approver2.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'approver'
+# Editors.
+- entity: user
+  status: 1
+  name: 'editor1.test@example.com'
+  mail: 'editor1.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'editor'
+- entity: user
+  status: 1
+  name: 'editor2.test@example.com'
+  mail: 'editor2.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'editor'
+# Previewers.
+- entity: user
+  status: 1
+  name: 'previewer1.test@example.com'
+  mail: 'previewer1.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'previewer'
+- entity: user
+  status: 1
+  name: 'previewer2.test@example.com'
+  mail: 'previewer2.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'previewer'

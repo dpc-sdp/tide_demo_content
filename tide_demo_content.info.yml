@@ -1,0 +1,8 @@
+name: Tide Demo Content
+type: module
+description: Create demo content for Tide modules.
+package: Tide
+core: 8.x
+dependencies:
+  - drupal:content_moderation
+  - drupal:yaml_content

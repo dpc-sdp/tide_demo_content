@@ -1,0 +1,189 @@
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000120
+  name: 'Demo: 2018-19 State Budget'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file
+        args:
+          - image
+          - filename: '2018-19 State Budget.jpg'
+      alt: 'Demo: 2018-19 State Budget'
+      title: 'Demo: 2018-19 State Budget'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000121
+  name: 'Demo: Aerial shot of new housing development'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file
+        args:
+          - image
+          - filename: 'Aerial shot of new housing development.jpg'
+      alt: 'Demo: Aerial shot of new housing development'
+      title: 'Demo: Aerial shot of new housing development'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000122
+  name: 'Demo: Bendigo Hospital'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file
+        args:
+          - image
+          - filename: 'Bendigo Hospital.jpg'
+      alt: 'Demo: Bendigo Hospital'
+      title: 'Demo: Bendigo Hospital.jpg'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000123
+  name: 'Demo: Melbourne skyline at dusk'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file
+        args:
+          - image
+          - filename: 'Melbourne skyline at dusk.jpg'
+      alt: 'Demo: Melbourne skyline at dusk'
+      title: 'Demo: Melbourne skyline at dusk'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000124
+  name: 'Demo: Melbourne tram'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file
+        args:
+          - image
+          - filename: 'Melbourne tram.jpg'
+      alt: 'Demo: Melbourne tram'
+      title: 'Demo: Melbourne tram'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000125
+  name: 'Demo: Parliament of Victoria'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file
+        args:
+          - image
+          - filename: 'Parliament of Victoria.jpg'
+      alt: 'Demo: Parliament of Victoria'
+      title: 'Demo: Parliament of Victoria'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000126
+  name: 'Demo: Staff at Treasury'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file
+        args:
+          - image
+          - filename: 'Staff at Treasury.jpg'
+      alt: 'Demo: Staff at Treasury'
+      title: 'Demo: Staff at Treasury'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000127
+  name: 'Demo: Two men working in hi-vis clothing'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file
+        args:
+          - image
+          - filename: 'Two men working in hi-vis clothing.jpg'
+      alt: 'Demo: Two men working in hi-vis clothing'
+      title: 'Demo: Two men working in hi-vis clothing'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000128
+  name: 'Demo: VicFleet - Police car on road'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file
+        args:
+          - image
+          - filename: 'VicFleet - Police car on road.jpg'
+      alt: 'Demo: VicFleet - Police car on road'
+      title: 'Demo: VicFleet - Police car on road'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'

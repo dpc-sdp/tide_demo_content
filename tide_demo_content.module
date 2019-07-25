@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Tide Demo Content.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\RevisionableInterface;
+use Drupal\tide_site\TideSiteFields;
+use Drupal\yaml_content\ContentLoader\ContentLoaderInterface;
+
+/**
+ * Implements hook_tide_demo_content_entity_imported().
+ */
+function tide_demo_content_tide_demo_content_entity_imported(EntityInterface $entity, $content_data, ContentLoaderInterface $content_loader) {
+  $entity_type = $entity->getEntityTypeId();
+  // Assign an existing Site to imported entities.
+  if (\Drupal::moduleHandler()->moduleExists('tide_site')) {
+    /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
+    $site_helper = \Drupal::service('tide_site.helper');
+    if (!$site_helper->isSupportedEntityType($entity_type)) {
+      return;
+    }
+
+    /** @var \Drupal\Core\Entity\FieldableEntityInterface $entity */
+    $entity_sites = $site_helper->getEntitySites($entity);
+    $sites = $site_helper->getAllSites();
+    if (!empty($sites)) {
+      // Attempt to find the very first Site with the smallest tid.
+      ksort($sites, SORT_ASC);
+      try {
+        foreach ($sites as $site_id => $site) {
+          $trail = $site_helper->getSiteTrail($site_id);
+          // Site term only has 1 item in its trail - choose this Site.
+          if (count($trail) == 1) {
+            $field_site_field_name = TideSiteFields::normaliseFieldName(TideSiteFields::FIELD_SITE, $entity_type);
+            if ($entity->hasField($field_site_field_name)) {
+              // This Site hasn't been assigned to the entity.
+              if (!isset($entity_sites['ids'][$site_id])) {
+                $entity->{$field_site_field_name}[] = ['target_id' => $site_id];
+              }
+            }
+            $field_primary_site_field_name = TideSiteFields::normaliseFieldName(TideSiteFields::FIELD_PRIMARY_SITE, $entity_type);
+            if ($entity->hasField($field_primary_site_field_name) && $entity->get($field_primary_site_field_name)->isEmpty()) {
+              $entity->$field_primary_site_field_name->target_id = $site_id;
+            }
+            if ($entity instanceof RevisionableInterface) {
+              $entity->setNewRevision(FALSE);
+            }
+            $entity->save();
+            break;
+          }
+        }
+      }
+      catch (\Exception $exception) {
+        \Drupal::messenger()->addError($exception->getMessage());
+        watchdog_exception('tide_demo_content', $exception);
+      }
+    }
+  }
+}

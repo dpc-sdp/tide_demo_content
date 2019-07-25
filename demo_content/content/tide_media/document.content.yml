@@ -1,0 +1,118 @@
+- entity: media
+  bundle: document
+  uuid: 11dede11-10c0-111e1-1100-000000000007
+  name: Demo Sample Document
+  uid: 1
+  status: 1
+  field_media_file:
+    - '#process':
+        callback: file
+        args:
+          - file
+          - filename: 'sample.docx'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+  field_media_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Demo Site'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          -
+            vid: sites
+            name: 'Demo Section 1'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Another Demo Site'
+
+- entity: media
+  bundle: document
+  uuid: 11dede11-10c0-111e1-1100-000000000100
+  name: Demo Sample PDF
+  uid: 1
+  status: 1
+  field_media_file:
+    - '#process':
+        callback: file
+        args:
+          - file
+          - filename: 'sample.pdf'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+  field_media_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Demo Site'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          -
+            vid: sites
+            name: 'Demo Section 2'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Another Demo Site'
+- entity: media
+  bundle: document
+  uuid: 11dede11-10c0-111e1-1100-000000000101
+  name: Demo Sample RTF
+  uid: 1
+  status: 1
+  field_media_file:
+    - '#process':
+        callback: file
+        args:
+          - file
+          - filename: 'sample.rtf'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+  field_media_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Demo Site'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          -
+            vid: sites
+            name: 'Another Demo Site'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Another Demo Section 1'
