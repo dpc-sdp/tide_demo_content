@@ -42,9 +42,11 @@ function tide_demo_content_tide_demo_content_entity_imported(EntityInterface $en
               }
             }
             $field_primary_site_field_name = TideSiteFields::normaliseFieldName(TideSiteFields::FIELD_PRIMARY_SITE, $entity_type);
+            // Update the Primary Site field if needed.
             if ($entity->hasField($field_primary_site_field_name) && $entity->get($field_primary_site_field_name)->isEmpty()) {
               $entity->$field_primary_site_field_name->target_id = $site_id;
             }
+            // Should not create a new revision.
             if ($entity instanceof RevisionableInterface) {
               $entity->setNewRevision(FALSE);
             }
@@ -59,4 +61,25 @@ function tide_demo_content_tide_demo_content_entity_imported(EntityInterface $en
       }
     }
   }
+}
+
+/**
+ * Implements hook_entity_delete().
+ */
+function tide_demo_content_entity_delete(EntityInterface $entity) {
+  // Removed the deleted entity from tracked demo entities.
+  /** @var \Drupal\tide_demo_content\DemoContentRepository $repository */
+  $repository = \Drupal::service('tide_demo_content.repository');
+  $repository->untrackEntity($entity);
+}
+
+/**
+ * Implements hook_config_ignore_settings_alter().
+ */
+function tide_demo_content_config_ignore_settings_alter(array &$settings) {
+  // Ignore all demo configs.
+  $settings[] = '*tide_demo*';
+  $settings[] = '*tide-demo*';
+  $settings[] = '*tide_demo_content*';
+  $settings[] = '*tide-demo-content*';
 }

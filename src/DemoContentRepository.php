@@ -14,7 +14,17 @@ use Drupal\media\MediaInterface;
  */
 class DemoContentRepository {
 
+  /**
+   * The tracking table.
+   */
   const TABLE_NAME = 'tide_demo_content_tracking';
+
+  /**
+   * Whether the tracking table exists.
+   *
+   * @var bool
+   */
+  protected $trackingTableExists = FALSE;
 
   /**
    * Default Database connection.
@@ -38,6 +48,7 @@ class DemoContentRepository {
    */
   public function __construct(Connection $connection) {
     $this->connection = $connection;
+    $this->trackingTableExists = $this->connection->schema()->tableExists(static::TABLE_NAME);
   }
 
   /**
@@ -130,10 +141,13 @@ class DemoContentRepository {
 
   /**
    * Remove all tracked entities.
+   *
+   * @param bool $untrack
+   *   Whether to remove the reference of the entity from the tracking table.
    */
-  public function removeTrackedEntities() {
+  public function removeTrackedEntities($untrack = FALSE) {
     try {
-      if (!$this->connection->schema()->tableExists(static::TABLE_NAME)) {
+      if (!$this->trackingTableExists) {
         return;
       }
 
@@ -148,16 +162,19 @@ class DemoContentRepository {
           $entity = \Drupal::entityTypeManager()->getStorage($result['entity_type'])
             ->load($result['entity_id']);
           if ($entity) {
-            if ($entity->getEntityTypeId() == 'media') {
-              $field_name = 'field_media_file';
-              if ($entity->bundle() == 'image') {
-                $field_name = 'field_media_image';
-              }
-              if ($entity instanceof MediaInterface && $entity->hasField($field_name)) {
+            if ($untrack) {
+              $this->untrackEntity($entity);
+            }
+
+            // Collect the files from media entities to delete later.
+            if ($entity instanceof MediaInterface) {
+              $field_name = ($entity->bundle() == 'image') ? 'field_media_image' : 'field_media_file';
+              if ($entity->hasField($field_name)) {
                 $fid = $entity->$field_name->target_id;
                 $fids_to_delete[$fid] = $fid;
               }
             }
+
             $entity->delete();
           }
 
@@ -173,6 +190,29 @@ class DemoContentRepository {
           watchdog_exception('tide_demo_content', $exception);
         }
       }
+    }
+    catch (\Exception $exception) {
+      watchdog_exception('tide_demo_content', $exception);
+    }
+  }
+
+  /**
+   * Remove the reference of the entity from the tracking table.
+   *
+   * @param \Drupal\Core\Entity\EntityInterface $entity
+   *   The entity.
+   */
+  public function untrackEntity(EntityInterface $entity) {
+    try {
+      if (!$this->trackingTableExists) {
+        return;
+      }
+
+      $this->connection->delete(static::TABLE_NAME)
+        ->condition('entity_type', $entity->getEntityTypeId())
+        ->condition('bundle', $entity->bundle())
+        ->condition('entity_id', $entity->id())
+        ->execute();
     }
     catch (\Exception $exception) {
       watchdog_exception('tide_demo_content', $exception);

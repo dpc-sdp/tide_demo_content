@@ -1,5 +1,5 @@
 tide_demo_content.import_form:
-  title: 'Import Demo Contemt'
+  title: 'Import Demo Content'
   parent: system.admin_content
   description: 'Manually import demo content YAML.'
   route_name: tide_demo_content.import_form
