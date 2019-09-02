@@ -26,6 +26,7 @@
           - media
           - bundle: image
             name: 'Demo: Melbourne skyline at dusk'
+  field_show_hero_image_caption: 1
   field_graphical_image:
     - '#process':
         callback: reference
