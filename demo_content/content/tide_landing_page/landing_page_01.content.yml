@@ -89,6 +89,7 @@
           - block_content
           - type: campaign
             field_block_title: 'Demo Campaign'
+  field_show_c_primary_caption: 1
   field_landing_page_c_secondary:
     - '#process':
         callback: reference
