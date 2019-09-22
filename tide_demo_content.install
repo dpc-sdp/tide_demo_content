@@ -45,9 +45,23 @@ function tide_demo_content_schema() {
  * Implements hook_install().
  */
 function tide_demo_content_install() {
+  // We don't want Pbt to interfere as it has memory limit issue.
+  $pbt_enabled = \Drupal::moduleHandler()->moduleExists('permissions_by_term');
+  if ($pbt_enabled) {
+    $pbt_settings = \Drupal::configFactory()
+      ->getEditable('permissions_by_term.settings');
+    $node_access = $pbt_settings->get('disable_node_access_records');
+    $pbt_settings->set('disable_node_access_records', TRUE)->save();
+  }
+
   /** @var \Drupal\tide_demo_content\DemoContentLoader $loader */
   $loader = \Drupal::service('tide_demo_content.loader');
   $loader->loadAllDemoContent();
+
+  // Restore Pbt settings.
+  if ($pbt_enabled) {
+    $pbt_settings->set('disable_node_access_records', $node_access)->save();
+  }
 }
 
 /**
