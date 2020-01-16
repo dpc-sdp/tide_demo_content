@@ -6,7 +6,7 @@
   status: 1
   field_media_file:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - file
           - filename: 'sample.docx'
@@ -46,7 +46,7 @@
   status: 1
   field_media_file:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - file
           - filename: 'sample.pdf'
@@ -85,7 +85,7 @@
   status: 1
   field_media_file:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - file
           - filename: 'sample.rtf'
