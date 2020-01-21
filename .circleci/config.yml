@@ -1,0 +1,47 @@
+version: 2
+aliases:
+  # Re-usable job to run different types of builds.
+  - &job-build
+    working_directory: /app
+    docker:
+      - image: &builder-image integratedexperts/ci-builder
+        environment:
+          INSTALL_NEW_SITE: 1
+          LAGOON_ENVIRONMENT_TYPE: ci
+    steps:
+      - attach_workspace:
+          at: /workspace
+      - checkout
+      # Init environment for development.
+      - run: if [ -f "./dev-tools.sh" ] && [ ! "$DEV_TOOLS" ]; then ./dev-tools.sh; fi
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run: .circleci/build.sh
+      - run: .circleci/test.sh
+      - run:
+          name: Copy artifacts
+          command: .circleci/test-artifacts.sh
+          when: always
+      - store_artifacts:
+          path: /tmp/artifacts
+
+jobs:
+  build:
+    <<: *job-build
+
+  build_suggest:
+    <<: *job-build
+    docker:
+      - image: *builder-image
+        environment:
+          INSTALL_NEW_SITE: 1
+          LAGOON_ENVIRONMENT_TYPE: ci
+          INSTALL_SUGGEST: 1
+          BEHAT_PROFILE: "--profile=suggest"
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build
+      - build_suggest

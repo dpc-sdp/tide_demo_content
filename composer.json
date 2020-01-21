@@ -2,9 +2,9 @@
   "name": "dpc-sdp/tide_demo_content",
   "description": "Create demo content for Tide modules.",
   "type": "drupal-module",
-  "license": "GPL-2.0+",
-  "version": "0.0.1",
+  "license": "GPL-2.0-or-later",
   "require": {
+    "dpc-sdp/tide_core": "^1.5.4",
     "drupal/yaml_content": "^1.0"
   },
   "repositories": {
