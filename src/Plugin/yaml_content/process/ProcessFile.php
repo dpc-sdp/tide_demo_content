@@ -30,7 +30,7 @@ class ProcessFile extends File {
     if ($entity_type == 'image') {
       $directory = '/images/';
     }
-    // TODO path not set.
+    // Path set tide_demo_content directory.
     $output = file_get_contents($context->getContentLoader()->getContentPath() . $directory . $filename);
     if ($output !== FALSE) {
       $destination = 'public://';
