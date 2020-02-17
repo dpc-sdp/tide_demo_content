@@ -6,10 +6,10 @@
   status: 1
   field_media_image:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - image
-          - filename: '2018-19 State Budget.jpg'
+          - filename: '2018-19-State-Budget.jpg'
       alt: 'Demo: 2018-19 State Budget'
       title: 'Demo: 2018-19 State Budget'
   field_license_type:
@@ -27,10 +27,10 @@
   status: 1
   field_media_image:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - image
-          - filename: 'Aerial shot of new housing development.jpg'
+          - filename: 'Aerial-shot-of-new-housing-development.jpg'
       alt: 'Demo: Aerial shot of new housing development'
       title: 'Demo: Aerial shot of new housing development'
   field_license_type:
@@ -48,10 +48,10 @@
   status: 1
   field_media_image:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - image
-          - filename: 'Bendigo Hospital.jpg'
+          - filename: 'Bendigo-Hospital.jpg'
       alt: 'Demo: Bendigo Hospital'
       title: 'Demo: Bendigo Hospital.jpg'
   field_license_type:
@@ -69,10 +69,10 @@
   status: 1
   field_media_image:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - image
-          - filename: 'Melbourne skyline at dusk.jpg'
+          - filename: 'Melbourne-skyline-at-dusk.jpg'
       alt: 'Demo: Melbourne skyline at dusk'
       title: 'Demo: Melbourne skyline at dusk'
   field_license_type:
@@ -90,10 +90,10 @@
   status: 1
   field_media_image:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - image
-          - filename: 'Melbourne tram.jpg'
+          - filename: 'Melbourne-tram.jpg'
       alt: 'Demo: Melbourne tram'
       title: 'Demo: Melbourne tram'
   field_license_type:
@@ -111,10 +111,10 @@
   status: 1
   field_media_image:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - image
-          - filename: 'Parliament of Victoria.jpg'
+          - filename: 'Parliament-of-Victoria.jpg'
       alt: 'Demo: Parliament of Victoria'
       title: 'Demo: Parliament of Victoria'
   field_license_type:
@@ -132,10 +132,10 @@
   status: 1
   field_media_image:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - image
-          - filename: 'Staff at Treasury.jpg'
+          - filename: 'Staff-at-Treasury.jpg'
       alt: 'Demo: Staff at Treasury'
       title: 'Demo: Staff at Treasury'
   field_license_type:
@@ -153,10 +153,10 @@
   status: 1
   field_media_image:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - image
-          - filename: 'Two men working in hi-vis clothing.jpg'
+          - filename: 'Two-men-working-in-hi-vis-clothing.jpg'
       alt: 'Demo: Two men working in hi-vis clothing'
       title: 'Demo: Two men working in hi-vis clothing'
   field_license_type:
@@ -174,10 +174,10 @@
   status: 1
   field_media_image:
     - '#process':
-        callback: file
+        callback: file_path_rename
         args:
           - image
-          - filename: 'VicFleet - Police car on road.jpg'
+          - filename: 'VicFleet-Police-car-on-road.jpg'
       alt: 'Demo: VicFleet - Police car on road'
       title: 'Demo: VicFleet - Police car on road'
   field_license_type:
