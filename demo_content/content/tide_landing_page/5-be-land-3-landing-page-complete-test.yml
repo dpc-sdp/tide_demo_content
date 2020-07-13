@@ -1,6 +1,9 @@
 - entity: node
   type: landing_page
   title: 5-BE-land-3  Landing Page - Complete Test
+  path:
+    - pathauto: 0
+      alias: '/5-be-land-3-landing-page-complete-test'
   uid: 1
   status: 1
   moderation_state:
@@ -111,7 +114,7 @@
           <p>&nbsp;When I have seen by Time's fell hand defac'd The rich proud cost of outworn buried age; When sometime lofty towers I see down-ras'd And brass eternal slave to mortal rage;</p>
           </blockquote>
           <p>When I have seen the hungry ocean gain Advantage on the kingdom of the shore, And the firm soil win of the wat'ry main, Increasing store with loss and loss with store; When I have seen such interchange of state, Or state itself confounded to decay; Ruin hath taught me thus to ruminate, That Time will come and take my love away. This thought is as a death, which cannot choose But weep to have that which it fears to lose.</p>
-          <p><iframe frameborder="0" height="600" scrolling="no" src="https://mazzanet.net.au/cfa/?magickey=cfamonitor&amp;reg=13" width="600"></iframe></p>
+          <p><iframe frameborder="0" height="600" scrolling="no" src="https://batchgeo.com/map/b1a587975184f3609b4e33d5379e067a" width="600"></iframe></p>
     # Accordion - basic.
     - entity: paragraph
       type: accordion
@@ -275,7 +278,7 @@
     # Card navigation.
     - entity: paragraph
       type: card_navigation
-      field_paragraph_title: 'Card Promotion'
+      field_paragraph_title: 'Card Navigation'
       field_paragraph_summary: Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus.
       field_paragraph_link:
         - uri: https://www.google.com
@@ -283,7 +286,7 @@
     # Card navigation featured.
     - entity: paragraph
       type: card_navigation_featured
-      field_paragraph_title: 'Card Promotion'
+      field_paragraph_title: 'Card Navigation Featured'
       field_paragraph_summary: Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus.
       field_paragraph_link:
         - uri: https://www.google.com

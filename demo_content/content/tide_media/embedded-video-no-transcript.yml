@@ -3,7 +3,6 @@
   name: 'Embedded video test - no transcript'
   uid: 1
   uuid: 90db91cb-eb81-41ee-b87f-6cee6ef67b86
-  mid: 17009
   path:
     - pathauto: 0
       alias: '/test-embedded-video-no-transcript'

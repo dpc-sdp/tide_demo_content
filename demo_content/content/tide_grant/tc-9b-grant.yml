@@ -5,7 +5,6 @@
     - pathauto: 0
       alias: '/tc-9b-grant'
   uid: 1
-  nid: 708224
   status: 1
   moderation_state:
     - '#process':
@@ -23,6 +22,7 @@
           - bundle: image
             name: 'Demo: Melbourne tram'
   field_landing_page_intro_text: 'Blah blah'
+  field_landing_page_summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus.
   field_overview_title: 'Overview title'
   field_audience: 
     - '#process':
@@ -37,11 +37,11 @@
   field_node_phone: '12345678'
   field_node_department: 
     - '#process':
-      callback: reference
-      args:
-        - taxonomy_term
-        - vid: department
-          name: 'Demo Department'
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: department
+            name: 'Demo Department'
   field_news_intro_text: 'news intro test'
   field_description: 'Description'
   field_node_author: 'bob'
@@ -118,7 +118,6 @@
   # Other.
   field_show_social_sharing: 1
   field_show_content_rating: 1
-  field_show_table_of_content: 1
   field_topic:
     - '#process':
         callback: reference

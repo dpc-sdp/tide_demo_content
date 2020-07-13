@@ -75,7 +75,6 @@
   # Other.
   field_show_social_sharing: 1
   field_show_content_rating: 1
-  field_show_table_of_content: 1
   # Topic and Tags.
   field_topic:
     - '#process':

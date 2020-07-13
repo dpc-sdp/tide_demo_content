@@ -6,7 +6,6 @@
   path:
     - pathauto: 0
       alias: '/2-BE-event-1'
-  nid: 810225
   moderation_state:
     - '#process':
         callback: reference
@@ -39,7 +38,7 @@
       type: event_details
       field_paragraph_date_range:
         - value: '2019-05-20T11:02:20'
-          end_value: '2019-05-20T11:11:1'
+          end_value: '2019-05-20T11:11:01'
       field_paragraph_location:
         - country_code: AU
           administrative_area: VIC
@@ -49,7 +48,13 @@
           address_line2: 
       field_paragraph_event_price_from: 34.33
       field_paragraph_event_price_to: 89.95
-      field-event-requirements: Accessible venue (84)
+      field_event_requirements:
+        - '#process':
+            callback: reference
+            args:
+              - taxonomy_term
+              - vid: event_requirements
+                name: 'Accessible venue'
       field_paragraph_link:
         - uri: http://examplebook.com
           title: Booking URL
@@ -60,7 +65,7 @@
         args:
           - taxonomy_term
           - vid: event
-            name: 'Film and cinema (78)'
+            name: 'Film and cinema'
   field_node_link:
     - uri: http://www.weatherzone.com.au/vic/central/healesville
   # Event author.

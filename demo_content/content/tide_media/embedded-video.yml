@@ -4,7 +4,6 @@
   uid: 1
   status: 1
   uuid: fa4aba0b-a58a-40c2-9a8d-2234ed555577
-  mid: 17008
   path:
     - pathauto: 0
       alias: '/test-embedded-video'
