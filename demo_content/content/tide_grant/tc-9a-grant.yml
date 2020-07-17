@@ -1,9 +1,6 @@
 - entity: node
   type: grant
   title: TC-9a Grant Simple Test - Date Range
-  path:
-    - pathauto: 0
-      alias: '/tc-9a-grant'
   uid: 1
   status: 1
   moderation_state:

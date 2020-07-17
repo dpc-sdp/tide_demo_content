@@ -1,9 +1,6 @@
 - entity: node
   type: grant
   title: TC-9b Grant page - Closed
-  path:
-    - pathauto: 0
-      alias: '/tc-9b-grant'
   uid: 1
   status: 1
   moderation_state:

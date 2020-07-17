@@ -1,9 +1,6 @@
 - entity: node
   type: landing_page
   title: 5-BE-land-3  Landing Page - Complete Test
-  path:
-    - pathauto: 0
-      alias: '/5-be-land-3-landing-page-complete-test'
   uid: 1
   status: 1
   moderation_state:

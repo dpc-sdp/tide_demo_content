@@ -3,9 +3,6 @@
   title: 2-BE-event-1
   uid: 1
   status: 1
-  path:
-    - pathauto: 0
-      alias: '/2-BE-event-1'
   moderation_state:
     - '#process':
         callback: reference
