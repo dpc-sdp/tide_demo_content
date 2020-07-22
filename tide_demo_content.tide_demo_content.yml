@@ -113,6 +113,8 @@ tide_publication.demo:
       - tide_demo_content:tide_media.demo
   content:
     - 'tide_publication/17-BE-pub-1-Create-Parent-Page.yml'
+    - 'tide_publication/17-BE-pub-page-1-Child-Page.yml'
+    - 'tide_publication/17-BE-pub-page-1-Child-Page-01.yml'
 tide_site.demo:
   dependencies:
     modules:
