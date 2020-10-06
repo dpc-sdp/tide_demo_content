@@ -75,7 +75,7 @@
     - entity: paragraph
       type: introduction_banner
       field_paragraph_title: Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae
-      field_paragraph_summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus.
+      field_paragraph_body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus.
       field_paragraph_links:
         - uri: 'https://vic.gov.au'
           title: Nullam laoreet
