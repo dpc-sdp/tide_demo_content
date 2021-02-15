@@ -162,22 +162,6 @@
           type: accordion_content
           field_paragraph_accordion_name: 'Accordion #3'
           field_paragraph_accordion_body: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus. Quisque nec congue ligula, vitae condimentum tellus.</p>'
-    # Call to action.
-    - entity: paragraph
-      type: call_to_action
-      field_paragraph_title: 'Phasellus in varius leo'
-      field_paragraph_media:
-        - '#process':
-            callback: reference
-            args:
-              - media
-              - bundle: image
-                name: 'Demo: Melbourne tram'
-      field_paragraph_body: 'Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus. Phasellus lacus lectus, sollicitudin sed posuere non, ultricies ut quam.'
-      field_paragraph_cta:
-        - uri: https://vic.gov.au
-          title: Victorian Government
-      field_paragraph_cta_style: banner
     # Card carousel.
     - entity: paragraph
       type: card_carousel
@@ -187,38 +171,6 @@
       type: card_carousel
       field_paragraph_title: 'Latest items (News)'
       field_paragraph_latest_items: news
-    # Card Event.
-    - entity: paragraph
-      type: card_event
-      field_paragraph_title: 'Card event'
-      field_paragraph_date_range:
-        - value: '2019-07-01T23:00:00'
-          end_value: '2019-07-07T23:00:00'
-      field_paragraph_media:
-        - '#process':
-            callback: reference
-            args:
-              - media
-              - bundle: image
-                name: 'Demo: Melbourne tram'
-      field_paragraph_summary: Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus.
-      field_paragraph_cta:
-        - uri: https://www.vic.gov.au
-          title: Vestibulum rhoncus
-      field_paragraph_topic:
-        - '#process':
-            callback: reference
-            args:
-              - taxonomy_term
-              - vid: topic
-                name: 'Demo Topic'
-      field_paragraph_location:
-        - country_code: AU
-          administrative_area: VIC
-          locality: Melbourne
-          postal_code: 3001
-          address_line1: Department of Premier and Cabinet
-          address_line2: GPO Box 4509
     # Card promotion.
     - entity: paragraph
       type: promotion_card
@@ -249,17 +201,6 @@
               - media
               - bundle: image
                 name: 'Demo: Melbourne tram'
-    # Card promotion auto.
-    - entity: paragraph
-      type: card_promotion_auto
-      field_paragraph_cta_text: Read more
-      field_paragraph_reference:
-        - '#process':
-            callback: reference
-            args:
-              - node
-              - type: page
-                title: 'Demo Page'
     # Featured news.
     - entity: paragraph
       type: featured_news
@@ -291,17 +232,6 @@
               - taxonomy_term
               - vid: topic
                 name: 'Demo Topic'
-    # Card event.
-    - entity: paragraph
-      type: card_event_auto
-      field_paragraph_cta_text: View more
-      field_paragraph_reference:
-        - '#process':
-            callback: reference
-            args:
-              - node
-              - type: event
-                title: 'Demo Event'
   # What's Next.
   field_show_whats_next: 1
   field_whats_next:
