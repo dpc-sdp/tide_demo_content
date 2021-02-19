@@ -132,22 +132,6 @@
           type: accordion_content
           field_paragraph_accordion_name: 'Accordion Content 1'
           field_paragraph_accordion_body: 'Lorem ipsum'
-    # Call to action.
-    - entity: paragraph
-      type: call_to_action
-      field_paragraph_title: 'Phasellus in varius leo'
-      field_paragraph_media:
-        - '#process':
-            callback: reference
-            args:
-              - media
-              - bundle: image
-                name: 'Demo: Melbourne tram'
-      field_paragraph_body: 'Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus. Phasellus lacus lectus, sollicitudin sed posuere non, ultricies ut quam.'
-      field_paragraph_cta:
-        - uri: https://www.google.com
-          title: Victorian Government
-      field_paragraph_cta_style: banner
     # Card carousel.
     - entity: paragraph
       type: card_carousel
@@ -222,38 +206,10 @@
           field_paragraph_cta:
             - uri: https://www.google.com
               title: Read more
-    # Card Event.
-    - entity: paragraph
-      type: card_event
-      field_paragraph_title: 'Card Event 1'
-      field_paragraph_date_range:
-        - value: '2018-03-12T14:22:00'
-          end_value: '2020-12-12T11:11:00'
-      field_paragraph_media:
-        - '#process':
-            callback: reference
-            args:
-              - media
-              - bundle: image
-                name: 'Demo: Melbourne tram'
-      field_paragraph_topic:
-        - '#process':
-            callback: reference
-            args:
-              - taxonomy_term
-              - vid: topic
-                name: 'Education'
-      field_paragraph_location:
-        - country_code: AU
-          administrative_area: VIC
-          locality: Melbourne
-          postal_code: 3000
-          address_line1: 35 Collins St
     # Card promotion.
     - entity: paragraph
-      type: card_promotion
+      type: promotion_card
       field_paragraph_title: 'Card Promotion'
-      field_paragraph_date: '2019-07-01T23:00:00'
       field_paragraph_media:
         - '#process':
             callback: reference
@@ -265,25 +221,10 @@
       field_paragraph_link:
         - uri: https://www.google.com
           title: Vestibulum rhoncus
-      field_paragraph_topic:
-        - '#process':
-            callback: reference
-            args:
-              - taxonomy_term
-              - vid: topic
-                name: 'Demo Topic'
     # Card navigation.
     - entity: paragraph
-      type: card_navigation
-      field_paragraph_title: 'Card Navigation'
-      field_paragraph_summary: Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus.
-      field_paragraph_link:
-        - uri: https://www.google.com
-          title: Vestibulum rhoncus
-    # Card navigation featured.
-    - entity: paragraph
-      type: card_navigation_featured
-      field_paragraph_title: 'Card Navigation Featured'
+      type: navigation_card
+      field_paragraph_title: 'Navigation card'
       field_paragraph_summary: Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus.
       field_paragraph_link:
         - uri: https://www.google.com
@@ -318,37 +259,6 @@
       field_paragraph_cta:
         - uri: https://www.google.com
           title: Read more
-    # Card promotion auto.
-    - entity: paragraph
-      type: card_promotion_auto
-      field_paragraph_cta_text: Read more
-      field_paragraph_reference:
-        - '#process':
-            callback: reference
-            args:
-              - node
-              - type: page
-                title: 'Demo Page'
-    # Card navigation auto.
-    - entity: paragraph
-      type: card_navigation_auto
-      field_paragraph_reference:
-        - '#process':
-            callback: reference
-            args:
-              - node
-              - type: page
-                title: 'Demo Page'
-    # Card navigation featured auto.
-    - entity: paragraph
-      type: card_navigation_featured_auto
-      field_paragraph_reference:
-        - '#process':
-            callback: reference
-            args:
-              - node
-              - type: news
-                title: 'Demo News'
     # Featured news.
     - entity: paragraph
       type: featured_news
@@ -380,17 +290,6 @@
               - taxonomy_term
               - vid: topic
                 name: 'Demo Topic'
-    # Card event.
-    - entity: paragraph
-      type: card_event_auto
-      field_paragraph_cta_text: View more
-      field_paragraph_reference:
-        - '#process':
-            callback: reference
-            args:
-              - node
-              - type: event
-                title: 'Demo Event'
     # latest events
     - entity: paragraph
       type: latest_events
