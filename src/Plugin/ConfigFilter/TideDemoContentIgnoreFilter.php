@@ -33,7 +33,7 @@ class TideDemoContentIgnoreFilter extends IgnoreFilter implements ContainerFacto
   /**
    * {@inheritdoc}
    */
-  public function filterWrite($name, array $data) {
+  public function filterWrite($name, array $data) : ?array {
     if ($name === 'core.extension') {
       $excluded_modules = ['tide_demo_content' => 'tide_demo_content'];
       $data['module'] = array_diff_key($data['module'], $excluded_modules);

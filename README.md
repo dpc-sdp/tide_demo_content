@@ -125,12 +125,18 @@ entity instead of the ID. This plugin can be used for Link fields or Menu items.
 ````
 
 ## Hooks
+* `hook_tide_demo_content_collection_ignore` is invoked before Tide Demo Content
+  imports demo content collections. It allows other modules to exclude unwanted
+  demo content collections. When a collection is ignored, all its dependants 
+  are also automatically ignored due to missing dependencies. Ignoring the
+  `tide_demo_content:tide_media.demo` and `tide_demo_content:tide_site.demo` 
+  will exclude *all* default demo content from Tide modules except demo users.
 * `hook_tide_demo_content_entity_imported` is invoked after Tide Demo Content
-imports a demo entity.
+  imports a demo entity.
 
 ## Known issues
 * Yaml Content: [Nodes Cannot Create Menu Links Automatically](https://www.drupal.org/node/2879468)
 * Yaml Content: [Nodes Cannot Create Path Aliases](https://www.drupal.org/project/yaml_content/issues/2883434)
-* Tide Demo Content: the Import Demo Content UI only allows to import YAML
-content, it does not allow to upload files/images. Hence, entities in the
-uploaded YAML can only reference existing files/images.
+* Tide Demo Content: the Import Demo Content UI only allows to import YAML 
+  content, it does not allow to upload files/images. Hence, entities in the 
+  uploaded YAML can only reference existing files/images.

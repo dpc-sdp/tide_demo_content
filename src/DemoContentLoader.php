@@ -5,6 +5,7 @@ namespace Drupal\tide_demo_content;
 use Drupal\Component\Graph\Graph;
 use Drupal\Core\Discovery\YamlDiscovery;
 use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\StringTranslation\TranslationInterface;
@@ -49,6 +50,13 @@ class DemoContentLoader {
   protected $messenger;
 
   /**
+   * The file system service.
+   *
+   * @var \Drupal\Core\File\FileSystemInterface
+   */
+  protected $fileSystem;
+
+  /**
    * The demo content collections.
    *
    * @var array
@@ -75,19 +83,22 @@ class DemoContentLoader {
    *   The messenger service.
    * @param \Drupal\Core\StringTranslation\TranslationInterface $translation
    *   The string translation service.
+   * @param \Drupal\Core\File\FileSystemInterface $file_system
+   *   The file system interface.
    */
-  public function __construct(DemoContentRepository $repository, ModuleHandlerInterface $module_handler, ContentLoaderInterface $content_loader, MessengerInterface $messenger, TranslationInterface $translation) {
+  public function __construct(DemoContentRepository $repository, ModuleHandlerInterface $module_handler, ContentLoaderInterface $content_loader, MessengerInterface $messenger, TranslationInterface $translation, FileSystemInterface $file_system) {
     $this->repository = $repository;
     $this->moduleHandler = $module_handler;
     $this->contentLoader = $content_loader;
     $this->messenger = $messenger;
     $this->stringTranslation = $translation;
+    $this->fileSystem = $file_system;
   }
 
   /**
    * Find all demo content collections defined in .tide_demo_content.yml files.
    */
-  protected function findAllDemoContentCollection() {
+  protected function findAllDemoContentCollection() : void {
     if (isset($this->collections)) {
       return;
     }
@@ -120,6 +131,14 @@ class DemoContentLoader {
       }
     }
 
+    // Allows other modules to exclude unwanted collections.
+    $ignored_collections = $this->moduleHandler->invokeAll('tide_demo_content_collection_ignore', [$this->collections]);
+    if (!empty($ignored_collections)) {
+      foreach ($ignored_collections as $ignored_collection) {
+        unset($this->collections[$ignored_collection]);
+      }
+    }
+
     // Filter out all items not meeting theirs collection dependencies.
     foreach ($this->collections as $collection_name => &$collection) {
       $missing_dependencies = $this->checkMissingCollections($collection['dependencies']['collections']);
@@ -139,7 +158,7 @@ class DemoContentLoader {
    * @return array
    *   The dependency graph of all collections.
    */
-  public function getCollectionGraph() {
+  public function getCollectionGraph() : array {
     if (!isset($this->collectionGraph)) {
       $graph = [];
       $this->findAllDemoContentCollection();
@@ -199,7 +218,7 @@ class DemoContentLoader {
    *   row from the graph and the value is the corresponding value for the key
    *   from the graph.
    */
-  protected function prepareMultisort(array $graph, array $keys) {
+  protected function prepareMultisort(array $graph, array $keys) : array {
     $return = array_fill_keys($keys, []);
     foreach ($graph as $graph_key => $graph_row) {
       foreach ($keys as $key) {
@@ -212,7 +231,7 @@ class DemoContentLoader {
   /**
    * Load all demo content.
    */
-  public function loadAllDemoContent() {
+  public function loadAllDemoContent() : void {
     foreach ($this->getCollectionGraph() as $collection_name => $graph_item) {
       $collection = $this->collections[$collection_name];
       foreach ($collection['content'] as $content_item) {
@@ -263,12 +282,12 @@ class DemoContentLoader {
    *   - 'filename'
    *   - 'name'
    *
-   * @see file_scan_directory()
+   * @see \Drupal\Core\File\FileSystemInterface::scanDirectory()
    * @see \Drupal\yaml_content\Service\LoadHelper::discoverFiles()
    */
-  protected function discoverFiles($path, $mask = '/.*\.content\.yml/') {
+  protected function discoverFiles(string $path, string $mask = '/.*\.content\.yml/') : array {
     // Identify files for import.
-    $files = file_scan_directory($path, $mask, [
+    $files = $this->fileSystem->scanDirectory($path, $mask, [
       'key' => 'filename',
       'recurse' => TRUE,
     ]);
@@ -288,7 +307,7 @@ class DemoContentLoader {
    * @return bool
    *   FALSE if at least one module is not enabled.
    */
-  protected function checkModulesEnabled(array $required_modules) {
+  protected function checkModulesEnabled(array $required_modules) : bool {
     foreach ($required_modules as $module_name) {
       if (!$this->moduleHandler->moduleExists($module_name)) {
         return FALSE;
@@ -307,7 +326,7 @@ class DemoContentLoader {
    * @return array
    *   List of missing collection name.
    */
-  protected function checkMissingCollections(array $required_collections) {
+  protected function checkMissingCollections(array $required_collections) : array {
     return array_diff($required_collections, array_keys($this->collections));
   }
 

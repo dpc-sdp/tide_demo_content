@@ -10,7 +10,7 @@ use Drupal\yaml_content\Event\YamlContentEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * Class YamlContent.
+ * Event subscriber to track entities imported by tide_demo_content.
  *
  * @package Drupal\tide_demo_content\EventSubscriber
  */
@@ -63,7 +63,7 @@ class YamlContent implements EventSubscriberInterface {
     $path = trim($loader->getContentPath(), '/');
 
     // Only track entities imported from tide_demo_content.
-    if (substr($path, -strlen(DemoContentLoader::DIRECTORY)) == DemoContentLoader::DIRECTORY) {
+    if (substr($path, -strlen(DemoContentLoader::DIRECTORY)) === DemoContentLoader::DIRECTORY) {
       $this->repository->trackEntity($event->getEntity());
       $this->moduleHandler->invokeAll('tide_demo_content_entity_imported', [
         $event->getEntity(),

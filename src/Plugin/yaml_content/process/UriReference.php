@@ -20,8 +20,7 @@ class UriReference extends Reference {
    * {@inheritdoc}
    */
   public function process(ProcessingContext $context, array &$field_data) {
-    $entity_type = $this->configuration[0];
-    $filter_params = $this->configuration[1];
+    [$entity_type, $filter_params] = $this->configuration;
 
     $entity_storage = $this->entityTypeManager->getStorage($entity_type);
 
@@ -57,6 +56,7 @@ class UriReference extends Reference {
       return $field_data['uri'];
     }
     $this->throwParamError('Unable to find referenced content', $entity_type, $filter_params);
+    return NULL;
   }
 
 }

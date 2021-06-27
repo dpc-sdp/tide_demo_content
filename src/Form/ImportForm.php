@@ -110,7 +110,7 @@ class ImportForm extends FormBase {
 
     $temp_dir = 'temporary://tide_demo_content';
     $demo_temp_dir = $temp_dir . '/content';
-    if (file_prepare_directory($demo_temp_dir, FILE_CREATE_DIRECTORY + FILE_MODIFY_PERMISSIONS)) {
+    if ($this->fs->prepareDirectory($demo_temp_dir, $this->fs::CREATE_DIRECTORY + $this->fs::MODIFY_PERMISSIONS)) {
       $randomiser = new Random();
       $temp_name = 'demo_content_' . $randomiser->name(16) . '.content.yml';
       $temp_file = $demo_temp_dir . DIRECTORY_SEPARATOR . $temp_name;
@@ -122,7 +122,7 @@ class ImportForm extends FormBase {
           $this->messenger()->addMessage($this->formatPlural(count($entities), '1 demo entity has been imported.', '@count demo entities have been imported.') . ' Only node and media type entities are listed below - ');
           if (!empty($entities)) {
             foreach ($entities as $entity) {
-              if ($entity->getEntityTypeId() == 'node' || $entity->getEntityTypeId() == 'media') {
+              if ($entity->getEntityTypeId() === 'node' || $entity->getEntityTypeId() === 'media') {
                 $this->messenger()->addMessage(t('@entity_type/@entity_id', [
                   '@entity_type' => $entity->getEntityTypeId(),
                   '@entity_id' => $entity->id(),
