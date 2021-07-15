@@ -259,16 +259,6 @@
       field_paragraph_cta:
         - uri: https://www.google.com
           title: Read more
-    # Featured news.
-    - entity: paragraph
-      type: featured_news
-      field_paragraph_news_reference:
-        - '#process':
-            callback: reference
-            args:
-              - node
-              - type: news
-                title: 'Demo News'
     # Media gallery.
     - entity: paragraph
       type: media_gallery
