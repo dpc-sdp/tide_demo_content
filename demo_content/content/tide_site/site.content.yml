@@ -22,6 +22,12 @@
   name: 'Demo Section 1'
   status: 1
   uuid: 11dede11-10c0-111e1-1100-000000000041
+  field_site_main_menu:
+    - '#process':
+        callback: reference
+        args:
+          - menu
+          - id: 'main-tide-demo'
   parent:
     - '#process':
         callback: reference
@@ -34,6 +40,12 @@
   name: 'Demo Section 2'
   status: 1
   uuid: 11dede11-10c0-111e1-1100-000000000042
+  field_site_main_menu:
+    - '#process':
+        callback: reference
+        args:
+          - menu
+          - id: 'main-tide-demo'
   parent:
     - '#process':
         callback: reference
