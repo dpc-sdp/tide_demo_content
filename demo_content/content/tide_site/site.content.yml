@@ -28,6 +28,12 @@
         args:
           - menu
           - id: 'main-tide-demo'
+  field_site_footer_menu:
+    - '#process':
+        callback: reference
+        args:
+          - menu
+          - id: 'footer-tide-demo'
   parent:
     - '#process':
         callback: reference
@@ -46,6 +52,12 @@
         args:
           - menu
           - id: 'main-tide-demo'
+  field_site_footer_menu:
+    - '#process':
+        callback: reference
+        args:
+          - menu
+          - id: 'footer-tide-demo'
   parent:
     - '#process':
         callback: reference
