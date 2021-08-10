@@ -332,6 +332,12 @@
         args:
           - taxonomy_term
           - vid: sites
+            name: 'Demo Section 2'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
             name: 'Another Demo Site'
   field_node_primary_site:
     - '#process':
