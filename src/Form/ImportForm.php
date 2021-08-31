@@ -10,6 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Serialization\Yaml;
 use Drupal\Core\Url;
+use Drupal\Core\File\FileSystemInterface;
 use Drupal\yaml_content\ContentLoader\ContentLoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -110,7 +111,7 @@ class ImportForm extends FormBase {
 
     $temp_dir = 'temporary://tide_demo_content';
     $demo_temp_dir = $temp_dir . '/content';
-    if (file_prepare_directory($demo_temp_dir, FILE_CREATE_DIRECTORY + FILE_MODIFY_PERMISSIONS)) {
+    if (\Drupal::service('file_system')->prepareDirectory($demo_temp_dir, FileSystemInterface::CREATE_DIRECTORY + FileSystemInterface::MODIFY_PERMISSIONS)) {
       $randomiser = new Random();
       $temp_name = 'demo_content_' . $randomiser->name(16) . '.content.yml';
       $temp_file = $demo_temp_dir . DIRECTORY_SEPARATOR . $temp_name;
