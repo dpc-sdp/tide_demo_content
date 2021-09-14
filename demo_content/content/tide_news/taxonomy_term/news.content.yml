@@ -1,0 +1,80 @@
+- entity: taxonomy_term
+  vid: location
+  name: 'Eastern Metropolitan Region'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000080
+- entity: taxonomy_term
+  vid: location
+  name: 'Eastern Victoria Region'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000081
+- entity: taxonomy_term
+  vid: location
+  name: 'Melbourne metropolitan'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000082
+- entity: taxonomy_term
+  vid: location
+  name: 'Northern Victorian Region'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000083
+- entity: taxonomy_term
+  vid: location
+  name: 'South Eastern Metropolitan Region'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000084
+- entity: taxonomy_term
+  vid: location
+  name: 'Southern Metropolitan Region'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000085
+- entity: taxonomy_term
+  vid: location
+  name: 'Western Metropolitan Region'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000086
+- entity: taxonomy_term
+  vid: location
+  name: 'Western Victoria Region'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000087
+- entity: taxonomy_term
+  vid: location
+  name: 'Eastern metropolitan Melbourne'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000088
+- entity: taxonomy_term
+  vid: location
+  name: 'Northern metropolitan Melbourne'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000089
+- entity: taxonomy_term
+  vid: location
+  name: 'Southern metropolitan Melbourne'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000090
+- entity: taxonomy_term
+  vid: location
+  name: 'Southeastern metropolitan Melbourne'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000091
+- entity: taxonomy_term
+  vid: location
+  name: 'Western metropolitan Melbourne'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000092
+- entity: taxonomy_term
+  vid: location
+  name: 'Eastern Victoria'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000093
+- entity: taxonomy_term
+  vid: location
+  name: 'Northern Victoria'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000094
+- entity: taxonomy_term
+  vid: location
+  name: 'Western Victoria'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000095
