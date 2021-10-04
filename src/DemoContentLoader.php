@@ -11,7 +11,7 @@ use Drupal\Core\StringTranslation\TranslationInterface;
 use Drupal\yaml_content\ContentLoader\ContentLoaderInterface;
 
 /**
- * Class DemoContentLoader.
+ * Class DemoContentLoader for tide_demo_content.
  *
  * @package Drupal\tide_demo_content
  */
