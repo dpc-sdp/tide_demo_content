@@ -11,7 +11,7 @@ use Drupal\Core\StringTranslation\TranslationInterface;
 use Drupal\yaml_content\ContentLoader\ContentLoaderInterface;
 
 /**
- * Class DemoContentLoader.
+ * Class DemoContentLoader for tide_demo_content.
  *
  * @package Drupal\tide_demo_content
  */
@@ -257,18 +257,18 @@ class DemoContentLoader {
    *
    * @return array
    *   An associative array of objects keyed by filename with the following
-   *   properties as returned by file_scan_directory():
+   *   properties as returned by FileSystemInterface::scanDirectory():
    *
    *   - 'uri'
    *   - 'filename'
    *   - 'name'
    *
-   * @see file_scan_directory()
+   * @see \Drupal\Core\File\FileSystemInterface::scanDirectory()
    * @see \Drupal\yaml_content\Service\LoadHelper::discoverFiles()
    */
   protected function discoverFiles($path, $mask = '/.*\.content\.yml/') {
     // Identify files for import.
-    $files = file_scan_directory($path, $mask, [
+    $files = \Drupal::service('file_system')->scanDirectory($path, $mask, [
       'key' => 'filename',
       'recurse' => TRUE,
     ]);

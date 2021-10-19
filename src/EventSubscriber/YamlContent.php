@@ -10,7 +10,7 @@ use Drupal\yaml_content\Event\YamlContentEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * Class YamlContent.
+ * Class YamlContent for tide_demo_content.
  *
  * @package Drupal\tide_demo_content\EventSubscriber
  */
@@ -47,6 +47,7 @@ class YamlContent implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
+    $events = [];
     $events[YamlContentEvents::ENTITY_POST_SAVE][] = ['trackEntity'];
 
     return $events;
