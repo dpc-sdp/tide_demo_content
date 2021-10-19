@@ -9,6 +9,7 @@
  * Implements hook_schema().
  */
 function tide_demo_content_schema() {
+  $schema = [];
   $schema['tide_demo_content_tracking'] = [
     'description' => 'Tracks created demo content.',
     'fields' => [

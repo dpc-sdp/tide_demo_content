@@ -8,7 +8,7 @@ use Drupal\file\Entity\File;
 use Drupal\media\MediaInterface;
 
 /**
- * Class DemoContentRepository.
+ * Class DemoContentRepository provides demo content repository.
  *
  * @package Drupal\tide_demo_content
  */
