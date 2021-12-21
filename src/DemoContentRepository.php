@@ -4,7 +4,7 @@ namespace Drupal\tide_demo_content;
 
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\EntityInterface;
-use Drupal\file\Entity\File;
+use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\media\MediaInterface;
 
 /**
@@ -34,6 +34,13 @@ class DemoContentRepository {
   protected $connection;
 
   /**
+   * Entity type manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManager
+   */
+  protected $entityTypeManager;
+
+  /**
    * The entities.
    *
    * @var \Drupal\Core\Entity\EntityInterface[]
@@ -45,9 +52,12 @@ class DemoContentRepository {
    *
    * @param \Drupal\Core\Database\Connection $connection
    *   The default DB connection.
+   * @param \Drupal\Core\Entity\EntityTypeManager $entityTypeManager
+   *   Entity type manager.
    */
-  public function __construct(Connection $connection) {
+  public function __construct(Connection $connection, EntityTypeManager $entityTypeManager) {
     $this->connection = $connection;
+    $this->entityTypeManager = $entityTypeManager;
     $this->trackingTableExists = $this->connection->schema()->tableExists(static::TABLE_NAME);
   }
 
@@ -177,7 +187,7 @@ class DemoContentRepository {
       foreach ($results as $result) {
         try {
           $fids_to_delete = [];
-          $entity = \Drupal::entityTypeManager()->getStorage($result['entity_type'])
+          $entity = $this->entityTypeManager->getStorage($result['entity_type'])
             ->load($result['entity_id']);
           if ($entity) {
             if ($untrack) {
@@ -198,7 +208,7 @@ class DemoContentRepository {
 
           // Delete the files from removed media.
           foreach ($fids_to_delete as $fid) {
-            $file = File::load($fid);
+            $file = $this->entityTypeManager->getStorage('file')->load($fid);
             if ($file) {
               $file->delete();
             }

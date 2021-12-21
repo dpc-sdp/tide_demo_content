@@ -1,0 +1,20 @@
+- entity: taxonomy_term
+  vid: audience
+  name: 'Individual'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000070
+- entity: taxonomy_term
+  vid: audience
+  name: 'Business'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000071
+- entity: taxonomy_term
+  vid: audience
+  name: 'Government'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000072
+- entity: taxonomy_term
+  vid: audience
+  name: 'Not-for-profit groups'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000073

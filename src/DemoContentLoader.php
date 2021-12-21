@@ -12,7 +12,7 @@ use Drupal\Core\StringTranslation\TranslationInterface;
 use Drupal\yaml_content\ContentLoader\ContentLoaderInterface;
 
 /**
- * Class DemoContentLoader.
+ * Class DemoContentLoader for tide_demo_content.
  *
  * @package Drupal\tide_demo_content
  */
@@ -276,7 +276,7 @@ class DemoContentLoader {
    *
    * @return array
    *   An associative array of objects keyed by filename with the following
-   *   properties as returned by file_scan_directory():
+   *   properties as returned by FileSystemInterface::scanDirectory():
    *
    *   - 'uri'
    *   - 'filename'
@@ -287,7 +287,7 @@ class DemoContentLoader {
    */
   protected function discoverFiles(string $path, string $mask = '/.*\.content\.yml/') : array {
     // Identify files for import.
-    $files = $this->fileSystem->scanDirectory($path, $mask, [
+    $files = \Drupal::service('file_system')->scanDirectory($path, $mask, [
       'key' => 'filename',
       'recurse' => TRUE,
     ]);

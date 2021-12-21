@@ -6,6 +6,7 @@ use Drupal\Component\Render\PlainTextOutput;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\yaml_content\Plugin\ProcessingContext;
 use Drupal\yaml_content\Plugin\yaml_content\process\File;
+use Drupal\Core\File\FileSystemInterface;
 
 /**
  * Plugin for processing and loading a file attachment.
@@ -45,11 +46,10 @@ class ProcessFile extends File {
       }
 
       // Create the destination directory if it does not already exist.
-      $file_system = static::getFileSystem();
-      $file_system->prepareDirectory($destination, $file_system::CREATE_DIRECTORY);
+      \Drupal::service('file_system')->prepareDirectory($destination, FileSystemInterface::CREATE_DIRECTORY);
 
       // Save the file data or return an existing file.
-      $file = file_save_data($output, $destination . $filename, $file_system::EXISTS_REPLACE);
+      $file = file_save_data($output, $destination . $filename, FileSystemInterface::EXISTS_REPLACE);
 
       // Use the newly created file id as the value.
       $field_data['target_id'] = $file->id();

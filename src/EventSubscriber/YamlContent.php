@@ -47,6 +47,7 @@ class YamlContent implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
+    $events = [];
     $events[YamlContentEvents::ENTITY_POST_SAVE][] = ['trackEntity'];
 
     return $events;

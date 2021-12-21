@@ -37,6 +37,7 @@ tide_grant.demo:
       - tide_demo_content:tide_site.demo
       - tide_demo_content:tide_media.demo
   content:
+    - 'tide_grant/taxonomy_term'
     - 'tide_grant/tc-9a-grant.yml'
     - 'tide_grant/tc-9b-grant.yml'
 tide_landing_page.demo:
@@ -78,6 +79,7 @@ tide_news.demo:
       - tide_demo_content:tide_site.demo
       - tide_demo_content:tide_media.demo
   content:
+    - 'tide_news/taxonomy_term'
     - 'tide_news/news_01.content.yml'
     - 'tide_news/news-1.yml'
     - 'tide_news/news-2.yml'

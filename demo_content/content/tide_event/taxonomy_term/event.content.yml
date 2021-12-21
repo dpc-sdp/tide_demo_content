@@ -3,3 +3,28 @@
   name: 'Demo Event Category'
   status: 1
   uuid: 11dede11-10c0-111e1-1100-000000000050
+- entity: taxonomy_term
+  vid: event_requirements
+  name: 'Accessible venue'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000051
+- entity: taxonomy_term
+  vid: event_requirements
+  name: 'Child friendly'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000052
+- entity: taxonomy_term
+  vid: event_requirements
+  name: 'Free admission'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000053
+- entity: taxonomy_term
+  vid: event_requirements
+  name: 'Online event'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000054
+- entity: taxonomy_term
+  vid: event_requirements
+  name: 'Seniors'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000055

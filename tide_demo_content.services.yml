@@ -1,7 +1,7 @@
 services:
   tide_demo_content.repository:
     class: \Drupal\tide_demo_content\DemoContentRepository
-    arguments: [ '@database' ]
+    arguments: [ '@database', '@entity_type.manager' ]
   tide_demo_content.loader:
     class: \Drupal\tide_demo_content\DemoContentLoader
     arguments:
