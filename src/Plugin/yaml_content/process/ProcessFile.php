@@ -70,7 +70,7 @@ class ProcessFile extends File {
    *   The file system service.
    */
   protected static function getFileSystem() : FileSystemInterface {
-    // @todo: Use proper dependency injection.
+    // @todo: Fix by using proper dependency injection.
     return \Drupal::service('file_system');
   }
 
