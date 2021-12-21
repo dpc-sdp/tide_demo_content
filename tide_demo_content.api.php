@@ -24,3 +24,25 @@ function hook_tide_demo_content_entity_imported(EntityInterface $entity, array $
     '%label' => $entity->label(),
   ]));
 }
+
+/**
+ * Excludes unwanted demo content collections.
+ *
+ * When a collection is ignored, all its dependants will be also ignored due to
+ * missing collections. Hence, be aware when ignoring the essential collections
+ * such as: 'tide_demo_content:tide_core.demo',
+ * 'tide_demo_content:tide_media.demo', and 'tide_demo_content:tide_site.demo'.
+ *
+ * @param array $collections
+ *   All collections which were discovered by tide_demo_content.
+ *
+ * @return string[]
+ *   The list of collection names to be excluded.
+ */
+function hook_tide_demo_content_collection_ignore(array $collections) : array {
+  $ignored_collections = ['my_module:my_unwanted_collection.demo'];
+  if (isset($collections['tide_alert:tide_alert.demo'])) {
+    $ignored_collections[] = 'tide_alert:tide_alert.demo';
+  }
+  return $ignored_collections;
+}

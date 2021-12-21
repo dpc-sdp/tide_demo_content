@@ -8,7 +8,7 @@ use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\media\MediaInterface;
 
 /**
- * Class DemoContentRepository provides demo content repository.
+ * The Repository to manage demo content.
  *
  * @package Drupal\tide_demo_content
  */
@@ -43,7 +43,7 @@ class DemoContentRepository {
   /**
    * The entities.
    *
-   * @var array
+   * @var \Drupal\Core\Entity\EntityInterface[]
    */
   protected $entities = [];
 
@@ -51,7 +51,7 @@ class DemoContentRepository {
    * DemoContentRepository constructor.
    *
    * @param \Drupal\Core\Database\Connection $connection
-   *   Te default DB connection.
+   *   The default DB connection.
    * @param \Drupal\Core\Entity\EntityTypeManager $entityTypeManager
    *   Entity type manager.
    */
@@ -66,8 +66,11 @@ class DemoContentRepository {
    *
    * @param \Drupal\Core\Entity\EntityInterface $entity
    *   The entity.
+   *
+   * @return \Drupal\tide_demo_content\DemoContentRepository
+   *   The current repository instance.
    */
-  public function trackEntity(EntityInterface $entity) {
+  public function trackEntity(EntityInterface $entity) : DemoContentRepository {
     try {
       $data = [
         'entity_type' => $entity->getEntityTypeId(),
@@ -82,6 +85,8 @@ class DemoContentRepository {
     catch (\Exception $exception) {
       watchdog_exception('tide_demo_content', $exception);
     }
+
+    return $this;
   }
 
   /**
@@ -95,8 +100,11 @@ class DemoContentRepository {
    *   Override bundle with a custom value.
    * @param bool $tracking
    *   Whether to track the entities.
+   *
+   * @return \Drupal\tide_demo_content\DemoContentRepository
+   *   The current repository instance.
    */
-  public function addDemoEntity(EntityInterface $entity, $entity_type_id = NULL, $bundle = NULL, $tracking = TRUE) {
+  public function addDemoEntity(EntityInterface $entity, string $entity_type_id = NULL, string $bundle = NULL, bool $tracking = TRUE) : DemoContentRepository {
     $entity_type_id = $entity_type_id ?: $entity->getEntityTypeId();
     $bundle = $bundle ?: $entity->bundle();
 
@@ -104,6 +112,8 @@ class DemoContentRepository {
     if ($tracking) {
       $this->trackEntity($entity);
     }
+
+    return $this;
   }
 
   /**
@@ -113,26 +123,31 @@ class DemoContentRepository {
    *   The array of entities.
    * @param bool $tracking
    *   Whether to track the entities.
+   *
+   * @return \Drupal\tide_demo_content\DemoContentRepository
+   *   The current repository instance.
    */
-  public function addDemoEntities(array $entities, $tracking = TRUE) {
+  public function addDemoEntities(array $entities, bool $tracking = TRUE) : DemoContentRepository {
     /** @var \Drupal\Core\Entity\EntityInterface $entity */
     foreach ($entities as $entity) {
       $this->addDemoEntity($entity, NULL, NULL, $tracking);
     }
+
+    return $this;
   }
 
   /**
    * Retrieve demo entities created in the same session.
    *
-   * @param string $entity_type_id
+   * @param string|null $entity_type_id
    *   Entity type ID, eg. node or taxonomy_term.
-   * @param string $bundle
+   * @param string|null $bundle
    *   Bundle, eg. sites, page, lading_page.
    *
-   * @return array
+   * @return \Drupal\Core\Entity\EntityInterface[]|\Drupal\Core\Entity\EntityInterface
    *   The list of entities.
    */
-  public function getDemoEntities($entity_type_id = NULL, $bundle = NULL) {
+  public function getDemoEntities(string $entity_type_id = NULL, string $bundle = NULL) {
     if ($entity_type_id) {
       if (isset($this->entities[$entity_type_id])) {
         if ($bundle) {
@@ -154,11 +169,14 @@ class DemoContentRepository {
    *
    * @param bool $untrack
    *   Whether to remove the reference of the entity from the tracking table.
+   *
+   * @return \Drupal\tide_demo_content\DemoContentRepository
+   *   The current repository instance.
    */
-  public function removeTrackedEntities($untrack = FALSE) {
+  public function removeTrackedEntities(bool $untrack = FALSE) : DemoContentRepository {
     try {
       if (!$this->trackingTableExists) {
-        return;
+        return $this;
       }
 
       $query = $this->connection->select(static::TABLE_NAME, 'demo')
@@ -178,9 +196,9 @@ class DemoContentRepository {
 
             // Collect the files from media entities to delete later.
             if ($entity instanceof MediaInterface) {
-              $field_name = ($entity->bundle() == 'image') ? 'field_media_image' : 'field_media_file';
+              $field_name = ($entity->bundle() === 'image') ? 'field_media_image' : 'field_media_file';
               if ($entity->hasField($field_name)) {
-                $fid = $entity->$field_name->target_id;
+                $fid = $entity->{$field_name}->target_id;
                 $fids_to_delete[$fid] = $fid;
               }
             }
@@ -204,6 +222,8 @@ class DemoContentRepository {
     catch (\Exception $exception) {
       watchdog_exception('tide_demo_content', $exception);
     }
+
+    return $this;
   }
 
   /**
@@ -211,11 +231,14 @@ class DemoContentRepository {
    *
    * @param \Drupal\Core\Entity\EntityInterface $entity
    *   The entity.
+   *
+   * @return \Drupal\tide_demo_content\DemoContentRepository
+   *   The current repository instance.
    */
-  public function untrackEntity(EntityInterface $entity) {
+  public function untrackEntity(EntityInterface $entity) : DemoContentRepository {
     try {
       if (!$this->trackingTableExists) {
-        return;
+        return $this;
       }
 
       $this->connection->delete(static::TABLE_NAME)
@@ -227,6 +250,8 @@ class DemoContentRepository {
     catch (\Exception $exception) {
       watchdog_exception('tide_demo_content', $exception);
     }
+
+    return $this;
   }
 
 }

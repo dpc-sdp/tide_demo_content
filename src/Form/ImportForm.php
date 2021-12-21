@@ -123,7 +123,7 @@ class ImportForm extends FormBase {
           $this->messenger()->addMessage($this->formatPlural(count($entities), '1 demo entity has been imported.', '@count demo entities have been imported.') . ' Only node and media type entities are listed below - ');
           if (!empty($entities)) {
             foreach ($entities as $entity) {
-              if ($entity->getEntityTypeId() == 'node' || $entity->getEntityTypeId() == 'media') {
+              if ($entity->getEntityTypeId() === 'node' || $entity->getEntityTypeId() === 'media') {
                 $this->messenger()->addMessage(t('@entity_type/@entity_id', [
                   '@entity_type' => $entity->getEntityTypeId(),
                   '@entity_id' => $entity->id(),
