@@ -6,7 +6,6 @@ use Drupal\Component\Render\PlainTextOutput;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\yaml_content\Plugin\ProcessingContext;
 use Drupal\yaml_content\Plugin\yaml_content\process\File;
-use Drupal\Core\File\FileSystemInterface;
 
 /**
  * Plugin for processing and loading a file attachment.
