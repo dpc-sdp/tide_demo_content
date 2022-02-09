@@ -43,12 +43,11 @@ tide_grant.demo:
 tide_landing_page.demo:
   dependencies:
     modules:
-      - tide_page
+      - tide_core
     collections:
       - tide_demo_content:tide_core.demo
       - tide_demo_content:tide_site.demo
       - tide_demo_content:tide_media.demo
-      - tide_demo_content:tide_page.demo
       - tide_demo_content:tide_news.demo
       - tide_demo_content:tide_event.demo
   content:
@@ -73,7 +72,7 @@ tide_media.demo:
 tide_news.demo:
   dependencies:
     modules:
-      - tide_page
+      - tide_core
     collections:
       - tide_demo_content:tide_core.demo
       - tide_demo_content:tide_site.demo
@@ -83,18 +82,6 @@ tide_news.demo:
     - 'tide_news/news_01.content.yml'
     - 'tide_news/news-1.yml'
     - 'tide_news/news-2.yml'
-tide_page.demo:
-  dependencies:
-    modules:
-      - tide_page
-    collections:
-      - tide_demo_content:tide_core.demo
-      - tide_demo_content:tide_site.demo
-      - tide_demo_content:tide_media.demo
-  content:
-    - 'tide_page/8-BE-page-1-basic-page.yml'
-    - 'tide_page/anchorlinktest.yml'
-    - 'tide_page/page_01.content.yml'
 tide_profile.demo:
   dependencies:
     modules:
