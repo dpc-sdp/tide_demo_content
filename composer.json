@@ -16,6 +16,10 @@
   "minimum-stability": "alpha",
   "prefer-stable": true,
   "extra": {
-    "patches": {}
+    "patches": {
+      "drupal/yaml_content": {
+        "Alter parsed values before nodes created. - https://www.drupal.org/project/yaml_content/issues/3261689#comment-14393366": "https://www.drupal.org/files/issues/2022-02-01/yaml_content-3261689_2.patch"
+      }
+    }
   }
 }
