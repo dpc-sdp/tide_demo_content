@@ -2,6 +2,7 @@
 
 namespace Drupal\tide_demo_content\EventSubscriber;
 
+use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\Exception\UnsupportedEntityTypeDefinitionException;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\tide_demo_content\DemoContentLoader;
@@ -33,16 +34,26 @@ class YamlContent implements EventSubscriberInterface {
   protected $moduleHandler;
 
   /**
+   * The entity field manager.
+   *
+   * @var \Drupal\Core\Entity\EntityFieldManagerInterface
+   */
+  protected $entityFieldManager;
+
+  /**
    * YamlContent constructor.
    *
    * @param \Drupal\tide_demo_content\DemoContentRepository $repository
    *   The demo content repository.
    * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
    *   The module handler service.
+   * @param \Drupal\Core\Extension\EntityFieldManagerInterface $entity_field_manager
+   *   The entity field manager.
    */
-  public function __construct(DemoContentRepository $repository, ModuleHandlerInterface $module_handler) {
+  public function __construct(DemoContentRepository $repository, ModuleHandlerInterface $module_handler, EntityFieldManagerInterface $entity_field_manager) {
     $this->repository = $repository;
     $this->moduleHandler = $module_handler;
+    $this->entityFieldManager = $entity_field_manager;
   }
 
   /**
@@ -81,13 +92,11 @@ class YamlContent implements EventSubscriberInterface {
    */
   public function modifyParsedContent(ContentParsedEvent $event) {
     $content = $event->getParsedContent();
-    /** @var \Drupal\Core\Entity\EntityFieldManager $manager */
-    $manager = \Drupal::service('entity_field.manager');
-    if (is_array($content) && count($content) > 0) {
+    if (!empty($content)) {
       foreach ($content as $delta => $details) {
         if (isset($details['entity']) && isset($details['type'])) {
           try {
-            $fields_info = $manager->getFieldDefinitions($details['entity'], $details['type']);
+            $fields_info = $this->entityFieldManager->getFieldDefinitions($details['entity'], $details['type']);
             $fields = array_keys($fields_info);
           }
           catch (\Exception $exception) {

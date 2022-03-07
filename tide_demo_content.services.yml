@@ -13,6 +13,6 @@ services:
       - '@file_system'
   tide_demo_content.event_subscriber.yaml_content:
     class: \Drupal\tide_demo_content\EventSubscriber\YamlContent
-    arguments: [ '@tide_demo_content.repository', '@module_handler' ]
+    arguments: [ '@tide_demo_content.repository', '@module_handler', '@entity_field.manager' ]
     tags:
       - { name: event_subscriber }
