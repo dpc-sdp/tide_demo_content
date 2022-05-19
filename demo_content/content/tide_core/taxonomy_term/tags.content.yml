@@ -8,3 +8,18 @@
   name: 'Another Demo Tag'
   status: 1
   uuid: 11dede11-10c0-111e1-1100-000000000011
+- entity: taxonomy_term
+  vid: tags
+  name: 'Content Collection Tag 1'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000012
+- entity: taxonomy_term
+  vid: tags
+  name: 'Content Collection Tag 2'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000013
+- entity: taxonomy_term
+  vid: tags
+  name: 'Content Collection Empty Tag'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000014

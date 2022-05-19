@@ -8,3 +8,18 @@
   name: 'Another Demo Topic'
   status: 1
   uuid: 11dede11-10c0-111e1-1100-000000000021
+- entity: taxonomy_term
+  vid: topic
+  name: 'Content Collection Topic 1'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000022
+- entity: taxonomy_term
+  vid: topic
+  name: 'Content Collection Topic 2'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000023
+- entity: taxonomy_term
+  vid: topic
+  name: 'Content Collection Empty Topic'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000024
