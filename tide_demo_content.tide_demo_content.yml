@@ -56,7 +56,7 @@ tide_landing_page.demo:
     - 'tide_landing_page/landing_page_cc_1.yml'
     - 'tide_landing_page/landing_page_cc_2.yml'
     - 'tide_landing_page/landing_page_cc_3.yml'
-    - 'tide_landing_page/landing_page_cc_4 neg.yml'
+    - 'tide_landing_page/landing_page_cc_4_neg.yml'
 tide_media.demo:
   dependencies:
     modules:
