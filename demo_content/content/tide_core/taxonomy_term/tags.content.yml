@@ -23,3 +23,8 @@
   name: 'Content Collection Empty Tag'
   status: 1
   uuid: 11dede11-10c0-111e1-1100-000000000014
+  - entity: taxonomy_term
+  vid: tags
+  name: 'Content Collection Future Tag'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1100-000000000015
