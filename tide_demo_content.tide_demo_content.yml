@@ -86,6 +86,10 @@ tide_news.demo:
     - 'tide_news/news_01.content.yml'
     - 'tide_news/news-1.yml'
     - 'tide_news/news-2.yml'
+    - 'tide_news/news_cc_1.yml'
+    - 'tide_news/news_cc_2yml'
+    - 'tide_news/news_cc_3.yml'
+    - 'tide_news/news_cc_4_neg.yml'
 tide_profile.demo:
   dependencies:
     modules:
