@@ -347,6 +347,8 @@
           - vid: sites
             name: 'Demo Site'
   field_publication_date:
+  field_node_author
+field_publication_date
     - value: '2050-07-01T23:00:00'
 # Create menu links.
 - entity: menu_link_content
