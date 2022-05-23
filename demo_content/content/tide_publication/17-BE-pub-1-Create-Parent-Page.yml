@@ -11,7 +11,6 @@
           - workflow: editorial
             moderation_state: published
   # Page header.
-  field_publication_date: '2019-06-25'
   field_featured_image:
     - '#process':
         callback: reference
