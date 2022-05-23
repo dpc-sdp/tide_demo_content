@@ -12,6 +12,7 @@
           - workflow: editorial
             moderation_state: published
   # Page header.
+  field_publication_date: '2050-07-01T23:00:00'
   field_featured_image:
     - '#process':
         callback: reference
@@ -346,10 +347,6 @@
           - taxonomy_term
           - vid: sites
             name: 'Demo Site'
-  field_publication_date:
-  field_node_author
-field_publication_date
-    - value: '2050-07-01T23:00:00'
 # Create menu links.
 - entity: menu_link_content
   title: Demo Landing Page
