@@ -123,7 +123,7 @@
             name: 'Another Demo Site'
 - entity: taxonomy_term
   vid: sites
-  name: 'Demo Content Collection Section Neg'
+  name: 'Demo Content Collection Section Alt'
   status: 1
   uuid: 11dede11-10c0-111e1-1100-000000000049
   parent:

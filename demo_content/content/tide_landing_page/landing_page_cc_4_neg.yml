@@ -13,7 +13,7 @@
             moderation_state: published
   # Page header.
   field_publication_date:
-      - value: '2037-07-01T23:00:00'
+      - value: '2063670252'
   field_featured_image:
     - '#process':
         callback: reference
@@ -340,7 +340,7 @@
         args:
           - taxonomy_term
           - vid: sites
-            name: 'Demo Content Collection Section Neg'
+            name: 'Demo Content Collection Section Alt'
   field_node_primary_site:
     - '#process':
         callback: reference

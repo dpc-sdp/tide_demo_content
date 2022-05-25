@@ -12,9 +12,7 @@
             moderation_state: published
   # Page header.
   created:
-    - value: '2036-07-01T23:00:00'
-  field_publication_date:
-    - value: '2036-07-01T23:00:00'
+    - value: '2063670252'
   field_featured_image:
     - '#process':
         callback: reference

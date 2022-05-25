@@ -169,7 +169,7 @@
         args:
           - taxonomy_term
           - vid: sites
-            name: 'Demo Content Collection Section Neg'
+            name: 'Demo Content Collection Section Alt'
   field_node_primary_site:
     - '#process':
         callback: reference
