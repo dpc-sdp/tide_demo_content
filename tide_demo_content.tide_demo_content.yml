@@ -112,6 +112,9 @@ tide_publication.demo:
     - 'tide_publication/17-BE-pub-1-Create-Parent-Page.yml'
     - 'tide_publication/17-BE-pub-page-1-Child-Page.yml'
     - 'tide_publication/17-BE-pub-page-1-Child-Page-01.yml'
+    - 'tide_publication/publication_cc_1.yml'
+    - 'tide_publication/publication_cc_1_child.yml'
+    - 'tide_publication/publication_cc_1_child_child.yml'
 tide_site.demo:
   dependencies:
     modules:
