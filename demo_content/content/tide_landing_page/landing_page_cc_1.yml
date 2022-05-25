@@ -1,6 +1,5 @@
 - entity: node
   type: landing_page
-  uuid: 11dede11-10c0-111e1-1100-000000000331
   title: Landing Page for CC 1
   uid: 1
   status: 1
@@ -12,8 +11,10 @@
           - workflow: editorial
             moderation_state: published
   # Page header.
+  created:
+    - value: '2036-07-01T23:00:00'
   field_publication_date:
-      - value: '2036-07-01T23:00:00'
+    - value: '2036-07-01T23:00:00'
   field_featured_image:
     - '#process':
         callback: reference
