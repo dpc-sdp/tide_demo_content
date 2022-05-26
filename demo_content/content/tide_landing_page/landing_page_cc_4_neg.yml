@@ -12,8 +12,8 @@
           - workflow: editorial
             moderation_state: published
   # Page header.
-  field_publication_date:
-      - value: '2063670252'
+  created:
+    - value: '1590454242'
   field_featured_image:
     - '#process':
         callback: reference

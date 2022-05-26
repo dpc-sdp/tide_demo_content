@@ -1,6 +1,5 @@
 - entity: node
   type: landing_page
-  uuid: 11dede11-10c0-111e1-1100-000000000334
   title: Landing Page for CC 5 neg
   uid: 1
   status: 1
@@ -12,8 +11,8 @@
           - workflow: editorial
             moderation_state: published
   # Page header.
-  field_publication_date:
-      - value: '2063670252'
+  created:
+    - value: '1558831842'
   field_featured_image:
     - '#process':
         callback: reference
