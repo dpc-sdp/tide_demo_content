@@ -1,6 +1,6 @@
 - entity: node
   type: publication
-  title: 17-BE-pub-1 Create Parent Page
+  title: Publication for CC 1
   uid: 1
   status: 1
   moderation_state:
@@ -88,13 +88,21 @@
           - bundle: document
             name: 'Demo Sample PDF'
   # Topic
+
   field_topic:
     - '#process':
         callback: reference
         args:
           - taxonomy_term
           - vid: topic
-            name: 'Science and technology'
+            name: 'Content Collection Topic 2'
+  field_tags:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Content Collection Tag 2'
   # Sites.
   field_node_site:
     - '#process':
@@ -108,67 +116,25 @@
         args:
           - taxonomy_term
           - vid: sites
-            name: 'aboriginalvictoria.vic.gov.au'
+            name: 'Demo Section 1'
     - '#process':
         callback: reference
         args:
           - taxonomy_term
           - vid: sites
-            name: 'aboriginalheritagecouncil.vic.gov.au'
+            name: 'Demo Section 2'
     - '#process':
         callback: reference
         args:
           - taxonomy_term
           - vid: sites
-            name: 'buyingfor.vic.gov.au'
+            name: 'Another Demo Site'
     - '#process':
         callback: reference
         args:
           - taxonomy_term
           - vid: sites
-            name: 'data.vic.gov.au'
-    - '#process':
-        callback: reference
-        args:
-          - taxonomy_term
-          - vid: sites
-            name: 'fvrim.vic.gov.au'
-    - '#process':
-        callback: reference
-        args:
-          - taxonomy_term
-          - vid: sites
-            name: 'lgi.vic.gov.au'
-    - '#process':
-        callback: reference
-        args:
-          - taxonomy_term
-          - vid: sites
-            name: 'multiculturalcommission.vic.gov.au'
-    - '#process':
-        callback: reference
-        args:
-          - taxonomy_term
-          - vid: sites
-            name: 'ovga.vic.gov.au'
-    - '#process':
-        callback: reference
-        args:
-          - taxonomy_term
-          - vid: sites
-            name: 'shrine.org.au'
-    - '#process':
-        callback: reference
-        args:
-          - taxonomy_term
-          - vid: sites
-            name: 'together.vic.gov.au'
-    - '#process':
-        callback: reference
-        args:
-          - taxonomy_term
-          - vid: sites
-            name: 'vicinspectorate.vic.gov.au'
+            name: 'Demo Content Collection Section Alt'
   field_node_primary_site:
     - '#process':
         callback: reference
