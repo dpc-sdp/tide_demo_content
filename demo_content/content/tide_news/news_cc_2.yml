@@ -161,7 +161,7 @@
         args:
           - taxonomy_term
           - vid: sites
-            name: 'Demo Content Collection Section'
+            name: 'Demo Content Collection Section 1'
   field_node_primary_site:
     - '#process':
         callback: reference
