@@ -36,7 +36,7 @@
           - bundle: image
             name: 'Demo: Parliament of Victoria'
   field_landing_page_intro_text: Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae
-  field_landing_page_summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus.
+  field_landing_page_summary: LP5 pulvinar nulla nunc, id porta lacus blandit id. Ut interdum, lectus ut elementum scelerisque, ligula turpis finibus risus, sed dapibus lorem urna vitae neque. Sed id egestas nunc, eget dictum massa. Donec congue dictum sapien, ullamcorper auctor erat tincidunt et. Cras sollicitudin dolor non neque vehicula varius.
   field_landing_page_hero_theme: light
   field_landing_page_bg_colour: white
   # Hero banner.

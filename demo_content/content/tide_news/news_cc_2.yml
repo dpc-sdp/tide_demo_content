@@ -13,13 +13,7 @@
   # Page Header.
   field_news_date:
     - value: '2048-07-01T23:00:00'
-  field_featured_image:
-    - '#process':
-        callback: reference
-        args:
-          - media
-          - bundle: image
-            name: 'Demo: Melbourne tram'
+ field_landing_page_summary: NP2 Pellentesque a pharetra magna. Pellentesque vitae est a sapien laoreet imperdiet id at urna. Quisque molestie mi enim, eu sodales diam pretium in. Quisque vitae quam et lectus condimentum ultricies.
   field_news_intro_text: Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae
   field_node_department:
     - '#process':
