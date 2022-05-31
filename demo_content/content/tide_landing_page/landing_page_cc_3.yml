@@ -12,13 +12,6 @@
           - workflow: editorial
             moderation_state: published
   # Page header.
-  field_featured_image:
-    - '#process':
-        callback: reference
-        args:
-          - media
-          - bundle: image
-            name: 'Demo: Melbourne tram'
   field_landing_page_hero_image:
     - '#process':
         callback: reference
@@ -35,7 +28,7 @@
           - bundle: image
             name: 'Demo: Parliament of Victoria'
   field_landing_page_intro_text: Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae
-  field_landing_page_summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus.
+  field_landing_page_summary: LP3 Praesent dictum sem justo, non facilisis arcu sodales at. Nulla ac mauris in felis lobortis aliquam. Integer nec et sed tortor. Pellentesque ut tempor nunc.
   field_landing_page_hero_theme: light
   field_landing_page_bg_colour: white
   # Hero banner.

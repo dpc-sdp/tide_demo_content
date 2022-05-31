@@ -20,6 +20,7 @@
           - media
           - bundle: image
             name: 'Demo: Melbourne tram'
+  field_landing_page_summary: NP5 Vestibulum mollis maximus lorem non laoreet. In hac habitasse platea dictumst. Mauris quis ante efficitur, commodo nisl eu, consequat dolor.
   field_news_intro_text: Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae
   field_node_department:
     - '#process':
