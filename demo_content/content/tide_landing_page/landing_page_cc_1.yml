@@ -340,6 +340,25 @@
           - taxonomy_term
           - vid: sites
             name: 'Demo Content Collection Section 1'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'aboriginalheritagecouncil.vic.gov.au'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'boards.vic.gov.au'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'buyingfor.vic.gov.au'
+  field_node_primary_site:
   field_node_primary_site:
     - '#process':
         callback: reference
