@@ -11,7 +11,7 @@
           - content_moderation_state
           - workflow: editorial
             moderation_state: published
-  # Page header.
+  ## Page header.
   field_landing_page_hero_image:
     - '#process':
         callback: reference
