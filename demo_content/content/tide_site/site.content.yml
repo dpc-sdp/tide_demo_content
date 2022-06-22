@@ -111,7 +111,7 @@
             name: 'Another Demo Site'
 - entity: taxonomy_term
   vid: sites
-  name: 'Demo Content Collection Section'
+  name: 'Demo Content Collection Section 1'
   status: 1
   uuid: 11dede11-10c0-111e1-1100-000000000048
   parent:
@@ -123,7 +123,7 @@
             name: 'Another Demo Site'
 - entity: taxonomy_term
   vid: sites
-  name: 'Demo Content Collection Section Alt'
+  name: 'Demo Content Collection Section 2'
   status: 1
   uuid: 11dede11-10c0-111e1-1100-000000000049
   parent:

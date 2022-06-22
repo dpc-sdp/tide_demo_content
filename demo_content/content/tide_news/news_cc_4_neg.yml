@@ -20,6 +20,7 @@
           - media
           - bundle: image
             name: 'Demo: Melbourne tram'
+  field_landing_page_summary: NP4 Duis posuere euismod ante.
   field_news_intro_text: Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae
   field_node_department:
     - '#process':
@@ -169,7 +170,7 @@
         args:
           - taxonomy_term
           - vid: sites
-            name: 'Demo Content Collection Section Alt'
+            name: 'Demo Content Collection Section 2'
   field_node_primary_site:
     - '#process':
         callback: reference

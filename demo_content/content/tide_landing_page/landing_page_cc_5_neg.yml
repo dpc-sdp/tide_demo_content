@@ -36,7 +36,7 @@
           - bundle: image
             name: 'Demo: Parliament of Victoria'
   field_landing_page_intro_text: Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae
-  field_landing_page_summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus.
+  field_landing_page_summary: LP5 pulvinar nulla nunc, id porta lacus blandit id. Ut interdum, lectus ut elementum scelerisque, ligula turpis finibus risus, sed auctor erat tincidunt et. Cras sollicitudin dolor non neque vehicula
   field_landing_page_hero_theme: light
   field_landing_page_bg_colour: white
   # Hero banner.
@@ -339,13 +339,13 @@
         args:
           - taxonomy_term
           - vid: sites
-            name: 'Demo Content Collection Section Alt'
+            name: 'Demo Content Collection Section 2'
     - '#process':
         callback: reference
         args:
           - taxonomy_term
           - vid: sites
-            name: 'Demo Content Collection Section'
+            name: 'Demo Content Collection Section 1'
   field_node_primary_site:
     - '#process':
         callback: reference
