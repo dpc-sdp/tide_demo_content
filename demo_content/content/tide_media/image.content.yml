@@ -147,6 +147,26 @@
             name: 'Demo License'
 - entity: media
   bundle: image
+  name: 'Demo: Staff at Treasury Unpublished'
+  uid: 1
+  status: 0
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'Staff-at-Treasury.jpg'
+      alt: 'Demo: Staff at Treasury Unpublished'
+      title: 'Demo: Staff at Treasury Unpublished'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
   uuid: 11dede11-10c0-111e1-1100-000000000127
   name: 'Demo: Two men working in hi-vis clothing'
   uid: 1
