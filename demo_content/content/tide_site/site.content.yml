@@ -156,7 +156,7 @@
   vid: sites
   name: 'Brunswick demo'
   status: 1
-  #uuid: 11dede11-10c0-111e1-1100-000000000047
+  uuid: 11dede11-10c0-111e1-1100-000000000047
   parent:
     - '#process':
         callback: reference
@@ -168,7 +168,7 @@
   vid: sites
   name: 'Frankston demo'
   status: 1
-  #uuid: 11dede11-10c0-111e1-1100-000000000048
+  uuid: 11dede11-10c0-111e1-1100-000000000048
   parent:
     - '#process':
         callback: reference
@@ -180,7 +180,7 @@
   vid: sites
   name: 'Spotswood demo'
   status: 1
-  #uuid: 11dede11-10c0-111e1-1100-000000000049
+  uuid: 11dede11-10c0-111e1-1100-000000000049
   parent:
     - '#process':
         callback: reference
@@ -192,7 +192,7 @@
   vid: sites
   name: 'South Yarra demo'
   status: 1
-  #uuid: 11dede11-10c0-111e1-1100-000000000050
+  uuid: 11dede11-10c0-111e1-1100-000000000050
   parent:
     - '#process':
         callback: reference
