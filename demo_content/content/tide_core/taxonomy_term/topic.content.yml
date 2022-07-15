@@ -2,89 +2,49 @@
   vid: topic
   name: 'Demo Topic'
   status: 1
-<<<<<<< HEAD
   #uuid: 11dede11-10c0-111e1-1100-000000000020
-=======
-  uuid: 11dede11-10c0-111e1-1100-000000000022
->>>>>>> 4f2778e5bf56d57a249244781268b3665f89fc54
 - entity: taxonomy_term
   vid: topic
   name: 'Another Demo Topic'
   status: 1
-<<<<<<< HEAD
   #uuid: 11dede11-10c0-111e1-1100-000000000021
-=======
-  uuid: 11dede11-10c0-111e1-1100-000000000023
->>>>>>> 4f2778e5bf56d57a249244781268b3665f89fc54
 - entity: taxonomy_term
   vid: topic
   name: 'Content Collection Topic 1'
   status: 1
-<<<<<<< HEAD
   #uuid: 11dede11-10c0-111e1-1100-000000000022
-=======
-  uuid: 11dede11-10c0-111e1-1100-000000000024
->>>>>>> 4f2778e5bf56d57a249244781268b3665f89fc54
 - entity: taxonomy_term
   vid: topic
   name: 'Content Collection Topic 2'
   status: 1
-<<<<<<< HEAD
   #uuid: 11dede11-10c0-111e1-1100-000000000023
-=======
-  uuid: 11dede11-10c0-111e1-1100-000000000025
->>>>>>> 4f2778e5bf56d57a249244781268b3665f89fc54
 - entity: taxonomy_term
   vid: topic
   name: 'Content Collection Empty Topic'
   status: 1
-<<<<<<< HEAD
   #uuid: 11dede11-10c0-111e1-1100-000000000024
-=======
-  uuid: 11dede11-10c0-111e1-1100-000000000026
->>>>>>> 4f2778e5bf56d57a249244781268b3665f89fc54
 - entity: taxonomy_term
   vid: topic
   name: 'Flinders topic demo'
   status: 1
-<<<<<<< HEAD
   #uuid: 11dede11-10c0-111e1-1100-000000000025'
-=======
-  uuid: 11dede11-10c0-111e1-1100-000000000027
->>>>>>> 4f2778e5bf56d57a249244781268b3665f89fc54
 - entity: taxonomy_term
   vid: topic
   name: 'Spencer topic demo'
   status: 1
-<<<<<<< HEAD
   #uuid: 11dede11-10c0-111e1-1100-000000000026
-=======
-  uuid: 11dede11-10c0-111e1-1100-000000000028
->>>>>>> 4f2778e5bf56d57a249244781268b3665f89fc54
 - entity: taxonomy_term
   vid: topic
   name: 'King topic demo'
   status: 1
-<<<<<<< HEAD
   #uuid: 11dede11-10c0-111e1-1100-000000000027
-=======
-  uuid: 11dede11-10c0-111e1-1100-000000000029
->>>>>>> 4f2778e5bf56d57a249244781268b3665f89fc54
 - entity: taxonomy_term
   vid: topic
   name: 'Bourke topic demo'
   status: 1
-<<<<<<< HEAD
   #uuid: 11dede11-10c0-111e1-1100-000000000028
-=======
-  uuid: 11dede11-10c0-111e1-1100-000000000030
->>>>>>> 4f2778e5bf56d57a249244781268b3665f89fc54
 - entity: taxonomy_term
   vid: topic
   name: 'Collins topic demo'
   status: 1
-<<<<<<< HEAD
   #uuid: 11dede11-10c0-111e1-1100-000000000029
-=======
-  uuid: 11dede11-10c0-111e1-1100-000000000031
->>>>>>> 4f2778e5bf56d57a249244781268b3665f89fc54
