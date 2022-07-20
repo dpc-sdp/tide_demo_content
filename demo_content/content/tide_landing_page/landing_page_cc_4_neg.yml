@@ -424,7 +424,6 @@
   vid: sites
   name: 'Another Demo Site'
   status: 1
-  uuid: 11dede11-10c0-111e1-1100-000000000045
   field_site_domains: 'www.another.demo.vic.gov.au'
   field_acknowledgement_to_country: 'The Victorian Government acknowledges Aboriginal and Torres Strait Islander people as the Traditional Custodians of the land and acknowledges and pays respect to their Elders, past and present.'
   field_site_main_menu:
