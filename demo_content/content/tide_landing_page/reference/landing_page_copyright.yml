@@ -1,0 +1,99 @@
+- entity: node
+  type: landing_page
+  title: Copyright - demo
+  uid: 1
+  status: 1
+  moderation_state:
+    - '#process':
+        callback: reference
+        args:
+          - content_moderation_state
+          - workflow: editorial
+            moderation_state: published
+  # Page header.
+  field_landing_page_intro_text: Copyright information for this website.
+  field_landing_page_summary: Copyright information for this website.
+  # Content Components.
+  field_show_table_of_content: 1
+  field_landing_page_component:
+    # Basic Text.
+    - entity: paragraph
+      type: basic_text
+      field_paragraph_body:
+      - format: rich_text
+        value: |
+          <p>We encourage the sharing and re-use of information provided on this website.</p>
+          <p>The State of Victoria owns the copyright in all material produced for this website by the Department of Premier and Cabinet.</p>
+          <p>All material provided on this website is provided under a <a href="https://creativecommons.org/licenses/by/4.0/legalcode" title="Creative Commons Attribution 4.0 international licence">Creative Commons Attribution 4.0 International licence</a>, <strong>except</strong>:</p>
+          <ul><li>any images or branding, including the Victorian Coat of Arms and the Victorian Government logo</li>
+          <li>content supplied by third parties</li></ul>
+          <p><a href="https://creativecommons.org/licenses/by/4.0/legalcode" title="Creative Commons Attribution 4.0 International full licence">Read the full licence</a>.</p>
+          <h2>Attribution</h2>
+          <p>Material obtained from this website must be attributed as:</p>
+          <p>© Copyright State Government of Victoria</p>
+          <h2>Third-party copyright</h2>
+          <p>In some cases, a third party may hold copyright in material presented on this website. Their permission may be required to use the material.</p>
+          <h2>Contact us</h2>
+          <p>You can inquire about copyright and use of the material on this website via our <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="b167f76f-6d29-494a-9b01-8c9116dc3bb2" href="/node/253">Connect with us page</a>.</p>
+          <hr />
+          <h2>DataVic copyright and attribution</h2>
+          <h3>Raw data available on DataVic</h3>
+          <p>It is essential that you check the record page of a dataset for the licensing terms which apply to that dataset and its contents.</p>
+          <p>To the maximum extent possible, the datasets provided via this site and their contents, to the extent they are protected by copyright, are provided under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution Version 4.0</a> (international licence).</p>
+          <p>The details of the licence conditions are available on the Creative Commons website (accessible using the link above or the linked Creative Commons licence image), as is the full legal code for the CC BY 4.0 (international licence).</p>
+          <p>However, there may be different or additional licence conditions for some datasets on this site.</p>
+          <h3>Historical records</h3>
+          <p>If you are using Historical Records of a dataset, copyright in the dataset and its contents may be licensed under different terms from those which apply to the current release. You must check the record page for the Historical Records of a dataset for the licensing terms which apply to the Historical Records of the dataset.</p>
+          <h3>Attributing DataVic material</h3>
+          <p>If you use the text, datasets or tools made available on this site you must comply with the attribution requirements set out below.</p>
+          <h3>Attributing datasets</h3>
+          <p>You are required to identify the source of any dataset or data it contains in the manner specified on the record page for the dataset. Please check the requirement stated under 'Attribution' on the record page.</p>
+          <p>For material licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution Version 4.0 (international licence)</a>, or other Creative Commons Version 4.0 licences, the basic requirement for attribution is:</p>
+          <p>(c) [name of agency] and licensed for re-use under the [name of and link to or URL for applicable Creative Commons licence]</p>
+          <p>However, there may be different or additional attribution requirements for some datasets on this site, particularly where data is modified or transformed in any way.</p>
+          <p>Please check the record page of the dataset.</p>
+          <p>If you have any questions, please contact the contributing agency by clicking on ‘Add Comment’ at the end of the record page for the dataset and complete the comment fields.</p>
+          <h3>Attributing other text on DataVic</h3>
+          <p>When you reproduce text on this site (including descriptions of datasets, comments and blog entries), to the extent that copyright applies, please include the following attribution.</p>
+          <p>Source: [name of agency] and licensed for re-use under the [name of and link to or URL for <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution Version 4.0 (international licence)</a>]</p>
+  # Other.
+  field_show_social_sharing: 1
+  field_show_content_rating: 1
+  field_show_site_section_nav: 1
+  field_landing_page_nav_title: 'Site-section Navigation'
+  # Topic and Tags.
+  field_topic:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: topic
+            name: 'Bourke topic demo'
+  field_tags:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Boomers tag demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Gen X tag demo'
+  # Sites.
+  field_node_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
+  field_node_primary_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
