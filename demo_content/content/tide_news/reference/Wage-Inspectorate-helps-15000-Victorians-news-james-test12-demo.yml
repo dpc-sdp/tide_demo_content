@@ -1,0 +1,139 @@
+- entity: node
+  type: news
+  title: Wage Inspectorate helps 15,000 Victorians in first year
+  uid: 1
+  status: 1
+  moderation_state:
+    - '#process':
+        callback: reference
+        args:
+          - content_moderation_state
+          - workflow: editorial
+            moderation_state: published
+  # Page Header.
+  field_news_date:
+    - value: '20222-07-22T09:33:12'
+  field_featured_image:
+    - '#process':
+        callback: reference
+        args:
+          - media
+          - bundle: image
+            name: 'Demo Melbourne tram'
+  field_landing_page_summary: More than 15,000 Victorians received help from Wage Inspectorate Victoria during its first 12 months, the regulator’s end of financial year figures show.
+  field_news_intro_text: More than 15,000 Victorians received help from Wage Inspectorate Victoria during its first 12 months, the regulator’s end of financial year figures show.  
+  field_node_department:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: department
+            name: 'Department of Piccolo demo'
+  # Body content.
+  body:
+    - format: rich_text
+      value: |
+        <h2>Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae</h2>
+        <h3>Phasellus congue aliquam vehicula</h3>
+        <p class="wysiwyg-callout">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus. Quisque nec congue ligula, vitae condimentum tellus. Nulla nec urna augue. Curabitur commodo nisi est, eu pulvinar tortor cursus vel. Morbi dictum ex est, et semper diam finibus eu. Cras rutrum, nunc a fringilla convallis, massa est vulputate velit, in blandit augue dui vitae elit. Donec hendrerit commodo augue, in maximus orci tempor congue. Mauris ultricies euismod orci, nec vehicula quam vehicula ac. Nunc dictum tortor dolor, nec eleifend orci luctus sed.</p>
+        <h3>Donec scelerisque cursus ex varius efficitur</h3>
+        <h4>Morbi cursus placerat mi</h4>
+        <h5>Nullam laoreet ante placerat</h5>
+        <p>Integer interdum nisl ut neque dictum, et sagittis metus feugiat. Sed in mattis neque. Duis at risus non ipsum semper dapibus. Sed enim sapien, molestie sed commodo vel, lacinia vitae risus. Proin sagittis diam nisi, sed rhoncus diam varius id. Sed malesuada felis tortor, scelerisque pretium elit tempor non. Pellentesque ultrices volutpat tincidunt. Fusce quis viverra urna, quis finibus nulla.</p>
+        <blockquote class='quotation'>
+          <p>Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus. Phasellus lacus lectus, sollicitudin sed posuere non, ultricies ut quam.</p>
+          <footer>
+            <cite>
+              <span class="quotation__author">Duis ligula lacus</span><br />
+              <span class="quotation__author-title">Phasellus est turpis, efficitur nec odio imperdiet</span><br />
+            </cite>
+          </footer>
+        </blockquote>
+        <h6>Mauris tincidunt tincidunt felis vel tempus</h6>
+        <drupal-entity data-embed-button="tide_media" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid='11dede11-10c0-111e1-1100-000000000124'></drupal-entity>
+        <p>Phasellus in varius leo. Suspendisse potenti. Donec scelerisque cursus ex varius efficitur. Vivamus pretium nisi sed libero accumsan mattis. Duis convallis, velit eget varius tempus, orci erat aliquam sem, eget porta mauris nisl at mauris.</p>
+        <drupal-entity data-embed-button="tide_media" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid='11dede11-10c0-111e1-1100-000000000007'></drupal-entity>
+
+      <p>Most requests for help came through phone calls from employees and businesses seeking information about long service leave, child employment, wage theft and owner driver laws.</p>
+
+      <p>295 Victorians claimed they were underpaid long service leave and $309,367 was recouped with the regulator’s help, taking the total recovered over the past 4 years to more than $1.5 million.</p>
+
+      <p>The Wage Inspectorate also took strong action in the courts, with seven matters before court during the financial year, including its <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="466d73c3-c9d3-498d-894e-375ddf623b7f" href="/node/17696">successful action against Coles Supermarkets</a> that led to more than 4000 workers being paid back in excess of $700,000 in long service leave.</p>
+
+      <p>The financial year figures show that 7758 permits were issued to employers of children under 15 years and that 329 child employment compliance checks and investigations were conducted. The regulator’s child employment team also conducted almost 100 field visits and sent over 200 letters to businesses suspected of employing children under 15 years to educate them about the law.</p>
+
+      <p>In one of the most serious cases taken to court, a <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="27642e24-74e2-4fdf-8f2e-543363f595bc" href="/node/19158">travelling circus pleaded guilty to three charges</a>, admitting it breached the law by employing Chinese nationals as acrobats without a mandatory child employment permit. One of the children spent 10 days in hospital after being hit by a trapeze.</p>
+
+      <p>The Wage Inspectorate also commenced intelligence-led, criminal wage theft investigations using the powers granted under Victoria’s new wage theft laws, including executing search warrants, issuing compulsory notices, entering premises and seizing evidence.</p>
+
+      <p>Hirers of owner drivers were audited too, with the Wage Inspectorate checking compliance with Victoria’s owner driver and forestry contractor laws for 259 individual drivers.</p>
+
+      <p>The retail, hospitality, manufacturing and services industries were the most likely to call the Wage Inspectorate. About 3000 calls came from employers seeking to understand their obligations, with employees, parents or people calling on behalf of a worker or business making up the rest.</p>
+
+      <p>The entertainment, retail, and hospitality industries accounted for over half of all child employment permits applied for. While Victoria came in and out of COVID-19 restrictions, officers supported applicants with advice about how business openings and closures would affect their permits.</p>
+
+      <p>More than 286,000 people accessed the Wage Inspectorate’s online tools, with its long service leave, child employment and wage theft pages the most popular resources.</p>
+
+      <p><strong>Quotes attributable to Robert Hortle, Commissioner of Wage Inspectorate Victoria</strong></p>
+
+      <blockquote>
+      <p>“It’s our vision to create productive and prosperous Victorian workplaces. That means fairer conditions for workers and a level playing field for businesses, so they’re not undercut by law breakers.”</p>
+
+      <p>“We’ve had a successful and balanced first year, educating businesses and workers about the law and taking appropriate compliance action. These have been equal focuses for the new statutory authority.”</p>
+
+      <p>“We’re aiming to have an even bigger impact over the next 12 months through our intelligence-led compliance activities, prosecutions and the release of new educational resources, including e-learning courses and multilingual videos, to make complying with the law even easier.”</p>
+</blockquote>
+
+  # Related links
+  field_show_related_content: 0
+  # Other.
+  field_show_social_sharing: 1
+  field_show_content_rating: 1
+  # Topic and Tags.
+  field_topic:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: topic
+            name: 'Collins topic demo'
+  field_tags:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Gen Y tag demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Gen X tag demo'
+  # Sites.
+  field_node_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: '    Frankston demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Spotswood demo'
+  field_node_primary_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
