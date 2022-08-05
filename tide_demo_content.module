@@ -51,7 +51,6 @@ function tide_demo_content_tide_demo_content_entity_imported(EntityInterface $en
               $entity->setNewRevision(FALSE);
             }
             $entity->save();
-            break;
           }
         }
       }
