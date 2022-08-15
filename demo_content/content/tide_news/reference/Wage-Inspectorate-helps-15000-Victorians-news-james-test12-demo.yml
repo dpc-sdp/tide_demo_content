@@ -12,7 +12,7 @@
             moderation_state: published
   # Page Header.
   field_news_date:
-    - value: '20222-07-22T09:33:12'
+    - value: '2022-07-22T09:33:12'
   field_featured_image:
     - '#process':
         callback: reference
@@ -121,7 +121,7 @@
         args:
           - taxonomy_term
           - vid: sites
-            name: '    Frankston demo'
+            name: 'Frankston demo'
     - '#process':
         callback: reference
         args:
