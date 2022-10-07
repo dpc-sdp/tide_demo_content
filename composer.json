@@ -4,7 +4,7 @@
   "type": "drupal-module",
   "license": "GPL-2.0-or-later",
   "require": {
-    "dpc-sdp/tide_core": "^3.0.0",
+    "dpc-sdp/tide_core": "dev-feature/SRM-512_update_drupal_to_9.4 as 3.1.11",
     "drupal/yaml_content": "^1.0"
   },
   "repositories": {
