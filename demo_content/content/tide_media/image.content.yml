@@ -187,3 +187,261 @@
           - taxonomy_term
           - vid: license_type
             name: 'Demo License'
+
+
+
+
+
+
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000129
+  name: 'Covid Primary Campaign - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'covid_primarycampaign.png'
+      alt: 'Covid primarycampaign - demo'
+      title: 'Covid primarycampaign - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000130
+  name: 'Engage Vic Photo Hero - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'Engage-Vic-photo-hero.jpeg'
+      alt: 'Engage Vic Photo Hero - demo'
+      title: 'Engage Vic Photo Hero - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000131
+  name: 'Kindergarden Best Life - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'Kindergarten-best-start-best-life.jpg'
+      alt: 'Kindergarden best life ALT text - demo'
+      title: 'Kindergarden best life - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000132
+  name: 'Many Talents One VCE Feature - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'Many-Talents-One-VCE-feature.jpg'
+      alt: 'Many Talents One VCE Feature Alt Text - demo'
+      title: 'Many Talents One VCE Feature - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000133
+  name: 'Many Talents One VCE Hero Banner - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'Many-talents-one-VCE-hero-banner.jpg'
+      alt: 'Many Talents One VCE Hero Banner - demo'
+      title: 'Many Talents One VCE Hero Banner - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000134
+  name: 'Roulette Aerial Display Card - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'roulette-aerial-display-card.jpg'
+      alt: 'Roulette Aerial Display Card - demo'
+      title: 'Roulette Aerial Display Card - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000135
+  name: 'The trades fit body image - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'The-trades-fit-body-image.jpg'
+      alt: 'The trades fit body image - demo'
+      title: 'The trades fit body image - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000136
+  name: 'Uncle Jack Charles - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'Uncle_Jack_Charles.jpg'
+      alt: 'Uncle Jack Charles - demo'
+      title: 'Uncle Jack Charles - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000137
+  name: 'Vic Dining and Ent Program - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'Vic-Dining-and-Ent-Program-818x496.jpg'
+      alt: 'Vic Dining and Ent Program - demo'
+      title: 'Vic Dining and Ent Program - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000138
+  name: 'Vic Dining Feature - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'vic-dining-eating-feature.jpg'
+      alt: 'Vic Dining Feature - demo'
+      title: 'Vic Dining Feature - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000139
+  name: 'Vic Sick Pay Guarantee - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'Vic-Sick-Pay-Guarantee.jpg'
+      alt: 'Vic Sick Pay Guarantee - demo'
+      title: 'Vic Sick Pay Guarantee - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000140
+  name: 'Melb Tram Unpublished - demo'
+  uid: 1
+  status: 0
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'Melbourne-tram-Unpublished.jpg'
+      alt: 'Melb Tram Unpublished - demo'
+      title: 'Melb Tram Unpublished - demo'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
