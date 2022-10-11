@@ -1,0 +1,168 @@
+- entity: node
+  type: event
+  title: Roulette Aerial Display - demo
+  uid: 1
+  status: 1
+  moderation_state:
+    - '#process':
+        callback: reference
+        args:
+          - content_moderation_state
+          - workflow: editorial
+            moderation_state: published
+  # Page header.
+  field_featured_image:
+    - '#process':
+        callback: reference
+        args:
+          - media
+          - bundle: image
+            name: 'Demo: Roulette aerial display'
+  field_news_intro_text: Air Force Roulettes at Australia Day in Victoria.
+  field_landing_page_summary: Air Force Roulettes at Australia Day in Victoria.
+  field_event_description:
+    - format: rich_text
+      value: |
+
+  # Body content.
+  body:
+    - format: rich_text
+      value: |
+        <p>The Air Force Roulettes will conduct a flypast of Melbourne CBD on Australia Day at 12.30pm.</p>
+
+        <p>Following this flypast, the Roulettes will conduct an aerobatic display over Kings Domain Gardens and the Shrine of Remembrance.</p>
+
+        <p>Throughout the flypasts and displays, the Roulettes will be flying as low as 250 feet (80 metres), at speeds up to 540km/h, and experiencing up to 6 times the force of gravity in their PC-21 aircraft.</p>
+
+        <p>All flying is subject to change due to weather and operational requirements.</p>
+  # Event details.
+  field_event_details:
+    - entity: paragraph
+      type: event_details
+      field_paragraph_date_range:
+        - value: '2022-01-26T12:30:00'
+          end_value: '2022-01-26T12:45:00'
+      field_paragraph_location:
+        - country_code: AU
+          administrative_area: VIC
+          locality: Melbourne
+          postal_code: 3000
+          address_line1: Melbourne CBD
+          address_line2:
+      field_paragraph_event_price_from: Free entry
+      field_paragraph_event_price_to: 0.00
+      field_paragraph_link:
+        - uri: https://www.airforce.gov.au/displays/roulettes
+          title: Find out more about the Air Force Roulettes
+  field_event_category:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: event
+            name: 'Demo Event Category'
+  # field_node_link:
+  #   - uri: https://www.vic.gov.au
+  # Event author.
+  field_node_author: Content editor
+  field_node_email: no-reply@vic.gov.au
+  field_node_phone: '+61 3 9603 8804'
+  # Related links
+  field_show_related_content: 0
+  field_related_links:
+    - entity: paragraph
+      type: related_links
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au
+          title: State Government of Victoria
+  # Contact.
+  field_landing_page_show_contact: 0
+  # field_landing_page_contact:
+  #   - entity: paragraph
+  #     type: contact_us
+  #     field_paragraph_title: 
+  #     field_paragraph_name: 
+  #     field_paragraph_email: 
+  #     field_paragraph_department_name: 
+  #     field_paragraph_location:
+  #       - country_code: 
+  #         administrative_area: 
+  #         locality: 
+  #         postal_code: 
+  #         address_line1: 
+  #         address_line2: 
+  #     field_paragraph_postal_address:
+  #       - country_code: 
+  #         administrative_area: 
+  #         locality: 
+  #         postal_code: 
+  #         address_line1: 
+  #         address_line2: 
+  #     field_paragraph_phones:
+  #       - entity: 
+  #         type: 
+  #         field_paragraph_phone_title: 
+  #         field_paragraph_phone_number: 
+  #       - entity: 
+  #         type: 
+  #         field_paragraph_phone_title: 
+  #         field_paragraph_phone_number: 
+  #     field_paragraph_social_media:
+  #       - entity: 
+  #         type: 
+  #         field_paragraph_social_list: 
+  #         field_paragraph_link:
+  #           - uri: 
+  #             title: 
+  # Other.
+  field_show_social_sharing: 1
+  field_show_content_rating: 0
+  field_show_table_of_content: 0
+  # Topic and Tags.
+  field_topic:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: topic
+            name: 'Spencer topic demo'
+  field_tags:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Gen X tag demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Boomers tag demo'
+  # Sites.
+  field_node_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Brunswick demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Frankston demo'
+  field_node_primary_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'

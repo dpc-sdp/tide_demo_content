@@ -219,7 +219,7 @@
         callback: file_path_rename
         args:
           - image
-          - filename: -Many-talents-one-VCE-hero-banner.jpg'
+          - filename: 'Many-talents-one-VCE-hero-banner.jpg'
       alt: 'Demo: Hero Banner Many Talents Once VCE'
       title: 'Demo: Hero Banner Many Talents Once VCE'
   field_license_type:
@@ -408,7 +408,7 @@
         callback: file_path_rename
         args:
           - image
-          - filename: 'Vic-Dining-and-Ent-Program-818x496.jpg'
+          - filename: 'vic-dining-entertainment-feature.jpg'
       alt: 'Victorian Dining and Entertainment Program feature image'
       title: 'Victorian Dining and Entertainment Program feature image'
   field_license_type:
