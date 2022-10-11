@@ -104,7 +104,6 @@ tide_news.demo:
     - 'tide_news/reference/celebrates-the-service-of-LGBTQ+-defence-personnel-news-james-test13-demo.yml'
     - 'tide_news/reference/GovHack-2022-coming-soon-news-james-test11-demo.yml'
     - 'tide_news/reference/Wage-Inspectorate-helps-15000-Victorians-news-james-test12-demo.yml'
-    - 'tide_news/reference/news-first-of-its-kind-exhibition-demo.yml'
 tide_profile.demo:
   dependencies:
     modules:
