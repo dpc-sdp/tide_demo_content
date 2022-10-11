@@ -408,7 +408,7 @@
         callback: file_path_rename
         args:
           - image
-          - filename: 'vic-dining-entertainment-feature.jpg'
+          - filename: 'vic-dining-eating-feature.jpg'
       alt: 'Victorian Dining and Entertainment Program feature image'
       title: 'Victorian Dining and Entertainment Program feature image'
   field_license_type:
