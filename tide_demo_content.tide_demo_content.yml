@@ -66,7 +66,7 @@ tide_landing_page.demo:
     - 'tide_landing_page/reference/landing_page_disclaimer.yml'
     - 'tide_landing_page/reference/demo-landing-page-many-talents-one-vce.yml'
     - 'tide_landing_page/reference/demo-landing-page-vic-gov-homepage.yml'
-    - 'tide_landing_page/reference/demo-landing-Working-in-the-CMS.yml'
+    # - 'tide_landing_page/reference/demo-landing-Working-in-the-CMS.yml'
 tide_media.demo:
   dependencies:
     modules:
@@ -102,8 +102,8 @@ tide_news.demo:
     - 'tide_news/news_cc_4_neg.yml'
     - 'tide_news/news_cc_5_neg.yml'
     - 'tide_news/reference/GovHack-2022-coming-soon-news-demo.yml'
-    # - 'tide_news/reference/news-first-of-its-kind-exhibition-demo.yml'
-    # - 'tide_news/reference/Wage-Inspectorate-helps-15000-Victorians-news-demo.yml'
+    - 'tide_news/reference/news-first-of-its-kind-exhibition-demo.yml'
+    - 'tide_news/reference/Wage-Inspectorate-helps-15000-Victorians-news-demo.yml'
 tide_profile.demo:
   dependencies:
     modules:
