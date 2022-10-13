@@ -7,6 +7,9 @@
     "dpc-sdp/tide_core": "dev-feature/SRM-512_update_drupal_to_9.4 as 3.1.11",
     "drupal/yaml_content": "^1.0"
   },
+  "provide": {
+    "drupal/ckeditor": "*"
+  },
   "repositories": {
     "drupal": {
       "type": "composer",
