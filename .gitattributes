@@ -5,4 +5,3 @@
 .circleci                 export-ignore
 .circleci/config.yml      export-ignore
 .env                      export-ignore
-dev-init.sh               export-ignore
