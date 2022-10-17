@@ -28,7 +28,9 @@ tide_event.demo:
     - 'tide_event/taxonomy_term'
     - 'tide_event/event_01.content.yml'
     - 'tide_event/2-BE-event-1.yml'
-
+    # - 'tide_event/reference/demo-event-Kensington-Primary-School.yml'
+    # - 'tide_event/reference/demo-event-roulette-aerial-display.yml'
+    # - 'tide_event/reference/demo-event-the-trades-fit.yml'
 tide_grant.demo:
   dependencies:
     modules:
@@ -62,7 +64,9 @@ tide_landing_page.demo:
     - 'tide_landing_page/reference/landing_page_accessibility.yml'
     - 'tide_landing_page/reference/landing_page_copyright.yml'
     - 'tide_landing_page/reference/landing_page_disclaimer.yml'
-
+    # - 'tide_landing_page/reference/demo-landing-page-many-talents-one-vce.yml'
+    # - 'tide_landing_page/reference/demo-landing-page-vic-gov-homepage.yml'
+    # - 'tide_landing_page/reference/demo-landing-Working-in-the-CMS.yml'
 tide_media.demo:
   dependencies:
     modules:
@@ -97,7 +101,9 @@ tide_news.demo:
     - 'tide_news/news_cc_3.yml'
     - 'tide_news/news_cc_4_neg.yml'
     - 'tide_news/news_cc_5_neg.yml'
-
+    # - 'tide_news/reference/GovHack-2022-coming-soon-news-demo.yml'
+    # - 'tide_news/reference/news-first-of-its-kind-exhibition-demo.yml'
+    # - 'tide_news/reference/Wage-Inspectorate-helps-15000-Victorians-news-demo.yml'
 tide_profile.demo:
   dependencies:
     modules:
