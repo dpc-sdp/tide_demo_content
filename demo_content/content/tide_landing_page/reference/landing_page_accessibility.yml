@@ -1,0 +1,77 @@
+- entity: node
+  type: landing_page
+  title: Accessibility - demo
+  uid: 1
+  status: 1
+  moderation_state:
+    - '#process':
+        callback: reference
+        args:
+          - content_moderation_state
+          - workflow: editorial
+            moderation_state: published
+  # Page header.
+  field_landing_page_intro_text: Accessibility information about this website
+  field_landing_page_summary: Accessibility information about this website. We endeavour to conform to level AA of the W3C Web Content Accessibility Guidelines 2.0.
+  # Content Components.
+  field_show_table_of_content: 1
+  field_landing_page_component:
+    # Basic Text.
+    - entity: paragraph
+      type: basic_text
+      field_paragraph_body:
+      - format: rich_text
+        value: |
+          <p>The Department of Premier and Cabinet, as owner of this website on behalf of the Victorian Government, is committed to providing a website that is accessible to the widest possible audience, regardless of technology or ability.&nbsp;</p>
+          <p>This website aims to meet level AA of the <a href="https://www.w3.org/TR/WCAG20/" title="Web Content Accessibility Guidelines (WCAG) 2.1">World Wide Web Consortium (W3C) Web Content Accessibility Guidelines 2.0</a>.</p>
+          <p>If there is information on this website that you can't access, or have any suggestions on how we can improve the accessibility of this website, please email us&nbsp;via&nbsp;<a href="mailto:digital@dpc.vic.gov.au" title="digital@dpc.vic.gov.au">digital@dpc.vic.gov.au</a>&nbsp;or contact us by mail to:</p>
+          <p>Department of Premier and Cabinet<br />1 Treasury Place<br />East Melbourne VIC 3002</p>
+          <p>All constructive feedback regarding the accessibility or usability of this website is welcome and will be carefully considered.</p>
+          <h2>Assistance</h2>
+          <ul>
+          <li>If you are a TTY user, phone <a href="tel:133677" title="133 677">133 677</a> then ask for 1300 366 356</li>
+          <li>If you are a Speak and Listen user, phone <a href="tel:1300555727" title="1300 555 727">1300 555 727</a> then ask for 1300 366 356</li>
+          <li>For SMS relay, use <a href="tel:0423677767" title="0423 677 767">0423 677 767</a></li>
+          <li>If you are an internet relay user, visit the <a href="https://nrschat.nrscall.gov.au/nrs/internetrelay" title="Internet Relay call page">Make an Internet Relay call page</a> and use this number: <a href="tel:1300366356">1300 366 356</a></li></ul>
+  
+  # Other.
+  field_show_social_sharing: 1
+  field_show_content_rating: 1
+  field_show_site_section_nav: 1
+  field_landing_page_nav_title: 'Site-section Navigation'
+  # Topic and Tags.
+  field_topic:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: topic
+            name: 'Bourke topic demo'
+  field_tags:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Boomers tag demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Gen X tag demo'
+  # Sites.
+  field_node_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
+  field_node_primary_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
