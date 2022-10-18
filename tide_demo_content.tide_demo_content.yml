@@ -81,9 +81,9 @@ tide_media.demo:
     - 'tide_media/embedded_video.content.yml'
     - 'tide_media/embedded-video-no-transcript.yml'
     - 'tide_media/embedded-video-test.yml'
-    - 'tide_media/campaign.content.yml'
-    - 'tide_media/demo-campaign-block-covid-engage-vic.yml'
-    - 'tide_media/media_gallery.content.yml'
+    - 'tide_media/block_content/campaign.content.yml'
+    - 'tide_media/block_content/demo-campaign-block-covid-engage-vic.yml'
+    - 'tide_media/block_content/media_gallery.content.yml'
 tide_news.demo:
   dependencies:
     modules:
