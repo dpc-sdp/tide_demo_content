@@ -11,38 +11,56 @@
           - workflow: editorial
             moderation_state: published
   # Page header.
-  field_landing_page_intro_text: Access grants and services, find out what's on in Victoria and have your say on government decisions.
-  field_landing_page_summary: Access grants and services, find out what's on in Victoria and have your say on government decisions.
+  field_featured_image:
+    - '#process':
+        callback: reference
+        args:
+          - media
+          - bundle: image
+            name: 'Demo: Melbourne tram'
+  field_landing_page_hero_image:
+    - '#process':
+        callback: reference
+        args:
+          - media
+          - bundle: image
+            name: 
+  field_show_hero_image_caption: 0
+  field_graphical_image:
+    - '#process':
+        callback: reference
+        args:
+          - media
+          - bundle: image
+            name: 
+  field_landing_page_intro_text: Access grants and services, find out what’s on in Victoria and have your say on government decisions.
+  field_landing_page_summary: Access grants and services, find out what’s on in Victoria and have your say on government decisions.
   field_landing_page_hero_theme: light
   field_landing_page_bg_colour: white
   # Hero banner.
-  field_landing_page_hero_banner:
-    - entity: paragraph
-      type: default
-      field_paragraph_freetext: Key coronavirus links
-      field_paragraph_theme: light
-  # Key journeys.
-  # field_landing_page_key_journeys:
+  # field_landing_page_hero_banner:
   #   - entity: paragraph
-  #     type: key_journeys
-  #     field_paragraph_title: Key coronavirus links
-  #     field_paragraph_links:
-  #       - uri: https://www.coronavirus.vic.gov.au/checklist
-  #         title: If you have COVID-19 or are a contact
-  #       - uri: https://www.coronavirus.vic.gov.au/where-get-tested-covid-19
-  #         title: Where to get tested
-  #       - uri: https://www.coronavirus.vic.gov.au/vaccine
-  #         title: Book your vaccine appointment
-  #       - uri: https://www.coronavirus.vic.gov.au/rapid-antigen-tests
-  #         title: Advice on rapid antigen tests
-  #       - uri: https://www.coronavirus.vic.gov.au/translated-information-about-coronavirus-covid-19
-  #         title: Translated information
-  # Header components.
-  field_landing_page_header:
+  #     type: hero_banner_with_cta
+  #     field_paragraph_cta:
+  #       - uri: 
+  #         title: 
+  #     field_paragraph_freetext: 
+  #     field_paragraph_link_text:
+  #       - uri: 
+  #         title: 
+  #     field_paragraph_background_image:
+  #       - '#process':
+  #           callback: reference
+  #           args:
+  #             - media
+  #             - bundle: image
+  #               name:
+  #     field_paragraph_theme: light
+  # Key journeys.
+  field_landing_page_key_journeys:
     - entity: paragraph
-      type: introduction_banner
-      field_paragraph_title: 
-      field_paragraph_body:
+      type: key_journeys
+      field_paragraph_title: Key coronavirus links
       field_paragraph_links:
         - uri: https://www.coronavirus.vic.gov.au/checklist
           title: If you have COVID-19 or are a contact
@@ -54,6 +72,23 @@
           title: Advice on rapid antigen tests
         - uri: https://www.coronavirus.vic.gov.au/translated-information-about-coronavirus-covid-19
           title: Translated information
+  # Header components.
+  # field_landing_page_header:
+  #   - entity: paragraph
+  #     type: introduction_banner
+  #     field_paragraph_title: Key coronavirus links
+  #     field_paragraph_body:
+  #     field_paragraph_links:
+  #       - uri: 'https://www.coronavirus.vic.gov.au/checklist'
+  #         title: If you have COVID-19 or are a contact
+  #       - uri: 'https://www.coronavirus.vic.gov.au/where-get-tested-covid-19'
+  #         title: Where to get tested
+  #       - uri: 'https://www.coronavirus.vic.gov.au/vaccine'
+  #         title: Book your vaccine appointment
+  #       - uri: 'https://www.coronavirus.vic.gov.au/rapid-antigen-tests'
+  #         title: Advice on rapid antigen tests
+  #       - uri: 'https://www.coronavirus.vic.gov.au/translated-information-about-coronavirus-covid-19'
+  #         title: Translated information
   # Campaigns.
   field_landing_page_c_primary:
     - '#process':
@@ -114,7 +149,7 @@
               - media
               - bundle: image
                 name: 'Demo: Vic Sick Pay Feature'
-      field_paragraph_summary: Giving casual and contract workers access to sick and carer's pay
+      field_paragraph_summary: Giving casual and contract workers access to sick and carer's pay.
       field_paragraph_link:
         - uri: https://www.vic.gov.au/sick-pay-guarantee
           title: Victorian Sick Pay Guarantee
@@ -129,7 +164,7 @@
               - media
               - bundle: image
                 name: 'Demo: Kinder'
-      field_paragraph_summary: The Victorian Government is investing $5 billion in kindergarten programs for all 3-year-olds over the next 10 years – a nation-leading initiative that will benefit children across the state
+      field_paragraph_summary: The Victorian Government is investing $5 billion in kindergarten programs for all 3-year-olds over the next 10 years – a nation-leading initiative that will benefit children across the state.
       field_paragraph_link:
         - uri: https://www.vic.gov.au/kinder
           title: Kindergarten - Best Start, Best Life
@@ -175,19 +210,32 @@
       - format: rich_text
         value: |
           <p>Follow <a href="https://twitter.com/VicGovAu">@VicGovAu</a> on Twitter for the latest news and updates.</p>
-  # # Related links
-  # field_show_related_content: 1
-  # field_related_links:
-  #   - entity: paragraph
-  #     type: related_links
-  #     field_paragraph_link:
-  #       - uri: https://www.google.com
-  #         title: State Government of Victoria
-  #   - entity: paragraph
-  #     type: related_links
-  #     field_paragraph_link:
-  #       - uri: https://www.google.com
-  #         title: Department of Premier and Cabinet
+  # What's Next.
+  field_show_whats_next: 0
+  field_whats_next:
+    - entity: paragraph
+      type: links
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au
+          title: State Government of Victoria
+    - entity: paragraph
+      type: links
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au/department-premier-and-cabinet
+          title: Department of Premier and Cabinet
+  # Related links
+  field_show_related_content: 0
+  field_related_links:
+    - entity: paragraph
+      type: related_links
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au
+          title: State Government of Victoria
+    - entity: paragraph
+      type: related_links
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au/department-premier-and-cabinet
+          title: Department of Premier and Cabinet
   # Contact.
   field_landing_page_show_contact: 0
   field_landing_page_contact:
@@ -229,9 +277,9 @@
               title: Twitter
   # Other.
   field_show_social_sharing: 0
-  field_show_content_rating: 0
+  field_show_content_rating: 1
   field_show_site_section_nav: 0
-  field_landing_page_nav_title: 'Site-section Navigation'
+  field_landing_page_nav_title:
   # Topic and Tags.
   field_topic:
     - '#process':
@@ -240,6 +288,19 @@
           - taxonomy_term
           - vid: topic
             name: 'Flinders topic demo'
+  field_tags:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'South Yarra demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Frankston demo'
   # Sites.
   field_node_site:
     - '#process':
@@ -247,7 +308,13 @@
         args:
           - taxonomy_term
           - vid: sites
-            name: 'South Yarra demo'
+            name: 'Melbourne Web Demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Brunswick demo'
     - '#process':
         callback: reference
         args:
@@ -302,6 +369,57 @@
   link:
     - '#process':
         callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Demo Landing Page
+# Override the homepage of demo Sites.
+- entity: taxonomy_term
+  vid: sites
+  name: 'Demo Site'
+  status: 1
+  field_site_domains: 'www.demo.vic.gov.au'
+  field_acknowledgement_to_country: 'The Victorian Government acknowledges Aboriginal and Torres Strait Islander people as the Traditional Custodians of the land and acknowledges and pays respect to their Elders, past and present.'
+  field_site_main_menu:
+    - '#process':
+        callback: reference
+        args:
+          - menu
+          - id: 'main-tide-demo'
+  field_site_footer_menu:
+    - '#process':
+        callback: reference
+        args:
+          - menu
+          - id: 'footer-tide-demo'
+  field_site_homepage:
+    - '#process':
+        callback: reference
+        args:
+          - node
+          - type: landing_page
+            title: Demo Landing Page
+- entity: taxonomy_term
+  vid: sites
+  name: 'Another Demo Site'
+  status: 1
+  field_site_domains: 'www.another.demo.vic.gov.au'
+  field_acknowledgement_to_country: 'The Victorian Government acknowledges Aboriginal and Torres Strait Islander people as the Traditional Custodians of the land and acknowledges and pays respect to their Elders, past and present.'
+  field_site_main_menu:
+    - '#process':
+        callback: reference
+        args:
+          - menu
+          - id: 'main-tide-demo-another'
+  field_site_footer_menu:
+    - '#process':
+        callback: reference
+        args:
+          - menu
+          - id: 'footer-tide-demo-another'
+  field_site_homepage:
+    - '#process':
+        callback: reference
         args:
           - node
           - type: landing_page
