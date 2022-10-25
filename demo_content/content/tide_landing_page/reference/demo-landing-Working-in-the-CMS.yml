@@ -1,6 +1,6 @@
 - entity: node
   type: landing_page
-  title: Working in the CMS
+  title: Working in the CMS - demo
   uid: 1
   status: 1
   moderation_state:
