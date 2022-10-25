@@ -44,13 +44,38 @@
 
         <p>There'll be four sessions across two days. Each school can attend only one of the sessions.</p>
 
-        <p>&nbsp;</p>
+        <p>Book now as spaces are limited.</p>
 
         <drupal-entity data-embed-button="tide_media" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="60e499b1-a5a2-4c58-b5e8-092f57548ee2" data-langcode="en" data-show-last-updated="0"></drupal-entity>
 
         <p>&nbsp;</p>
 
         <drupal-entity data-embed-button="tide_media" data-entity-embed-display="view_mode:media.embedded_with_transcript" data-entity-type="media" data-entity-uuid="392b3678-ce74-430f-8a38-a7c8e8b7935c" data-langcode="en" data-show-last-updated="0"></drupal-entity>
+
+        <h2>All Victorian secondary schools</h2>
+
+        <p>Book your session for up to 20 students* across years 9 and 10.</p>
+
+        <ul>
+          <li>Session 1: Booked out</li>
+          <li>Session 2: Monday 16 May, 12.45 pm to 3.30 pm</li>
+          <li>Session 3: Tuesday 17 May, 9.30 am to 12.15 pm</li>
+          <li>Session 4: Tuesday 17 May, 12.45 pm to 3.30 pm</li>
+        </ul>
+
+        <p><a class="button" href="https://vic.gov.au/book-your-session-trades-fit-young-women-trades-and-tech-expo">Book your session!</a></p>
+
+        <p>School bookings close Wednesday 20 April 2022.</p>
+
+        <p>Notification of allocated session will be by email no later than Friday 22 April 2022. Early submission of the booking form may improve the chance of being offered a preferred session.</p>
+
+        <p>Please note schools to provide own transport and CRTs.</p>
+
+        <h2>All trade and tech businesses/organisations</h2>
+
+        <p>Book your stand at the expo and provide details of your exhibit, presentation, and display.</p>
+
+        <p>For all Exhibitor inquiries please&nbsp;contact&nbsp;<a href="mailto:School.Industry.Event@education.vic.gov.au">School.Industry.Event@education.vic.gov.au</a>.</p>
 
         <p>* This event is for young women and non-binary people who are comfortable in a space that centres the experiences of young women.</p>
   # Event details.
