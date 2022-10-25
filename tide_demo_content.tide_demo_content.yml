@@ -66,7 +66,7 @@ tide_landing_page.demo:
     - 'tide_landing_page/reference/landing_page_disclaimer.yml'
     - 'tide_landing_page/reference/demo-landing-page-many-talents-one-vce.yml'
     - 'tide_landing_page/reference/demo-landing-page-vic-gov-homepage.yml'
-    # - 'tide_landing_page/reference/demo-landing-Working-in-the-CMS.yml'
+    - 'tide_landing_page/reference/demo-landing-Working-in-the-CMS.yml'
 tide_media.demo:
   dependencies:
     modules:
