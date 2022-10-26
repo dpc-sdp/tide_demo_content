@@ -11,13 +11,6 @@
           - workflow: editorial
             moderation_state: published
   # Page header.
-  # field_featured_image:
-  #   - '#process':
-  #       callback: reference
-  #       args:
-  #         - media
-  #         - bundle: image
-  #           name: 
   field_news_intro_text: 
   field_landing_page_summary: An online information session for school and community members to discuss Kensington Primary School's exciting upgrade project.
   field_event_description:

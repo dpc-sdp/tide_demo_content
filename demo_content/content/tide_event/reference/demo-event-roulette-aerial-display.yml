@@ -61,8 +61,6 @@
           - taxonomy_term
           - vid: event
             name: 'Demo Event Category'
-  # field_node_link:
-  #   - uri: https://www.vic.gov.au
   # Event author.
   field_node_author: Content editor
   field_node_email: no-reply@vic.gov.au
@@ -77,43 +75,6 @@
           title: State Government of Victoria
   # Contact.
   field_landing_page_show_contact: 0
-  # field_landing_page_contact:
-  #   - entity: paragraph
-  #     type: contact_us
-  #     field_paragraph_title: 
-  #     field_paragraph_name: 
-  #     field_paragraph_email: 
-  #     field_paragraph_department_name: 
-  #     field_paragraph_location:
-  #       - country_code: 
-  #         administrative_area: 
-  #         locality: 
-  #         postal_code: 
-  #         address_line1: 
-  #         address_line2: 
-  #     field_paragraph_postal_address:
-  #       - country_code: 
-  #         administrative_area: 
-  #         locality: 
-  #         postal_code: 
-  #         address_line1: 
-  #         address_line2: 
-  #     field_paragraph_phones:
-  #       - entity: 
-  #         type: 
-  #         field_paragraph_phone_title: 
-  #         field_paragraph_phone_number: 
-  #       - entity: 
-  #         type: 
-  #         field_paragraph_phone_title: 
-  #         field_paragraph_phone_number: 
-  #     field_paragraph_social_media:
-  #       - entity: 
-  #         type: 
-  #         field_paragraph_social_list: 
-  #         field_paragraph_link:
-  #           - uri: 
-  #             title: 
   # Other.
   field_show_social_sharing: 1
   field_show_content_rating: 0
