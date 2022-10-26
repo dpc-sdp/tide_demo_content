@@ -11,13 +11,6 @@
           - workflow: editorial
             moderation_state: published
   # Page header.
-  field_featured_image:
-    # - '#process':
-    #     callback: reference
-    #     args:
-    #       - media
-    #       - bundle:
-    #         name:
   field_news_intro_text: The Trades Fit expo demonstrates the exciting world of trade and tech industries to young women and the rewarding, and well-paid career opportunities they can provide.
   field_landing_page_summary: The Trades Fit expo demonstrates the exciting world of trade and tech industries to young women and the rewarding, and well-paid career opportunities they can provide.
   field_event_description:

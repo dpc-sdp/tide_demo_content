@@ -61,8 +61,6 @@
           - taxonomy_term
           - vid: event
             name: 'Demo Event Category'
-  # field_node_link:
-  #   - uri: https://www.vic.gov.au
   # Event author.
   field_node_author: Content editor
   field_node_email: no-reply@vic.gov.au

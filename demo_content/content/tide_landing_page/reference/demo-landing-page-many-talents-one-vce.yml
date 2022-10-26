@@ -26,22 +26,7 @@
             - bundle: image
               name: 'Demo: Hero Banner Many Talents Once VCE'
   field_paragraph_theme: light
-  # field_landing_page_hero_logo:
-  #     - '#process':
-  #         callback: reference
-  #         args:
-  #           - media
-  #           - bundle: image
-  #             name: 'Demo: Hero Banner Many Talents Once VCE'
-  # field_landing_page_hero_image: 
-  #     - '#process':
-  #       callback: reference
-  #       args:
-  #         - media
-  #         - bundle: image
-  #           name: 'Demo: Hero Banner Many Talents Once VCE'
   field_show_hero_image_caption: 0
-
   field_graphical_image: 
       - '#process':
         callback: reference
@@ -52,34 +37,7 @@
   field_landing_page_intro_text:
   field_landing_page_summary: 'VCE is changing from 2023. Victorian senior secondary education is changing. From 2023, the new VCE Vocational Major and Victorian Pathways Certificate will replace VCAL.'
   field_landing_page_hero_theme: light
-  field_landing_page_bg_colour: white
-#   # Header components.
-#   field_landing_page_header: 
-#     - entity: paragraph
-#       type: introduction_banner
-#       field_paragraph_title: 
-#       field_paragraph_body: 
-#       field_paragraph_links:
-#         - uri: 
-#           title: 
-#         - uri: 
-#           title:
-#   # Campaigns.
-#   field_landing_page_c_primary: 
-#     - '#process':
-#         callback: reference
-#         args:
-#           - block_content
-#           - type: campaign
-#             field_block_title: 'Demo Campaign'
-#   field_show_c_primary_caption: 0
-#   field_landing_page_c_secondary: 
-    # - '#process':
-    #     callback: reference
-    #     args:
-    #       - block_content
-    #       - type: campaign
-    #         field_block_title: 'Another Demo Campaign'
+  field_landing_page_bg_colour: white  
   # Content Components.
   field_show_table_of_content: 0
   field_landing_page_component:
