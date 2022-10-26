@@ -1,0 +1,73 @@
+- entity: node
+  type: landing_page
+  title: Disclaimer - demo
+  uid: 1
+  status: 1
+  moderation_state:
+    - '#process':
+        callback: reference
+        args:
+          - content_moderation_state
+          - workflow: editorial
+            moderation_state: published
+  # Page header.
+  field_landing_page_intro_text: Legal disclaimer information.
+  field_landing_page_summary: Legal disclaimer information.
+  # Content Components.
+  field_show_table_of_content: 1
+  field_landing_page_component:
+    # Basic Text.
+    - entity: paragraph
+      type: basic_text
+      field_paragraph_body:
+      - format: rich_text
+        value: |
+          <p>The content of this website is provided for information purposes only. No claim is made as to the accuracy or authenticity of the content of the website.</p>
+          <p>Information, data and advice on this website is provided on the basis that site users undertake responsibility for assessing the relevance and accuracy of its content. The Department of Premier and Cabinet, as owner of this site on behalf of the Victorian Government, makes no representations, either expressed or implied, as to the suitability of anything on this website for any particular purpose.</p>
+          <p>We do not sponsor or endorse any material on websites linked from or to this website, including any social media websites that may be linked in any way to this website.</p>
+          <p>We do not accept any liability to any person:</p>
+          <ul>
+          <li>for the information, data or advice (or the use of such information, data or advice) which is provided on this website or incorporated into it by reference</li>
+          <li>for any interference with or damage to a user's computer, software or data occurring in connection with or relating to this website or its use</li></ul>
+          <p>If you use automatic language translation services in connection with this site you do so at your own risk. We make no representations, express or implied, as to the accuracy or usefulness of any translation of the information on this website.</p>
+  # Other.
+  field_show_social_sharing: 1
+  field_show_content_rating: 1
+  field_show_site_section_nav: 1
+  field_landing_page_nav_title: 'Site-section Navigation'
+  # Topic and Tags.
+  field_topic:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: topic
+            name: 'Bourke topic demo'
+  field_tags:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Boomers tag demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Gen X tag demo'
+  # Sites.
+  field_node_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
+  field_node_primary_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'

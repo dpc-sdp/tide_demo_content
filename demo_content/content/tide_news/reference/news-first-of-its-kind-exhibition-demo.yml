@@ -1,0 +1,108 @@
+- entity: node
+  type: news
+  title: FIRST-OF-ITS-KIND EXHIBITION CELEBRATES THE SERVICE OF LGBTQ+ DEFENCE PERSONNEL - demo
+  uid: 1
+  status: 1
+  moderation_state:
+    - '#process':
+        callback: reference
+        args:
+          - content_moderation_state
+          - workflow: editorial
+            moderation_state: published
+  # Page Header.
+  field_news_date:
+    - value: '2022-07-22T09:00:00'
+  field_featured_image: 0
+  field_landing_page_summary: Opening in August, the Shrine’s Defending with Pride is dedicated to uncovering history and giving voice to personal stories of service.
+  field_news_intro_text: Opening in August, the Shrine’s Defending with Pride is dedicated touncovering history and giving voice to personal stories of service.
+  field_node_department:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: department
+            name: 'Department of Macchiato demo'
+  field_location:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: location
+            name: 'Frankston demo'
+  # Body content.
+  body:
+    - format: rich_text
+      value: |
+        <p><strong><span class="scayt-misspell-word">Opening in August, the Shrine’s <em>Defending with Pride</em> is dedicated to uncovering history and giving voice to personal stories of service.</span></strong></p>
+        <drupal-entity data-embed-button="tide_media" data-entity-embed-display="view_mode:media.embedded" data-entity-embed-display-settings="" data-entity-type="media" data-entity-uuid="11dede11-10c0-111e1-1100-000000000124" data-langcode="en" data-show-last-updated="0"></drupal-entity>
+        <p><em>Defending with Pride: Stories of LGBTQ+ Service</em> reveals the history of lesbian, gay, bisexual, transgender and queer people in the Australian Defence Force (ADF). This is the first time LGBTQ+ service has been examined in a dedicated exhibition by an Australian war memorial. Opening 1 August, Defending with Pride is the third and final Shrine exhibition in a special series exploring themes of individual identity in times of war.</p>
+        <p>Lesbian, gay, bisexual, transgender and queer people have been proudly defending Australia through their military service since the formation of the armed forces. This exhibition charts the long and often difficult journey faced by LGBTQ+ people in gaining recognition, acceptance and celebration of their contribution to the ADF.</p>
+        <p>Curated in partnership with an advisory group of ex and current LGBTQ+ service personnel and drawing on collections from the Australian Queer Archives, Defending with Pride uncovers the long history of LGBTQ+   service; from stories of same-sex attraction in the First World War and the fluidity of sexual identity in wartime, to the ‘witch hunts’ that sought to out LGBTQ+ service people in the1970’s and ‘80’s, to ADF’s support for the recognition of same-sex couples.</p>
+        <p>An immersive exhibition featuring images, objects and video interviews, the centrepiece of <em>Defending with Pride</em> is the personal stories and reflections of veterans and current serving ADF personnel. Their testimony speaks to the richness and diversity of experiences of LGBTQ+ people in service, and highlights their continuing journey.</p>
+        <p>Kate Spinks, curator of <em>Defending with Pride</em> says of the exhibition,</p>
+        <blockquote>
+        <p>“I am honoured to have worked with the participants and advisory group to help present their stories and experiences. I am also proud that Melbourne’s Shrine is recognising and celebrating the history and service of LGBTQ+ people, something that has traditionally been absent or under-represented within Australia’s war memorials''.</p>
+        </blockquote>
+        <p>Advisory group member Professor Noah Riseman says,</p>
+        <blockquote>
+        <p>“This exhibition highlights the service LGBTQ+ Australians gave to their country, even when the country said they were not welcome. It showcases LGBTQ+ service members' achievements amidst adversity and how, over time, the ADF has changed its tune to embrace the strengths that LGBTQ+ service members bring to the force."</p>
+        </blockquote>
+        <p><strong>KEY PROGRAM DETAILS</strong></p>
+        <p><em>Defending with Pride</em> opens at the Shrine on 1 August 2022 and runs until July 2023.</p>
+        <p>The Shrine’s weekly Last Post Service at 4.45pm on Sunday 31 July will honour the contribution of LGBTQ+ personnel, and that evening <strong>the Shrine colonnades will be lit in rainbow colours</strong> to celebrate the contribution of past and present LGBTQ+ ADF personnel and the opening of<em> Defending<br />with Pride</em>.</p>
+        <p>The exhibition is also supported by a <strong>three-part podcast series</strong> hosted by Megan Spencer featuring interviews with veterans from the LGBTQ+ community.</p><p>For more information about the exhibition: <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="03b71bda-c3e0-4f28-a108-7c372eac34bf" href="/node/25975">https://www.shrine.org.au/defending-pride</a><br />
+        For details of the Last Post Service:&nbsp;https://www.shrine.org.au/last-post-service-31-july&nbsp;</p>
+  # Related links
+  field_show_related_content: 0
+  # Other.
+  field_show_social_sharing: 1
+  field_show_content_rating: 1
+  # Topic and Tags.
+  field_topic:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: topic
+            name: 'King topic demo'
+  field_tags:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Millennials tag demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Boomers tag demo'
+  # Sites.
+  field_node_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Frankston demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'South Yarra demo'
+  field_node_primary_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'

@@ -1,0 +1,296 @@
+- entity: node
+  type: landing_page
+  title: Working in the CMS - demo
+  uid: 1
+  status: 1
+  moderation_state:
+    - '#process':
+        callback: reference
+        args:
+          - content_moderation_state
+          - workflow: editorial
+            moderation_state: published
+  # Page header.
+  field_featured_image:
+    - '#process':
+        callback: reference
+        args:
+          - media
+          - bundle: image
+            name: 'Demo: Melbourne tram'
+  field_landing_page_hero_image: 
+      - '#process':
+        callback: reference
+        args:
+          - media
+          - bundle: image
+            name: 
+  field_show_hero_image_caption: 0
+  field_graphical_image: 
+      - '#process':
+        callback: reference
+        args:
+          - media
+          - bundle: image
+            name:
+  field_landing_page_intro_text: 'Everything you need to know about working in the CMS throughout the content lifecycle: drafting, scheduling, publishing, archiving and more.'
+  field_landing_page_summary: 'Everything you need to know about working in the CMS throughout the content lifecycle: drafting, scheduling, publishing, archiving and more.'
+  field_landing_page_hero_theme: light
+  field_landing_page_bg_colour: white
+  # Content Components.
+  field_show_table_of_content: 0
+  field_landing_page_component:
+     # Basic Text.
+    - entity: paragraph
+      type: basic_text
+      field_paragraph_body:
+      - format: rich_text
+        value: |
+          <div class="callout-wrapper">
+          <p>You can navigate to this page directly from the CMS under the <strong>CMS Support</strong> menu item.</p>
+          </div>
+    # Card promotion.
+    - entity: paragraph
+      type: promotion_card
+      field_paragraph_title: 'Using your SDP content management system dashboard'
+      field_paragraph_summary: A guide to help you understand your SDP CMS dashboard page and how to use it.
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au/using-your-sdp-cms-dashboard
+          title: Using your SDP content management system dashboard
+    # Card promotion.
+    - entity: paragraph
+      type: promotion_card
+      field_paragraph_title: 'Working with the content lock'
+      field_paragraph_summary: Find out how the content lock system works and how to unlock content.
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au/working-in-the-cms
+          title: Working with the content lock
+    # Card promotion.
+    - entity: paragraph
+      type: promotion_card
+      field_paragraph_title: 'Preview and share draft pages'
+      field_paragraph_summary: Instructions on how to preview your page to see how it will look when published and how to share a preview link for others to review.
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au/preview-and-share-draft-pages
+          title: Preview and share draft pages
+    # Card promotion.
+    - entity: paragraph
+      type: promotion_card
+      field_paragraph_title: 'Schedule content to publish or archive'
+      field_paragraph_summary: How to schedule in advance for a page or page update to be published or archived at a specific date and time.
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au/schedule-content-publish-or-archive
+          title: Schedule content to publish or archive
+    # Card promotion.
+    - entity: paragraph
+      type: promotion_card
+      field_paragraph_title: 'Aliases and redirects'
+      field_paragraph_summary: How to add redirects (including short/vanity URLs) and when to change a page's alias.
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au/aliases-and-redirects
+          title: Aliases and redirects
+    # Card promotion.
+    - entity: paragraph
+      type: promotion_card
+      field_paragraph_title: 'Clone an existing content page'
+      field_paragraph_summary: How to clone an existing content page within the Single Digital Presence content management system.
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au/clone-existing-content-page
+          title: Clone an existing content page
+    # Card promotion.
+    - entity: paragraph
+      type: promotion_card
+      field_paragraph_title: 'Using a sandbox environment to develop content'
+      field_paragraph_summary: When to use the production environment for draft content and when you might need a sandbox.
+      field_paragraph_link:
+        - uri: https://www.vic.gov.au/using-sandbox-environment-develop-content
+          title: Using a sandbox environment to develop content
+  # What's Next.
+  field_show_whats_next: 0
+  field_whats_next:
+    - entity: paragraph
+      type: links
+      field_paragraph_link:
+        - uri: 
+          title: 
+    - entity: paragraph
+      type: links
+      field_paragraph_link:
+        - uri: 
+          title: 
+  # Related links
+  field_show_related_content: 0
+  field_related_links:
+    - entity: paragraph
+      type: related_links
+      field_paragraph_link:
+        - uri: 
+          title: 
+    - entity: paragraph
+      type: related_links
+      field_paragraph_link:
+        - uri: 
+          title: 
+  # Contact.
+  field_landing_page_show_contact: 0
+  field_landing_page_contact:
+    - entity: paragraph
+      type: contact_us
+      field_paragraph_title: 
+      field_paragraph_name: 
+      field_paragraph_email: 
+      field_paragraph_department_name: 
+      field_paragraph_location:
+        - country_code: 
+          administrative_area:
+          locality: 
+          postal_code: 
+          address_line1: 
+          address_line2:
+      field_paragraph_postal_address:
+        - country_code: 
+          administrative_area:
+          locality: 
+          postal_code: 
+          address_line1: 
+          address_line2: 
+      field_paragraph_phones:
+        - entity: paragraph
+          type: phone
+          field_paragraph_phone_title: 
+          field_paragraph_phone_number: 
+        - entity: paragraph
+          type: phone
+          field_paragraph_phone_title: 
+          field_paragraph_phone_number:
+      field_paragraph_social_media:
+        - entity: paragraph
+          type: social_link
+          field_paragraph_social_list:
+          field_paragraph_link:
+            - uri: 
+              title: 
+  # Other.
+  field_show_social_sharing: 1
+  field_show_content_rating: 0
+  field_show_site_section_nav: 1
+  field_landing_page_nav_title: 'Single Digital Presence'
+  # Topic and Tags.
+  field_topic:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: topic
+            name: 'Melbourne Web Demo'
+  field_tags:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Millennials tag demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: tags
+            name: 'Boomers tag demo'
+  # Sites.
+  field_node_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Brunswick demo'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Frankston demo'
+  field_node_primary_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
+# Create menu links.
+- entity: menu_link_content
+  title: Demo Landing Page
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Demo Landing Page
+- entity: menu_link_content
+  title: Demo Landing Page
+  menu_name: footer-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Demo Landing Page
+- entity: menu_link_content
+  title: Demo Landing Page
+  menu_name: main-tide-demo-another
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Demo Landing Page
+- entity: menu_link_content
+  title: Demo Landing Page
+  menu_name: footer-tide-demo-another
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Demo Landing Page
+# Override the homepage of demo Sites.
+- entity: taxonomy_term
+  vid: sites
+  name: 'Melbourne Web Demo'
+  status: 1
+  field_site_domains: 'www.demo.vic.gov.au'
+  field_acknowledgement_to_country: 'The Victorian Government acknowledges Aboriginal and Torres Strait Islander people as the Traditional Custodians of the land and acknowledges and pays respect to their Elders, past and present.'
+  field_site_main_menu:
+    - '#process':
+        callback: reference
+        args:
+          - menu
+          - id: 'main-tide-demo'
+  field_site_footer_menu:
+    - '#process':
+        callback: reference
+        args:
+          - menu
+          - id: 'footer-tide-demo'
+  field_site_homepage:
+    - '#process':
+        callback: reference
+        args:
+          - node
+          - type: landing_page
+            title: Demo Landing Page

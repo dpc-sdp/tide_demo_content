@@ -2,9 +2,34 @@
   vid: department
   name: 'Demo Department'
   status: 1
-  uuid: 11dede11-10c0-111e1-1100-000000000001
+  uuid: 11dede11-10c0-111e1-1103-000000000001
 - entity: taxonomy_term
   vid: department
   name: 'Another Demo Department'
   status: 1
-  uuid: 11dede11-10c0-111e1-1100-000000000002
+  uuid: 11dede11-10c0-111e1-1103-000000000002
+- entity: taxonomy_term
+  vid: department
+  name: 'Department of Flat White demo'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1103-000000000003
+- entity: taxonomy_term
+  vid: department
+  name: 'Department of Latte demo'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1103-000000000004
+- entity: taxonomy_term
+  vid: department
+  name: 'Department of Long Black demo'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1103-000000000005
+- entity: taxonomy_term
+  vid: department
+  name: 'Department of Macchiato demo'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1103-000000000006
+- entity: taxonomy_term
+  vid: department
+  name: 'Department of Piccolo demo'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1103-000000000007
