@@ -116,3 +116,41 @@
           - taxonomy_term
           - vid: sites
             name: 'Another Demo Section 1'
+- entity: media
+  bundle: document
+  uuid: 11dede11-10c0-111e1-1100-000000000102
+  name: The Trades Fit Poster
+  uid: 1
+  status: 1
+  field_media_file:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - file
+          - filename: 'the-trades-fit-poster.pdf'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+  field_media_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Demo Site'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Another Demo Site'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
