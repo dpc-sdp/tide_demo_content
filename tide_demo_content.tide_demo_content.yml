@@ -43,6 +43,8 @@ tide_grant.demo:
     - 'tide_grant/taxonomy_term'
     - 'tide_grant/tc-9a-grant.yml'
     - 'tide_grant/tc-9b-grant.yml'
+    - 'tide_grant/reference/demo-grant-camps-sports-excursions.yml'
+    - 'tide_grant/reference/demo-grant-vic-dining-ent.yml'
 tide_landing_page.demo:
   dependencies:
     modules:
