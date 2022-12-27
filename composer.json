@@ -1,25 +1,25 @@
 {
-  "name": "dpc-sdp/tide_demo_content",
   "description": "Create demo content for Tide modules.",
-  "type": "drupal-module",
-  "license": "GPL-2.0-or-later",
-  "require": {
-    "dpc-sdp/tide_core": "^3.1.12",
-    "drupal/yaml_content": "^1.0"
-  },
-  "repositories": {
-    "drupal": {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    }
-  },
-  "minimum-stability": "alpha",
-  "prefer-stable": true,
   "extra": {
     "patches": {
       "drupal/yaml_content": {
         "Alter parsed values before nodes created. - https://www.drupal.org/project/yaml_content/issues/3261689#comment-14393366": "https://www.drupal.org/files/issues/2022-02-01/yaml_content-3261689_2.patch"
       }
     }
-  }
+  },
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "alpha",
+  "name": "dpc-sdp/tide_demo_content",
+  "prefer-stable": true,
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "require": {
+    "dpc-sdp/tide_core": "dev-reference",
+    "drupal/yaml_content": "^1.0"
+  },
+  "type": "drupal-module"
 }
