@@ -44,7 +44,7 @@ class UriReference extends Reference {
       $entity_id = array_shift($entity_ids);
       $entity = $entity_storage->load($entity_id);
       if ($entity && $entity->hasLinkTemplate('canonical')) {
-        $field_data['uri'] = $entity->toUrl()->toUriString();
+        $field_data['uri'] = $entity->toUrl()->toString();
       }
       else {
         $field_data['uri'] = 'internal://' . $entity->getEntityTypeId() . '/' . $entity_id;
