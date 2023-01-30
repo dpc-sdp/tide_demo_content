@@ -44,7 +44,11 @@ class UriReference extends Reference {
       $entity_id = array_shift($entity_ids);
       $entity = $entity_storage->load($entity_id);
       if ($entity && $entity->hasLinkTemplate('canonical')) {
-        $field_data['uri'] = $entity->toUrl()->toString();
+        // A Uri string represents the data in the Url object, followed by
+        // `route:entity.node.canonical;node={entity_id}` format, which does not
+        // fit to an entity field. The uri column in database must be
+        // `entity:{entity_type_id}/{id}` or an uri with a schema.
+        $field_data['uri'] = 'entity:' . $entity_type . '/' . $entity_id;
       }
       else {
         $field_data['uri'] = 'internal://' . $entity->getEntityTypeId() . '/' . $entity_id;
