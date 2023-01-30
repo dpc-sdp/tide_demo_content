@@ -118,8 +118,8 @@ class DemoContentLoader {
           ],
           'content' => [],
         ];
-        $collection['dependencies']['modules'] = $collection['dependencies']['modules'] ?: [];
-        $collection['dependencies']['collections'] = $collection['dependencies']['collections'] ?: [];
+        $collection['dependencies']['modules'] = $collection['dependencies']['modules'] ?? [];
+        $collection['dependencies']['collections'] = $collection['dependencies']['collections'] ?? [];
 
         // Only use items satisfying theirs module dependencies.
         if ($this->checkModulesEnabled($collection['dependencies']['modules'])) {
