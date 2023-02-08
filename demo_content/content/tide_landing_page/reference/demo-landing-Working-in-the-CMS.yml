@@ -279,13 +279,13 @@
     - '#process':
         callback: reference
         args:
-          - menu
+          - menu_link_content
           - id: 'main-tide-demo'
   field_site_footer_menu:
     - '#process':
         callback: reference
         args:
-          - menu
+          - menu_link_content
           - id: 'footer-tide-demo'
   field_site_homepage:
     - '#process':

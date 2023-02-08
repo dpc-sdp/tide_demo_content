@@ -396,13 +396,13 @@
     - '#process':
         callback: reference
         args:
-          - menu
+          - menu_link_content
           - id: 'main-tide-demo'
   field_site_footer_menu:
     - '#process':
         callback: reference
         args:
-          - menu
+          - menu_link_content
           - id: 'footer-tide-demo'
   field_site_homepage:
     - '#process':
@@ -421,13 +421,13 @@
     - '#process':
         callback: reference
         args:
-          - menu
+          - menu_link_content
           - id: 'main-tide-demo-another'
   field_site_footer_menu:
     - '#process':
         callback: reference
         args:
-          - menu
+          - menu_link_content
           - id: 'footer-tide-demo-another'
   field_site_homepage:
     - '#process':
