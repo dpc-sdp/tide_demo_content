@@ -359,6 +359,17 @@
           - type: landing_page
             title: Demo Landing Page
 - entity: menu_link_content
+  title: Landing Page Test
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Landing Page for CC 1
+- entity: menu_link_content
   title: Demo Landing Page
   menu_name: footer-tide-demo
   weight: 0
