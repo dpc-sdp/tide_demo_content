@@ -34,7 +34,7 @@
         callback: reference
         args:
           - menu
-          - id: 'footer-tide-demo'
+          - id: 'main-tide-demo'
   parent:
     - '#process':
         callback: reference
