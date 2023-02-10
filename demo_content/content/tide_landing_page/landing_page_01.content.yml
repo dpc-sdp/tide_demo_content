@@ -350,6 +350,7 @@
 - entity: menu_link_content
   title: Demo Landing Page
   menu_name: main-tide-demo
+  uuid: c9b2419b-c89d-4a43-87de-f991291c4894
   weight: 0
   link:
     - '#process':
@@ -359,7 +360,56 @@
           - type: landing_page
             title: Demo Landing Page
 - entity: menu_link_content
-  title: Landing Page Test
+  title: News
+  menu_name: main-tide-demo
+  uuid: c9b2419b-c89d-4a43-87de-f991291c4895
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: news
+            title: Demo News
+- entity: menu_link_content
+  title: Events
+  menu_name: main-tide-demo
+  uuid: c9b2419b-c89d-4a43-87de-f991291c4896
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: event
+            title: 2-BE-event-1
+- entity: menu_link_content
+  title: Publications
+  menu_name: main-tide-demo
+  uuid: c9b2419b-c89d-4a43-87de-f991291c4897
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: publication
+            title: Demo Publication
+# - entity: menu_link_content
+#   title: Grants
+#   menu_name: main-tide-demo
+#   uuid: c9b2419b-c89d-4a43-87de-f991291c4898
+#   weight: 0
+#   link:
+#     - '#process':
+#         callback: uri_reference
+#         args:
+#           - node
+#           - type: grant
+#             title: TC-9b Grant page - Closed
+#-------- Demo Content Child links-----
+- entity: menu_link_content
+  title: 2.1 Accessibility - demo
   menu_name: main-tide-demo
   weight: 0
   link:
@@ -368,7 +418,198 @@
         args:
           - node
           - type: landing_page
-            title: Landing Page for CC 1
+            title: Accessibility - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4894
+- entity: menu_link_content
+  title: 2.2 Copyright - demo
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Copyright - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4894
+- entity: menu_link_content
+  title: 2.3 Disclaimer - demo
+  uuid: c9b2419b-c89d-4a43-87de-f991291c5000
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Disclaimer - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4894
+- entity: menu_link_content
+  title: 2.4 Working in the CMS - demo
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Working in the CMS - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4894
+#---Demo menu 3rd level child
+- entity: menu_link_content
+  title: 3.x Find, connect, shape your Victorian Government - demo
+  menu_name: main-tide-demo
+  uuid: c9b2419b-c89d-4a43-87de-f991291c9000
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Find, connect, shape your Victorian Government - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c5000
+#---Demo menu 3rd level child
+- entity: menu_link_content
+  title: 4.x Many Talents One VCE - demo
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Many Talents One VCE - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c9000
+#---News childs
+- entity: menu_link_content
+  title: GovHack 2022 is coming soon - Connections Event and Hack weekend - demo
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: news
+            title: GovHack 2022 is coming soon - Connections Event and Hack weekend - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4895
+- entity: menu_link_content
+  title: FIRST-OF-ITS-KIND EXHIBITION CELEBRATES THE SERVICE OF LGBTQ+ DEFENCE PERSONNEL - demo
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: news
+            title: FIRST-OF-ITS-KIND EXHIBITION CELEBRATES THE SERVICE OF LGBTQ+ DEFENCE PERSONNEL - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4895
+- entity: menu_link_content
+  title: Wage Inspectorate helps 15,000 Victorians in first year - demo
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: news
+            title: Wage Inspectorate helps 15,000 Victorians in first year - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4895
+#---Event childs
+- entity: menu_link_content
+  title: Kensington Primary School - information session - demo
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: event
+            title: Kensington Primary School - information session - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4896
+- entity: menu_link_content
+  title: Roulette Aerial Display - demo
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: event
+            title: Roulette Aerial Display - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4896
+- entity: menu_link_content
+  title: "The Trades Fit: Young Women in Trades and Tech - demo"
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: event
+            title: "The Trades Fit: Young Women in Trades and Tech - demo"
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4896
+#---Publication childs
+- entity: menu_link_content
+  title: 17-BE-pub-1 Create Parent Page
+  uuid: c9b2419b-c89d-4a43-87de-f991291c9020
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: publication
+            title: 17-BE-pub-1 Create Parent Page
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4897
+- entity: menu_link_content
+  title: 17-BE-pub-page-1 Child Page
+  menu_name: main-tide-demo
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: publication_page
+            title: 17-BE-pub-page-1 Child Page
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c9020
+# #---Grant childs
+# - entity: menu_link_content
+#   title: Camps, Sports and Excursions Fund - Demo
+#   menu_name: main-tide-demo
+#   weight: 0
+#   link:
+#     - '#process':
+#         callback: uri_reference
+#         args:
+#           - node
+#           - type: grant
+#             title: Camps, Sports and Excursions Fund - Demo
+#   parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4898
+# - entity: menu_link_content
+#   title: Victorian Dining and Entertainment Program - demo
+#   menu_name: main-tide-demo
+#   weight: 0
+#   link:
+#     - '#process':
+#         callback: uri_reference
+#         args:
+#           - node
+#           - type: grant
+#             title: Victorian Dining and Entertainment Program - demo
+#   parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4898
+#----Footer Menu Links
 - entity: menu_link_content
   title: Demo Landing Page
   menu_name: footer-tide-demo
