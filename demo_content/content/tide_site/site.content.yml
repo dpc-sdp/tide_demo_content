@@ -168,7 +168,7 @@
   vid: sites
   name: 'Frankston demo'
   status: 1
-  uuid: 11dede11-10c0-111e1-1100-123000000050
+  uuid: 11dede11-10c0-111e1-1100-000000000050
   parent:
     - '#process':
         callback: reference
