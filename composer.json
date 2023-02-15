@@ -18,8 +18,7 @@
   "extra": {
     "patches": {
       "drupal/yaml_content": {
-        "Alter parsed values before nodes created. - https://www.drupal.org/project/yaml_content/issues/3261689#comment-14393366": "https://www.drupal.org/files/issues/2022-02-01/yaml_content-3261689_2.patch",
-        "Warnings when importing menus using module. - https://www.drupal.org/project/yaml_content/issues/3340448": "https://www.drupal.org/files/issues/2023-02-14/warnings-when-importing_3340448_5.patch"
+        "Alter parsed values before nodes created. - https://www.drupal.org/project/yaml_content/issues/3261689#comment-14393366": "https://www.drupal.org/files/issues/2022-02-01/yaml_content-3261689_2.patch"
       }
     }
   }
