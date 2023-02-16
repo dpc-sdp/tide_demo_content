@@ -294,15 +294,3 @@
           - node
           - type: landing_page
             title: Demo Landing Page
-- entity: menu_link_content
-  title: 2.4 Working in the CMS - demo
-  menu_name: main-tide-demo
-  weight: 0
-  link:
-    - '#process':
-        callback: uri_reference
-        args:
-          - node
-          - type: landing_page
-            title: Working in the CMS - demo
-  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c4894

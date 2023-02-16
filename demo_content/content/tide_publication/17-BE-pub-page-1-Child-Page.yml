@@ -222,15 +222,3 @@
           - taxonomy_term
           - vid: sites
             name: 'Demo Site'
-- entity: menu_link_content
-  title: 17-BE-pub-page-1 Child Page
-  menu_name: main-tide-demo
-  weight: 0
-  link:
-    - '#process':
-        callback: uri_reference
-        args:
-          - node
-          - type: publication_page
-            title: 17-BE-pub-page-1 Child Page
-  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c9020
