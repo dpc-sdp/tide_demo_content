@@ -394,7 +394,7 @@
         args:
           - node
           - type: publication
-            title: Demo Publication
+            title: 17-BE-pub-page-1 - Child Page - Chapter 1 - Page 1
 # - entity: menu_link_content
 #   title: Grants
 #   menu_name: main-tide-demo
