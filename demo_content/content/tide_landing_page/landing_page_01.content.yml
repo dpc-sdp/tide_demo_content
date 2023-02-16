@@ -36,7 +36,7 @@
             name: 'Demo: Parliament of Victoria'
   field_landing_page_intro_text: Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae
   field_landing_page_summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus.
-  field_landing_page_hero_theme: light
+  field_landing_page_hero_theme: dark
   field_landing_page_bg_colour: white
   # Hero banner.
   field_landing_page_hero_banner:
@@ -135,15 +135,21 @@
         - entity: paragraph
           type: accordion_content
           field_paragraph_accordion_name: 'Accordion #1'
-          field_paragraph_accordion_body: '<p>Phasellus in varius leo. Suspendisse potenti. Donec scelerisque cursus ex varius efficitur. Vivamus pretium nisi sed libero accumsan mattis. Duis convallis, velit eget varius tempus, orci erat aliquam sem, eget porta mauris nisl at mauris.</p>'
+          field_paragraph_accordion_body:
+          - format: rich_text
+            value: '<p>Phasellus in varius leo. Suspendisse potenti. Donec scelerisque cursus ex varius efficitur. Vivamus pretium nisi sed libero accumsan mattis. Duis convallis, velit eget varius tempus, orci erat aliquam sem, eget porta mauris nisl at mauris.</p>'
         - entity: paragraph
           type: accordion_content
           field_paragraph_accordion_name: 'Accordion #2'
-          field_paragraph_accordion_body: '<p>Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus. Phasellus lacus lectus, sollicitudin sed posuere non, ultricies ut quam.</p>'
+          field_paragraph_accordion_body:
+          - format: rich_text
+            value: '<p>Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus. Phasellus lacus lectus, sollicitudin sed posuere non, ultricies ut quam.</p>'
         - entity: paragraph
           type: accordion_content
           field_paragraph_accordion_name: 'Accordion #3'
-          field_paragraph_accordion_body: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus. Quisque nec congue ligula, vitae condimentum tellus.</p>'
+          field_paragraph_accordion_body:
+          - format: rich_text
+            value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus. Quisque nec congue ligula, vitae condimentum tellus.</p>'
     # Accordion - numbered.
     - entity: paragraph
       type: accordion
@@ -153,15 +159,21 @@
         - entity: paragraph
           type: accordion_content
           field_paragraph_accordion_name: 'Accordion #1'
-          field_paragraph_accordion_body: '<p>Phasellus in varius leo. Suspendisse potenti. Donec scelerisque cursus ex varius efficitur. Vivamus pretium nisi sed libero accumsan mattis. Duis convallis, velit eget varius tempus, orci erat aliquam sem, eget porta mauris nisl at mauris.</p>'
+          field_paragraph_accordion_body:
+          - format: rich_text
+            value: '<p>Phasellus in varius leo. Suspendisse potenti. Donec scelerisque cursus ex varius efficitur. Vivamus pretium nisi sed libero accumsan mattis. Duis convallis, velit eget varius tempus, orci erat aliquam sem, eget porta mauris nisl at mauris.</p>'
         - entity: paragraph
           type: accordion_content
           field_paragraph_accordion_name: 'Accordion #2'
-          field_paragraph_accordion_body: '<p>Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus. Phasellus lacus lectus, sollicitudin sed posuere non, ultricies ut quam.</p>'
+          field_paragraph_accordion_body:
+          - format: rich_text
+            value: '<p>Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus. Phasellus lacus lectus, sollicitudin sed posuere non, ultricies ut quam.</p>'
         - entity: paragraph
           type: accordion_content
           field_paragraph_accordion_name: 'Accordion #3'
-          field_paragraph_accordion_body: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus. Quisque nec congue ligula, vitae condimentum tellus.</p>'
+          field_paragraph_accordion_body:
+          - format: rich_text
+            value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus. Quisque nec congue ligula, vitae condimentum tellus.</p>'
     # Card carousel.
     - entity: paragraph
       type: card_carousel
