@@ -17,7 +17,7 @@
         callback: reference
         args:
           - menu
-          - id: 'footer-tide-demo'
+          - id: 'main-tide-demo'
 - entity: taxonomy_term
   vid: sites
   name: 'Demo Section 1'
