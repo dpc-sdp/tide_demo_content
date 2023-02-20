@@ -424,3 +424,16 @@
           - node
           - type: landing_page
             title: Demo Landing Page
+- entity: menu_link_content
+  title: 3.x Find, connect, shape your Victorian Government - demo
+  menu_name: main-tide-demo
+  uuid: c9b2419b-c89d-4a43-87de-f991291c9000
+  weight: 0
+  link:
+    - '#process':
+        callback: uri_reference
+        args:
+          - node
+          - type: landing_page
+            title: Find, connect, shape your Victorian Government - demo
+  parent: menu_link_content:c9b2419b-c89d-4a43-87de-f991291c5000
