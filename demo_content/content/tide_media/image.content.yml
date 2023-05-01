@@ -439,3 +439,45 @@
           - taxonomy_term
           - vid: license_type
             name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000141
+  name: 'leaves4k - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'leaves4k.jpeg'
+      alt: 'leaves4k image'
+      title: 'leaves4k image'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
+- entity: media
+  bundle: image
+  uuid: 11dede11-10c0-111e1-1100-000000000142
+  name: 'lake4k - demo'
+  uid: 1
+  status: 1
+  field_media_image:
+    - '#process':
+        callback: file_path_rename
+        args:
+          - image
+          - filename: 'lake4k.jpeg'
+      alt: 'lake4k image'
+      title: 'lake4k image'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
