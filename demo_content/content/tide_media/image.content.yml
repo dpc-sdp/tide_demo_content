@@ -432,13 +432,6 @@
           - filename: 'Melbourne-tram-Unpublished.jpg'
       alt: 'Melb Tram Unpublished - demo'
       title: 'Melb Tram Unpublished - demo'
-  field_license_type:
-    - '#process':
-        callback: reference
-        args:
-          - taxonomy_term
-          - vid: license_type
-            name: 'Demo License'
 - entity: media
   bundle: image
   uuid: 11dede11-10c0-111e1-1100-000000000141
