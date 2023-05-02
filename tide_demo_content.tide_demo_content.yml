@@ -61,7 +61,7 @@ tide_landing_page.demo:
     - 'tide_landing_page/landing_page_cc_3.yml'
     - 'tide_landing_page/landing_page_cc_4_neg.yml'
     - 'tide_landing_page/landing_page_cc_5_neg.yml'
-    - 'tide_landing_page/landing_page_images.yml'
+    # - 'tide_landing_page/landing_page_images.yml'
     - 'tide_landing_page/reference/landing_page_accessibility.yml'
     - 'tide_landing_page/reference/landing_page_copyright.yml'
     - 'tide_landing_page/reference/landing_page_disclaimer.yml'
