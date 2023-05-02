@@ -19,7 +19,7 @@
           - type: publication
             title: 'Publication for CC 1'
       weight: 1
-  field_landing_page_intro_text: Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae
+  field_landing_page_intro_text: Nulla ul tricies dignissim leo, posuere vestibulum erat cursus vitae
   field_landing_page_summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus.
   # Content Components.
   field_show_table_of_content: 1
