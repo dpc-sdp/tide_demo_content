@@ -65,8 +65,8 @@ tide_landing_page.demo:
     - 'tide_landing_page/reference/landing_page_accessibility.yml'
     - 'tide_landing_page/reference/landing_page_copyright.yml'
     - 'tide_landing_page/reference/landing_page_disclaimer.yml'
-    - 'tide_landing_page/reference/demo-landing-page-many-talents-one-vce.yml'
     - 'tide_landing_page/reference/demo-landing-page-vic-gov-homepage.yml'
+    - 'tide_landing_page/reference/demo-landing-page-many-talents-one-vce.yml'
     - 'tide_landing_page/reference/demo-landing-Working-in-the-CMS.yml'
 tide_media.demo:
   dependencies:
@@ -125,9 +125,8 @@ tide_publication.demo:
       - tide_demo_content:tide_site.demo
       - tide_demo_content:tide_media.demo
   content:
-    - 'tide_publication/17-BE-pub-1-Create-Parent-Page.yml'
+    - 'tide_publication/17-BE-pub-1-Create-Parent-Page-Child-Page-01.yml'
     - 'tide_publication/17-BE-pub-page-1-Child-Page.yml'
-    - 'tide_publication/17-BE-pub-page-1-Child-Page-01.yml'
     - 'tide_publication/publication_cc_1.yml'
     - 'tide_publication/publication_cc_1_child.yml'
     - 'tide_publication/publication_cc_1_child_child.yml'
