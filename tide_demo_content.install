@@ -78,20 +78,16 @@ function tide_demo_content_uninstall() {
 /**
  * Updates user permissions [SDPAP-7778].
  */
-function tide_media_update_8001() {
-  if (!\Drupal::moduleHandler()->moduleExists('tide_site_restriction')) {
+function tide_demo_content_update_8001() {
+  if (\Drupal::moduleHandler()->moduleExists('tide_site')) {
+    /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
+    $site_helper = \Drupal::service('tide_site.helper');
+    $sites = $site_helper->getAllSites();
     $usernames = [
       'editor1.test@example.com',
       'approver1.test@example.com',
       'previewer1.test@example.com',
     ];
-    $sites = [];
-    $tree = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
-      ->loadTree('sites', 0, NULL, TRUE);
-    /** @var \Drupal\taxonomy\TermInterface $site */
-    foreach ($tree as $site) {
-      $sites[$site->id()] = $site;
-    }
     foreach ($usernames as $username) {
       $user = user_load_by_name($username);
       if ($user->hasField('field_name')) {
