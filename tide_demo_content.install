@@ -74,3 +74,34 @@ function tide_demo_content_uninstall() {
   $repository->removeTrackedEntities();
   \Drupal::messenger()->addMessage('Removed all demo content.');
 }
+
+/**
+ * Updates user permissions [SDPAP-7778].
+ */
+function tide_media_update_8001() {
+  if (!\Drupal::moduleHandler()->moduleExists('tide_site_restriction')) {
+    $usernames = [
+      'editor1.test@example.com',
+      'approver1.test@example.com',
+      'previewer1.test@example.com',
+    ];
+    $sites = [];
+    $tree = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+      ->loadTree('sites', 0, NULL, TRUE);
+    /** @var \Drupal\taxonomy\TermInterface $site */
+    foreach ($tree as $site) {
+      $sites[$site->id()] = $site;
+    }
+    foreach ($usernames as $username) {
+      $user = user_load_by_name($username);
+      if ($user->hasField('field_name')) {
+        $user->set('field_name', $username);
+      }
+      if ($user->hasField('field_last_name')) {
+        $user->set('field_last_name', $username);
+      }
+      $user->set('field_user_site', $sites);
+      $user->save();
+    }
+  }
+}
