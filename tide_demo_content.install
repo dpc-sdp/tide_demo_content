@@ -65,20 +65,8 @@ function tide_demo_content_install() {
   if ($pbt_enabled) {
     $pbt_settings->set('disable_node_access_records', $node_access)->save();
   }
-}
 
-/**
- * Implements hook_uninstall().
- */
-function tide_demo_content_uninstall() {
-  /** @var \Drupal\tide_demo_content\DemoContentRepository $repository */
-  $repository = \Drupal::service('tide_demo_content.repository');
-  $repository->removeTrackedEntities();
-  \Drupal::messenger()->addMessage('Removed all demo content.');
-}
-
-function tide_demo_content_update_8002() {
-  if (\Drupal::moduleHandler()->moduleExists('tide_site')) {
+  if (\Drupal::moduleHandler()->moduleExists('tide_site_restriction')) {
     $usernames = [
       'editor1.test@example.com',
       'approver1.test@example.com',
@@ -101,4 +89,14 @@ function tide_demo_content_update_8002() {
       }
     }
   }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function tide_demo_content_uninstall() {
+  /** @var \Drupal\tide_demo_content\DemoContentRepository $repository */
+  $repository = \Drupal::service('tide_demo_content.repository');
+  $repository->removeTrackedEntities();
+  \Drupal::messenger()->addMessage('Removed all demo content.');
 }
