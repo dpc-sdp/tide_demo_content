@@ -5,6 +5,8 @@
  * Install file.
  */
 
+use Drupal\user\Entity\User;
+
 /**
  * Implements hook_schema().
  */
@@ -75,7 +77,7 @@ function tide_demo_content_uninstall() {
   \Drupal::messenger()->addMessage('Removed all demo content.');
 }
 
-function tide_demo_content_update_8001() {
+function tide_demo_content_update_8002() {
   /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
   $site_helper = \Drupal::service('tide_site.helper');
   $sites = $site_helper->getAllSites();
