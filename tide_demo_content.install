@@ -66,11 +66,13 @@ function tide_demo_content_install() {
     $pbt_settings->set('disable_node_access_records', $node_access)->save();
   }
 
+  // Adds sites to test users.
   if (\Drupal::moduleHandler()->moduleExists('tide_site_restriction')) {
     $usernames = [
       'editor1.test@example.com',
       'approver1.test@example.com',
     ];
+    $department = [1459];
     /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
     $site_helper = \Drupal::service('tide_site.helper');
     $sites = $site_helper->getAllSites();
@@ -82,10 +84,19 @@ function tide_demo_content_install() {
     if (isset($user_ids)) {
       foreach ($user_ids as $user_id) {
         $user = User::load($user_id);
+        if ($user->hasField('field_name')) {
+          $user->set('field_name', $user->getAccountName());
+        }
+        if ($user->hasField('field_last_name')) {
+          $user->set('field_last_name', $user->getAccountName());
+        }
+        if ($user->hasField('field_department_agency')) {
+          $user->set('field_department_agency', $department);
+        }
         if ($user->hasField('field_user_site')) {
           $user->set('field_user_site', $sites);
-          $user->save();
         }
+        $user->save();
       }
     }
   }
