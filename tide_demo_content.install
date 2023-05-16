@@ -82,7 +82,6 @@ function tide_demo_content_update_8001() {
     $usernames = [
       'editor1.test@example.com',
       'approver1.test@example.com',
-      'previewer1.test@example.com',
     ];
     /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
     $site_helper = \Drupal::service('tide_site.helper');
