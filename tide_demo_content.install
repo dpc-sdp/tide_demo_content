@@ -77,21 +77,28 @@ function tide_demo_content_uninstall() {
   \Drupal::messenger()->addMessage('Removed all demo content.');
 }
 
-function tide_demo_content_update_8002() {
-  /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
-  $site_helper = \Drupal::service('tide_site.helper');
-  $sites = $site_helper->getAllSites();
-  $user_ids = \Drupal::entityQuery('user')
-    ->condition('name', 'editor1.test@example.com')
-    ->accessCheck(FALSE)
-    ->execute();
-
-  if (isset($user_ids)) {
-    foreach ($user_ids as $user_id) {
-      $user = User::load($user_id);
-      if ($user->hasField('field_user_site')) {
-          $user->set('field_user_site', $sites);
-          $user->save();
+function tide_demo_content_update_8001() {
+  if (\Drupal::moduleHandler()->moduleExists('tide_site')) {
+    $usernames = [
+      'editor1.test@example.com',
+      'approver1.test@example.com',
+      'previewer1.test@example.com',
+    ];
+    /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
+    $site_helper = \Drupal::service('tide_site.helper');
+    $sites = $site_helper->getAllSites();
+    $user_ids = \Drupal::entityQuery('user')
+      ->condition('name', $usernames, 'IN')
+      ->sort('uid', 'ASC')
+      ->accessCheck(FALSE)
+      ->execute();
+    if (isset($user_ids)) {
+      foreach ($user_ids as $user_id) {
+        $user = User::load($user_id);
+        if ($user->hasField('field_user_site')) {
+            $user->set('field_user_site', $sites);
+            $user->save();
+        }
       }
     }
   }
