@@ -83,8 +83,8 @@ function tide_demo_content_install() {
       foreach ($user_ids as $user_id) {
         $user = User::load($user_id);
         if ($user->hasField('field_user_site')) {
-            $user->set('field_user_site', $sites);
-            $user->save();
+          $user->set('field_user_site', $sites);
+          $user->save();
         }
       }
     }
