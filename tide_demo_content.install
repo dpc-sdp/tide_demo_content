@@ -71,6 +71,7 @@ function tide_demo_content_install() {
     $usernames = [
       'editor1.test@example.com',
       'approver1.test@example.com',
+      'previewer1.test@example.com',
     ];
     $department = [1459];
     /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
@@ -93,7 +94,7 @@ function tide_demo_content_install() {
         if ($user->hasField('field_department_agency')) {
           $user->set('field_department_agency', $department);
         }
-        if ($user->hasField('field_user_site')) {
+        if (($user->getAccountName() != 'previewer1.test@example.com') && ($user->hasField('field_user_site'))) {
           $user->set('field_user_site', $sites);
         }
         $user->save();
