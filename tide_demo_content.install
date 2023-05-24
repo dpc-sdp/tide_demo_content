@@ -5,6 +5,8 @@
  * Install file.
  */
 
+use Drupal\user\Entity\User;
+
 /**
  * Implements hook_schema().
  */
@@ -62,6 +64,42 @@ function tide_demo_content_install() {
   // Restore Pbt settings.
   if ($pbt_enabled) {
     $pbt_settings->set('disable_node_access_records', $node_access)->save();
+  }
+
+  // Adds sites to test users.
+  if (\Drupal::moduleHandler()->moduleExists('tide_site_restriction')) {
+    $usernames = [
+      'editor1.test@example.com',
+      'approver1.test@example.com',
+      'previewer1.test@example.com',
+    ];
+    $department = [1459];
+    /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
+    $site_helper = \Drupal::service('tide_site.helper');
+    $sites = $site_helper->getAllSites();
+    $user_ids = \Drupal::entityQuery('user')
+      ->condition('name', $usernames, 'IN')
+      ->sort('uid', 'ASC')
+      ->accessCheck(FALSE)
+      ->execute();
+    if (isset($user_ids)) {
+      foreach ($user_ids as $user_id) {
+        $user = User::load($user_id);
+        if ($user->hasField('field_name')) {
+          $user->set('field_name', $user->getAccountName());
+        }
+        if ($user->hasField('field_last_name')) {
+          $user->set('field_last_name', $user->getAccountName());
+        }
+        if ($user->hasField('field_department_agency')) {
+          $user->set('field_department_agency', $department);
+        }
+        if (($user->getAccountName() != 'previewer1.test@example.com') && ($user->hasField('field_user_site'))) {
+          $user->set('field_user_site', $sites);
+        }
+        $user->save();
+      }
+    }
   }
 }
 
