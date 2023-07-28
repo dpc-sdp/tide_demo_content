@@ -5,8 +5,8 @@
  * Hooks provided by Tide Demo Content module.
  */
 
-use Drupal\yaml_content\ContentLoader\ContentLoaderInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\yaml_content\ContentLoader\ContentLoaderInterface;
 
 /**
  * Reacts when a demo entity is imported.
