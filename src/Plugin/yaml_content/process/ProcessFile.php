@@ -48,7 +48,8 @@ class ProcessFile extends File {
       \Drupal::service('file_system')->prepareDirectory($destination, FileSystemInterface::CREATE_DIRECTORY);
 
       // Save the file data or return an existing file.
-      $file = file_save_data($output, $destination . $filename, FileSystemInterface::EXISTS_REPLACE);
+      $fileRepository = \Drupal::service('file.repository');
+      $file = $fileRepository->writeData($output, $destination . $filename, FileSystemInterface::EXISTS_REPLACE);
 
       // Use the newly created file id as the value.
       $field_data['target_id'] = $file->id();
