@@ -113,3 +113,70 @@
         args:
           - 'user_role'
           - id: 'previewer'
+# Contributors
+- entity: user
+  status: 1
+  name: 'contributor1.test@example.com'
+  mail: 'contributor1.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'contributor'
+  field_user_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Demo Site'
+        dependency: 'site.content.yml'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Another Demo Site'
+        dependency: 'site.content.yml'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
+        dependency: 'site.content.yml'
+- entity: user
+  status: 1
+  name: 'contributor2.test@example.com'
+  mail: 'contributor2.test@example.com'
+  pass: DpcFakePass
+  roles:
+    - '#process':
+        callback: 'reference'
+        args:
+          - 'user_role'
+          - id: 'contributor'
+  field_user_site:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Demo Site'
+        dependency: 'site.content.yml'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Another Demo Site'
+        dependency: 'site.content.yml'
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: sites
+            name: 'Melbourne Web Demo'
+        dependency: 'site.content.yml'
