@@ -32,7 +32,7 @@ class UriReference extends Reference {
       $query->condition($property, $value);
     }
 
-    $entity_ids = $query->execute();
+    $entity_ids = $query->accessCheck(FALSE)->execute();
 
     if (empty($entity_ids)) {
       $entity = $entity_storage->create($filter_params);

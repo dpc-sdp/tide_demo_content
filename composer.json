@@ -4,13 +4,13 @@
   "type": "drupal-module",
   "license": "GPL-2.0-or-later",
   "require": {
-    "dpc-sdp/tide_core": "^3.2.0",
-    "drupal/yaml_content": "^1.0"
+    "dpc-sdp/tide_core": "^4.0.0",
+    "drupal/yaml_content": "^1.0@alpha"
   },
   "repositories": {
     "drupal": {
       "type": "composer",
-      "url": "https://packages.drupal.org/8"
+      "url": "https://packages.drupal.org/10"
     }
   },
   "minimum-stability": "alpha",
