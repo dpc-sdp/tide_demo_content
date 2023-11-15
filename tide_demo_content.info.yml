@@ -2,7 +2,7 @@ name: Tide Demo Content
 type: module
 description: Create demo content for Tide modules.
 package: Tide
-core_version_requirement: ^8.9 || ^9
+core_version_requirement: ^9 || ^10
 dependencies:
   - drupal:content_moderation
   - drupal:yaml_content
