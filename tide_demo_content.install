@@ -70,7 +70,9 @@ function tide_demo_content_install() {
   if (\Drupal::moduleHandler()->moduleExists('tide_site_restriction')) {
     $usernames = [
       'editor1.test@example.com',
+      'editor2.test@example.com',
       'approver1.test@example.com',
+      'approver2.test@example.com',
       'previewer1.test@example.com',
     ];
     $department = [1459];
