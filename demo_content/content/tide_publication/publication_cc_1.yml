@@ -95,7 +95,7 @@
         args:
           - taxonomy_term
           - vid: topic
-            name: 'Content Collection Topic 2'
+            name: 'Content Collection All Topic'
   field_tags:
     - '#process':
         callback: reference
