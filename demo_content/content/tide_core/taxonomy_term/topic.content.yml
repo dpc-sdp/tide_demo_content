@@ -48,3 +48,8 @@
   name: 'Collins topic demo'
   status: 1
   uuid: 11dede11-10c0-111e1-1102-000000000029
+- entity: taxonomy_term
+  vid: topic
+  name: 'Content Collection All Topic'
+  status: 1
+  uuid: 11dede11-10c0-111e1-1102-000000000030
