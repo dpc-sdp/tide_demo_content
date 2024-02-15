@@ -1,6 +1,5 @@
 - entity: node
   type: news
-  uuid: 11dede11-10c0-111e1-1100-000000000320
   title: Demo News
   uid: 1
   status: 1
