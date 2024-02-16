@@ -121,7 +121,8 @@ function getAllSitesAndSiteSections() {
   $sites = [];
 
   try {
-    $terms = $this->entityTypeManager->getStorage('taxonomy_term')
+    
+    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
       ->loadByProperties(['vid' => 'sites']);
 
     foreach ($terms as $site) {
