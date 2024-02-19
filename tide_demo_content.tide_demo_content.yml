@@ -103,6 +103,7 @@ tide_news.demo:
     - 'tide_news/news_cc_3.yml'
     - 'tide_news/news_cc_4_neg.yml'
     - 'tide_news/news_cc_5_neg.yml'
+    - 'tide_news/news_collection.yml'
     - 'tide_news/reference/GovHack-2022-coming-soon-news-demo.yml'
     - 'tide_news/reference/news-first-of-its-kind-exhibition-demo.yml'
     - 'tide_news/reference/Wage-Inspectorate-helps-15000-Victorians-news-demo.yml'
