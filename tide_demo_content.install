@@ -70,13 +70,15 @@ function tide_demo_content_install() {
   if (\Drupal::moduleHandler()->moduleExists('tide_site_restriction')) {
     $usernames = [
       'editor1.test@example.com',
+      'editor2.test@example.com',
       'approver1.test@example.com',
+      'approver2.test@example.com',
       'previewer1.test@example.com',
     ];
     $department = [1459];
     /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
     $site_helper = \Drupal::service('tide_site.helper');
-    $sites = $site_helper->getAllSites();
+    $sites = getAllSitesAndSiteSections();
     $user_ids = \Drupal::entityQuery('user')
       ->condition('name', $usernames, 'IN')
       ->sort('uid', 'ASC')
@@ -111,4 +113,26 @@ function tide_demo_content_uninstall() {
   $repository = \Drupal::service('tide_demo_content.repository');
   $repository->removeTrackedEntities();
   \Drupal::messenger()->addMessage('Removed all demo content.');
+}
+
+/**
+ * Get all sites and site sections.
+ */
+function getAllSitesAndSiteSections() { 
+  $sites = [];
+
+  try {
+
+    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+      ->loadByProperties(['vid' => 'sites']);
+
+    foreach ($terms as $site) {
+      $sites[$site->id()] = $site;
+    }
+  }
+  catch (\Exception $exception) {
+    watchdog_exception('tide_site', $exception);
+  }
+
+  return $sites;
 }
