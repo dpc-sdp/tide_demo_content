@@ -78,7 +78,7 @@ function tide_demo_content_install() {
     $department = [1459];
     /** @var \Drupal\tide_site\TideSiteHelper $site_helper */
     $site_helper = \Drupal::service('tide_site.helper');
-    $sites = getAllSitesAndSiteSections();
+    $sites = _tide_demo_content_get_all_sections();
     $user_ids = \Drupal::entityQuery('user')
       ->condition('name', $usernames, 'IN')
       ->sort('uid', 'ASC')
@@ -118,7 +118,7 @@ function tide_demo_content_uninstall() {
 /**
  * Get all sites and site sections.
  */
-function getAllSitesAndSiteSections() { 
+function _tide_demo_content_get_all_sections() { 
   $sites = [];
 
   try {
