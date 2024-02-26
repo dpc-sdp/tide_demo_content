@@ -1,5 +1,20 @@
 {
+  "name": "dpc-sdp/tide_demo_content",
   "description": "Create demo content for Tide modules.",
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "dpc-sdp/tide_core": "^4.0.0",
+    "drupal/yaml_content": "^1.0@alpha"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/10"
+    }
+  },
+  "minimum-stability": "alpha",
+  "prefer-stable": true,
   "extra": {
     "patches": {
       "drupal/yaml_content": {
@@ -7,20 +22,5 @@
         "Warnings when importing menus using module. - https://www.drupal.org/project/yaml_content/issues/3340448": "https://www.drupal.org/files/issues/2023-07-28/warnings-when-importing_3340448_7.patch"
       }
     }
-  },
-  "license": "GPL-2.0-or-later",
-  "minimum-stability": "alpha",
-  "name": "dpc-sdp/tide_demo_content",
-  "prefer-stable": true,
-  "repositories": {
-    "drupal": {
-      "type": "composer",
-      "url": "https://packages.drupal.org/10"
-    }
-  },
-  "require": {
-    "dpc-sdp/tide_core": "dev-reference",
-    "drupal/yaml_content": "^1.0@alpha"
-  },
-  "type": "drupal-module"
+  }
 }
