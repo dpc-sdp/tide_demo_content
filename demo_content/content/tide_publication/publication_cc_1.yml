@@ -102,7 +102,7 @@
         args:
           - taxonomy_term
           - vid: tags
-            name: 'Content Collection Tag 2'
+            name: 'Content Collection Tag 1'
   # Sites.
   field_node_site:
     - '#process':
