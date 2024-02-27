@@ -155,14 +155,3 @@
           - taxonomy_term
           - vid: sites
             name: 'Demo Site'
-- entity: menu_link_content
-  title: Events
-  menu_name: main-tide-demo
-  weight: 0
-  link:
-    - '#process':
-        callback: uri_reference
-        args:
-          - node
-          - type: event
-            title: event_collection
