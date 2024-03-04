@@ -104,7 +104,7 @@
         args:
           - block_content
           - type: campaign
-            field_block_title: 'Wellbeing in Victoria: A Plan to Promote Good Mental Health'
+            field_block_title: 'Wellbeing in Victoria: A Plan to Promote Good Mental Health - demo'
   # Content Components.
   field_show_table_of_content: 0
   field_landing_page_component:
