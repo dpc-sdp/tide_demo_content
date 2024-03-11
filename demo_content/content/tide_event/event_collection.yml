@@ -34,8 +34,8 @@
     - entity: paragraph
       type: event_details
       field_paragraph_date_range:
-        - value: '2019-05-20T11:02:20'
-          end_value: '2019-05-20T11:11:01'
+        - value: '2019-06-20T11:02:20'
+          end_value: '2019-06-20T11:11:01'
       field_paragraph_location:
         - country_code: AU
           administrative_area: VIC
