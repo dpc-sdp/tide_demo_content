@@ -21,9 +21,9 @@
 - entity: block_content
   type: campaign
   uuid: 11dede11-10c0-111e1-1100-000000000301
-  info: 'Wellbeing in Victoria: A Plan to Promote Good Mental Health'
+  info: 'Wellbeing in Victoria: A Plan to Promote Good Mental Health - demo'
   status: 1
-  field_block_title: 'Wellbeing in Victoria: A Plan to Promote Good Mental Health'
+  field_block_title: 'Wellbeing in Victoria: A Plan to Promote Good Mental Health - demo'
   body:
     - format: rich_text
       value: |
