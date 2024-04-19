@@ -118,7 +118,7 @@ function tide_demo_content_uninstall() {
 /**
  * Get all sites and site sections.
  */
-function _tide_demo_content_get_all_sections() { 
+function _tide_demo_content_get_all_sections() {
   $sites = [];
 
   try {
