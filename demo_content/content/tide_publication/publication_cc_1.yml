@@ -95,14 +95,14 @@
         args:
           - taxonomy_term
           - vid: topic
-            name: 'Content Collection Topic 2'
+            name: 'Content Collection All Topic'
   field_tags:
     - '#process':
         callback: reference
         args:
           - taxonomy_term
           - vid: tags
-            name: 'Content Collection Tag 2'
+            name: 'Content Collection Tag 1'
   # Sites.
   field_node_site:
     - '#process':
