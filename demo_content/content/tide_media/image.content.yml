@@ -84,7 +84,6 @@
             name: 'Demo License'
 - entity: media
   bundle: image
-  uuid: 11dede11-10c0-111e1-1100-000000000124
   name: 'Demo: Melbourne tram'
   uid: 1
   status: 1
