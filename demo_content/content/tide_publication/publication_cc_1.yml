@@ -17,7 +17,7 @@
         args:
           - media
           - bundle: image
-            name: 'Demo: Melbourne tram'
+            name: 'Demo: Placeholder'
   field_license_type:
     - '#process':
         callback: reference
@@ -41,7 +41,7 @@
            args:
             - media
             - bundle: image
-              name: 'Demo: Melbourne tram'
+              name: 'Demo: Placeholder'
       field_complex_image_source:
         - value: Complex Image  Source
       field_complex_image_data:

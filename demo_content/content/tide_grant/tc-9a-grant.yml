@@ -17,7 +17,7 @@
         args:
           - media
           - bundle: image
-            name: 'Demo: Melbourne tram'
+            name: 'Demo: Placeholder'
   field_landing_page_intro_text: 'Blah blah'
   field_landing_page_summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus.
   field_overview_title: 'Overview title'
@@ -97,7 +97,7 @@
                 args:
                   - media
                   - bundle: image
-                    name: 'Demo: Melbourne tram'
+                    name: 'Demo: Placeholder'
           field_paragraph_summary: Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus.
         - entity: paragraph
           type: timeline
@@ -110,7 +110,7 @@
                 args:
                   - media
                   - bundle: image
-                    name: 'Demo: Melbourne tram'
+                    name: 'Demo: Placeholder'
           field_paragraph_summary: Anim excepteur magna eu aliqua quis velit voluptate sit culpa.
   # Other.
   field_show_social_sharing: 1
