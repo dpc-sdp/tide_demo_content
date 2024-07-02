@@ -17,7 +17,7 @@
         args:
           - media
           - bundle: image
-            name: 'Demo: Melbourne tram'
+            name: 'Demo: Placeholder'
   field_landing_page_hero_image:
     - '#process':
         callback: reference

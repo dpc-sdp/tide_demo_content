@@ -174,7 +174,7 @@
             args:
               - media
               - bundle: image
-                name: 'Demo: Melbourne tram'
+                name: 'Demo: Placeholder'
       field_paragraph_summary: Mauris tincidunt tincidunt felis vel tempus. Vestibulum rhoncus blandit justo quis finibus.
       field_paragraph_link:
         - uri: https://www.vic.gov.au
@@ -193,7 +193,7 @@
             args:
               - media
               - bundle: image
-                name: 'Demo: Melbourne tram'
+                name: 'Demo: Placeholder'
     # Media gallery.
     - entity: paragraph
       type: media_gallery
