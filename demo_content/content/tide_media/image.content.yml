@@ -516,10 +516,10 @@
           - filename: 'Demo-tram.jpg'
       alt: 'Demo: Placeholder'
       title: 'Demo: Placeholder'
-    field_license_type:
-      - '#process':
-          callback: reference
-          args:
-            - taxonomy_term
-            - vid: license_type
-              name: 'Demo License'
+  field_license_type:
+    - '#process':
+        callback: reference
+        args:
+          - taxonomy_term
+          - vid: license_type
+            name: 'Demo License'
