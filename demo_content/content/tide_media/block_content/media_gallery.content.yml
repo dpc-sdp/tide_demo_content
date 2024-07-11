@@ -54,4 +54,4 @@
         args:
           - media
           - bundle: image
-            name: 'Demo: Melbourne tram'
+            name: 'Demo: Placeholder'
