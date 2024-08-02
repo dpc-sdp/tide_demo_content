@@ -204,37 +204,6 @@
               - block_content
               - type: media_gallery
                 info: Demo Image Gallery block
-    # News listing.
-    - entity: paragraph
-      type: news_listing
-      field_paragraph_title: 'News Listing'
-      field_paragraph_topic:
-        - '#process':
-            callback: reference
-            args:
-              - taxonomy_term
-              - vid: topic
-                name: 'Demo Topic'
-    # latest events
-    - entity: paragraph
-      type: latest_events
-      field_paragraph_title: Demo latest events
-      field_paragraph_cta_card_event:
-        - entity: paragraph
-          type: call_to_action
-          field_paragraph_title: Latest Event 1
-          field_paragraph_body: 'Mauris tincidunt tincidunt felis vel tempus.'
-          field_paragraph_cta_style: banner
-          field_paragraph_media:
-            - '#process':
-                callback: reference
-                args:
-                  - media
-                  - bundle: image
-                    name: 'Demo: Placeholder'
-          field_paragraph_cta:
-            - uri: https://www.google.com
-              title: See more
     # Timelines
     - entity: paragraph
       type: timelines
