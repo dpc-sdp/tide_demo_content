@@ -212,17 +212,6 @@
               - block_content
               - type: media_gallery
                 info: Demo Image Gallery block
-    # News listing.
-    - entity: paragraph
-      type: news_listing
-      field_paragraph_title: 'News Listing'
-      field_paragraph_topic:
-        - '#process':
-            callback: reference
-            args:
-              - taxonomy_term
-              - vid: topic
-                name: 'Demo Topic'
   # What's Next.
   field_show_whats_next: 1
   field_whats_next:
