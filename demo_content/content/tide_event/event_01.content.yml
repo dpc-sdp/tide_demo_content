@@ -18,7 +18,7 @@
         args:
           - media
           - bundle: image
-            name: 'Demo: Melbourne tram'
+            name: 'Demo: Placeholder'
   field_news_intro_text: Nulla ultricies dignissim leo, posuere vestibulum erat cursus vitae
   field_landing_page_summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt sit amet ligula sit amet lacinia. In a leo nec tortor aliquet faucibus.
   field_event_description:
@@ -46,7 +46,7 @@
           </footer>
         </blockquote>
         <h6>Mauris tincidunt tincidunt felis vel tempus</h6>
-        <drupal-entity data-embed-button="tide_media" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid='11dede11-10c0-111e1-1100-000000000124'></drupal-entity>
+        <drupal-entity data-embed-button="tide_media" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid='11dede11-10c0-111e1-1100-000000000144'></drupal-entity>
         <p>Phasellus in varius leo. Suspendisse potenti. Donec scelerisque cursus ex varius efficitur. Vivamus pretium nisi sed libero accumsan mattis. Duis convallis, velit eget varius tempus, orci erat aliquam sem, eget porta mauris nisl at mauris.</p>
         <drupal-entity data-embed-button="tide_media" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid='11dede11-10c0-111e1-1100-000000000007'></drupal-entity>
   # Event details.
